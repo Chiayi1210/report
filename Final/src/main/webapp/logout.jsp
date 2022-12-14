@@ -10,7 +10,7 @@ if(session.getAttribute("access") !="n"){
 	out.println("您已成功登出！<br>");
 	out.println("<a href='logina.jsp'>登入</a>");
 }else{
-	response.sendRedirect("logina.jsp");
+	response.sendRedirect("loginCheak-Select.jsp");
 }
 %>	
 </body>
