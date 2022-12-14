@@ -1,6 +1,6 @@
-
 <%@ page language="java" contentType="text/html; charset=BIG5"
     pageEncoding="BIG5"%>
+
 <!DOCTYPE html>
 <html>
 <head><title>註冊</title></head>
@@ -42,7 +42,7 @@ span.memberpwd {
 
 </style>
 <body>
-<form action="signUp.jsp" method="get" style="border:1px solid #ccc">
+<form action="signup-InsertInto.jsp" method="get" style="border:1px solid #ccc">
   <div class="container">
     <h1>註冊</h1>
     <p>請先建立一個帳號</p>
