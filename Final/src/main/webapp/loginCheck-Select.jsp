@@ -1,9 +1,9 @@
 <%@page contentType="text/html"%>
 <%@page pageEncoding="BIG5"%>
 <%@page import="java.sql.*"%>
-jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
-<%
-session.setAttribute("access","n");
+<jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
+
+<% session.setAttribute("access","n");
 if(request.getParameter("memberid") !=null &&
 	request.getParameter("memberpwd") !=null){
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
@@ -31,11 +31,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
-  width: 100%;
+  width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+ 
   box-sizing: border-box;
 }
 
@@ -46,7 +46,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
 }
 
 button:hover {
@@ -65,7 +65,7 @@ button:hover {
 }
 
 img.avatar {
-  width: 40%;
+  width: 70%;
   border-radius: 50%;
 }
 
@@ -85,7 +85,7 @@ span.psw {
      float: none;
   }
   .signbtn {
-     width: 100%;
+     width: 70%;
   }
 }
 </style>
@@ -94,7 +94,7 @@ span.psw {
 <form action="index.jsp" method="post">
 <div class="container">
 	<label for="memberid"><b>帳號</b></label>
-    <input type="text" placeholder="請輸入帳號" name="memberid" required>
+    <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
 	<% if(request.getParameter("memberid")!= null){ %>
 		value = '<%=request.getParameter("memberid") %>'
 	<%}%>
