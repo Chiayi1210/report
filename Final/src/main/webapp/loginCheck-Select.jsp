@@ -40,7 +40,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #708090;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -56,7 +56,7 @@ button:hover {
 .signbtn {
   width: auto;
   padding: 10px 18px;
-  background-color: #f44336;
+  background-color: #708090;
 }
 
 .imgcontainer {
@@ -91,7 +91,7 @@ span.psw {
 </style>
 <body>
 <h2>登入</h2>
-<form method="post">
+<form action="index.jsp" method="post">
 <div class="container">
 	<label for="memberid"><b>帳號</b></label>
     <input type="text" placeholder="請輸入帳號" name="memberid" required>

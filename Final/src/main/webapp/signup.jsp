@@ -42,7 +42,7 @@ span.memberpwd {
 
 </style>
 <body>
-<form action="signup-InsertInto.jsp" method="get" style="border:1px solid #ccc">
+<form action="loginCheck-Select.jsp" method="get" style="border:1px solid #ccc">
   <div class="container">
     <h1>註冊</h1>
     <p>請先建立一個帳號</p>
