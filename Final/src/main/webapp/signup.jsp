@@ -9,11 +9,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
-  width: 100%;
+  width: 70%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+ 
   box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 70%;
+  width: 80%;
 }
 
 button:hover {
@@ -49,7 +49,7 @@ span.memberpwd {
     <hr>
 
     <label for="memberid"><b>帳號</b></label>
-    <input type="text" placeholder="請輸入帳號" name="memberid" required>
+    <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
 
     <label for="memberpwd"><b>密碼</b></label>
     <input type="password" placeholder="請輸入密碼" name="memberpwd" required>
