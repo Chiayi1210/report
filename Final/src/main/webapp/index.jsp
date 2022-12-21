@@ -40,11 +40,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
     <i class="fa fa-remove"></i>
   </a>
-  <h4 class="w3-bar-item"><b>之後放</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <h4 class="w3-bar-item"><b>服務內容</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">慢性病連續處方箋預約</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">快篩/口罩預約領取</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">藥品品項庫存及查詢</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">查尋/更改/取消預約</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -56,7 +56,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
       <h1>石牌藥局</h1>
-      <p>我們的內容</p>
+      <p>石牌藥局不單具有完好的醫療資源，還有豐富的照護經驗及專業的職員培訓，期望能夠帶給客戶安心、溫馨又仔細的保健服務，
+      而且石牌藥局擁有豐沛的醫療器材、母嬰用品與藥品等類別的產品，讓顧客能便利的挑選，同時，石牌藥局還會提供專業護理的概念給客人，
+      做為社區的健康好幫手，石牌藥局能夠使消費者擁有最專業、最安心、最齊全的體會，推薦給各位！</p>
     </div>
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">聯絡我們<br>電話:(02)2821-4986<br></p>
