@@ -60,6 +60,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       而且石牌藥局擁有豐沛的醫療器材、母嬰用品與藥品等類別的產品，讓顧客能便利的挑選，同時，石牌藥局還會提供專業護理的概念給客人，
       做為社區的健康好幫手，石牌藥局能夠使消費者擁有最專業、最安心、最齊全的體會，推薦給各位！</p>
     </div>
+   
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">聯絡我們<br>電話:(02)2821-4986<br></p>
       <p class="w3-border w3-padding-large w3-padding-64 w3-center">營業時間:<br>星期一	09:00–23:00<br>星期二	09:00–23:00<br>星期三	09:00–23:00<br>星期四	09:00–23:00<br>星期五	09:00–23:00<br>星期六	09:00–22:00<br>星期日	休息<br>
@@ -93,19 +94,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
     </div>
   </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a class="w3-button w3-black" href="#">1</a>
-      <a class="w3-button w3-hover-black" href="#">2</a>
-      <a class="w3-button w3-hover-black" href="#">3</a>
-      <a class="w3-button w3-hover-black" href="#">4</a>
-      <a class="w3-button w3-hover-black" href="#">5</a>
-      <a class="w3-button w3-hover-black" href="#">»</a>
-    </div>
-  </div>
-
 
 
 </body>
