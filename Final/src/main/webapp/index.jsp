@@ -55,7 +55,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1>石牌藥局</h1>
+      <h1>藥局介紹</h1>
       <p>石牌藥局不單具有完好的醫療資源，還有豐富的照護經驗及專業的職員培訓，期望能夠帶給客戶安心、溫馨又仔細的保健服務，
       而且石牌藥局擁有豐沛的醫療器材、母嬰用品與藥品等類別的產品，讓顧客能便利的挑選，同時，石牌藥局還會提供專業護理的概念給客人，
       做為社區的健康好幫手，石牌藥局能夠使消費者擁有最專業、最安心、最齊全的體會，推薦給各位！</p>
@@ -106,42 +106,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     </div>
   </div>
 
-  <footer id="myFooter">
-    <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>Footer</h4>
-    </div>
-
-    <div class="w3-container w3-theme-l1">
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </div>
-  </footer>
-
-<!-- END MAIN -->
-</div>
-
-<script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
-
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
 </script>
 
 </body>
