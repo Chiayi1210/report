@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=BIG5"
     pageEncoding="utf-8"%>
-<head>石牌藥局
-<title>石牌藥局線上預約系統</title>
+<head>慢性處分笺預約系統
+<title>慢性連續處方箋預約</title>
 <body style="background-color:#D3D3D3;">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -120,4 +120,4 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 
 </body>
-</html>ㄋ
+</html>
