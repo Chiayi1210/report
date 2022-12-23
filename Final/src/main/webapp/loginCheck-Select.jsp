@@ -46,7 +46,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 50%;
+  width: 53%;
 }
 
 button:hover {
@@ -75,7 +75,7 @@ img.avatar {
 
 span.psw {
   float: right;
-  padding-top: 16px;
+  padding-top: 50px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -85,7 +85,7 @@ span.psw {
      float: none;
   }
   .signbtn {
-     width: 70%;
+     width: 50%;
   }
 }
 </style>
@@ -105,7 +105,7 @@ span.psw {
 	<%}%>
     <button type="submit" name="loginButton">µn¤J</button>
 </div>
-<div class="container" style="background-color:#f1f1f1">
+<div class="container" style="background-color:#white">
 	<a href="signup.jsp" class="signbtn">µù¥U</a>
     
   </div>
