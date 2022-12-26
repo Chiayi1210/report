@@ -3,7 +3,19 @@
 
 <!DOCTYPE html>
 <html>
-<head><title>註冊</title></head>
+<head><title>註冊</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
@@ -42,10 +54,13 @@ span.memberpwd {
 
 </style>
 <body>
+<header class="w3-container w3-red w3-center" style="padding:25px 16px">
+  <h1 class="w3-margin w3-jumbo">註冊</h1>
+  </header>
 <form action="loginCheck-Select.jsp" method="get" style="border:1px solid #ccc">
   <div class="container">
-    <h1>註冊</h1>
-    <p>請先建立一個帳號</p>
+    <h1> 請先建立一個帳號</h1>
+  
     <hr>
 
     <label for="memberid"><b>帳號</b></label>
@@ -56,7 +71,7 @@ span.memberpwd {
 
     <div class="clearfix">
       <button type="submit" class="signupbtn">註冊</button>
-      <button type="reset" class="cancelbtn">取消</button>
+      <button class="cancelbtn"><botton onclick="document.location='loginCheck-Select.jsp'">取消</botton></button>
     </div>
   </div>
 </form>

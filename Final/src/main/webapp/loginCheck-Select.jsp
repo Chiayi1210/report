@@ -24,7 +24,19 @@ if(request.getParameter("memberid") !=null &&
 }
 %>
 <html>
-<head><title>石牌診所-登入</title></head>
+<head><title>石牌藥局-登入</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -74,7 +86,7 @@ img.avatar {
 }
 
 span.psw {
-  float: right;
+  float: center;
   padding-top: 50px;
 }
 
@@ -90,9 +102,11 @@ span.psw {
 }
 </style>
 <body>
-<h2>登入</h2>
+<header class="w3-container w3-red w3-center" style="padding:25px 16px">
+  <h1 class="w3-margin w3-jumbo">登入</h1>
+  </header>
 <form action="index.jsp" method="post">
-<div class="container">
+<center><div class="container">
 	<label for="memberid"><b>帳號</b></label>
     <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
 	<% if(request.getParameter("memberid")!= null){ %>
@@ -107,8 +121,8 @@ span.psw {
 </div>
 <div class="container" style="background-color:#white">
 	<a href="signup.jsp" class="signbtn">註冊</a>
-    
-  </div>
+	<a href="index.jsp" class="signbtn">取消</a>
+  </center>
 </form>
 </body>
 </html>
