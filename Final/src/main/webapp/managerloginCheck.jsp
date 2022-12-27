@@ -120,7 +120,6 @@ span.psw {
     <button type="submit" name="loginButton">µn¤J</button>
 </div>
 <div class="container" style="background-color:#white">
-	<a href="signup.jsp" class="signbtn">µù¥U</a>
 	<a href="index.jsp" class="signbtn">¨ú®ø</a>
   </center>
 </form>

@@ -28,7 +28,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-red w3-center" style="padding:40px 16px">
   <h1 class="w3-margin w3-jumbo">查詢/更改/取消預約</h1>
   </header>
- <h2 class="w3-margin w3-jumbo">HELLO</h2>
+ <h4 class="w3-margin w3-jumbo">這邊要做一個表格(會有預約的日期和細節 取消原因) </h4>
 </div>
 </body>
 </html>

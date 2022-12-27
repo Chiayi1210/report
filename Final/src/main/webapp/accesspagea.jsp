@@ -16,7 +16,7 @@ if(session.getAttribute("access") !="y"){
  <%if(session.getAttribute("access") == "y"){%>
   <input type="submit" value="µn¥X" name="logout">
  <%}else{%>
- <a href="loinCheck-Select.jsp">µn¤J</a>
+ <a href="loginCheck-Select.jsp">µn¤J</a>
  <%}%>
 </form>
 </body>
