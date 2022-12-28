@@ -54,12 +54,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-third w3-center">
-    </div>
-
     <div class="w3-twothird">
       <h1>聯絡資訊</h1>
-      <h5 class="w3-padding-32">電話:(02)2821-4986<br><br>地址:台北市北投區石牌路一段49號<br><br>
+      <h5 class="w3-padding-32">電話:(02)2821-4986<br><br>地址:台北市北投區石牌路一段49號<br>
 營業時間:<br>
 星期一 09:00–23:00<br>
 星期二 09:00–23:00<br>
@@ -67,13 +64,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 星期四 09:00–23:00<br>
 星期五 09:00–23:00<br>
 星期六 09:00–22:00<br>
-星期日 休息
-</h5>
+星期日 休息</h5>
+
+      <p class="w3-text-grey"></p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class=" w3-padding-64 "><img  src="pic/pic.png" ></i>
     </div>
   </div>
 </div>
-
-
 </body>
 </html>
     

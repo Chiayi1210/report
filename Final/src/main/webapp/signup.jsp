@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=BIG5"
-    pageEncoding="BIG5"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
-<head><title>���U</title>
+<head><title>註冊</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -55,23 +55,27 @@ span.memberpwd {
 </style>
 <body>
 <header class="w3-container w3-red w3-center" style="padding:25px 16px">
-  <h1 class="w3-margin w3-jumbo">���U</h1>
+  <h1 class="w3-margin w3-jumbo">註冊</h1>
   </header>
 <form action="signup-InsertInto.jsp" method="get" style="border:1px solid #ccc">
   <div class="container">
-    <h1> �Х��إߤ@�ӱb��</h1>
+    <h1> 請先建立一個帳號</h1>
   
     <hr>
-
-    <label for="memberid"><b>�b��</b></label>
-    <input type="text" placeholder="�п�J�b��(�q�l�H�c)" name="memberid" required><br>
-
-    <label for="memberpwd"><b>�K�X</b></label>
-    <input type="password" placeholder="�п�J�K�X" name="memberpwd" required>
+    <label for="name"><b>姓名</b></label>
+    <input type="text" placeholder="請輸入姓名" name="name" required><br>
+    <label for="id"><b>身分證字號</b></label>
+    <input type="text" placeholder="請輸入身分證字號" name="id" required><br>
+    <label for="phone"><b>連絡電話</b></label>
+    <input type="text" placeholder="請輸入連絡電話" name="phone" required><br>
+    <label for="memberid"><b>帳號</b></label>
+    <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
+    <label for="memberpwd"><b>密碼</b></label>
+    <input type="password" placeholder="請輸入密碼" name="memberpwd" required>
 
     <div class="clearfix">
-      <button type="submit" class="signupbtn">���U</button>
-      <button class="cancelbtn"><botton onclick="document.location='loginCheck-Select.jsp'">����</botton></button>
+      <button type="submit" class="signupbtn">註冊</button>
+      <button class="cancelbtn"><botton onclick="document.location='loginCheck-Select.jsp'">取消</botton></button>
     </div>
   </div>
 </form>
