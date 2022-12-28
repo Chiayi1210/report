@@ -25,7 +25,7 @@ if(request.getParameter("memberid") !=null &&
 }
 %>
 <html>
-<head><title>石牌藥局-登入</title>
+<head><title>石牌藥局-管理者登入</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -121,8 +121,8 @@ span.psw {
     <button type="submit" name="loginButton">登入</button>
 </div>
 <div class="container" style="background-color:#white">
-	<a href="index.jsp" class="signbtn">取消</a>
-  </center>
+	<a href="index.jsp" class="signbtn">取消</a></div>
+</center>
 </form>
 </body>
 </html>

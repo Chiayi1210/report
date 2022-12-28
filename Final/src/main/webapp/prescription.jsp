@@ -162,7 +162,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                                                             
                                                         </select>
                                                         <br>
-                                                        <span style="color:red">1700時後，無法預約次日領藥</span>
+                                                        <span style="color:red">無故未領取將不受領線上預約</span>
                                                     </h3>
                                                 </div>
                                             </div>
@@ -208,47 +208,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                                                         <input type="text" class="form-control" placeholder="出生日期" id="birthday" name="birthday" title="出生日期" required maxlength="7" onkeyup="return ValidateNumber(this, value)" inputmode="numeric">
                                                     </div>
                                                     <br />
-                                                    <p class="">
+                                                    
                                                         <h4>請輸入民國年格式：民國99年1月1日，如0990101</h4>
-                                                    </p>
-                                                </div>
-                                            </div>
 
-                                         <div class="row control-group col-xs-12">
-                                              <div class="input-group">
-                                                  <span class="input-group-addon">
-                                                       <i class="fa fa-credit-card-alt" title=""></i>
-                                                  </span>
-                                         <div id="s1" class="w-100">
-                                             <H3>慢性病卡號1<span style="color:red;">*(請至少輸入一個慢性病卡號即可)</span></H3>
-                                             <input type="text" class="form-control" placeholder="慢性病卡號1" id="ssno1" name="ssno1" maxlength="10" title="慢性病卡號1" value="" required inputmode="numeric">
-                                             <input type="button" class="btn btn-success" style="background-color:#02326c;border-color:#02326c;" onclick="ClearFields('1');" value="清除"  />
-                                             <label id="DEPT1"></label>
-                                         </div>
-                                         <div id="s2" class="w-100">
-                                            <H3>慢性病卡號2</H3>
-                                            <input type="text" class="form-control" placeholder="慢性病卡號2" id="ssno2" name="ssno2" maxlength="10" title="慢性病卡號2" value="" width="5px"  inputmode="numeric">
-                                            <input type="button" class="btn btn-success" style="background-color:#02326c;border-color:#02326c;" onclick="ClearFields('2');" value="清除" />
-                                            <label id="DEPT2"></label>
-                                        </div>
-                                        <div id="s3" class="w-100">
-                                            <H3>慢性病卡號3</H3>
-                                            <input type="text" class="form-control" placeholder="慢性病卡號3" id="ssno3" name="ssno3" maxlength="10" title="慢性病卡號3" value=""  inputmode="numeric">
-                                             <input type="button" class="btn btn-success" style="background-color:#02326c;border-color:#02326c;" onclick="ClearFields('3');" value="清除" />
-                                             <label id="DEPT3"></label>
-                                       </div>
-                                       <div id="s4" class="w-100">
-                                            <H3>慢性病卡號4</H3>
-                                            <input type="text" class="form-control" placeholder="慢性病卡號4" id="ssno4" name="ssno4" maxlength="10" title="慢性病卡號4" value=""  inputmode="numeric">
-                                            <input type="button" class="btn btn-success" style="background-color:#02326c;border-color:#02326c;" onclick="ClearFields('4');" value="清除"  />
-                                            <label id="DEPT4"></label>
-                                        </div>
-                                        <div id="s5" class="w-100">
-                                            <H3>慢性病卡號5</H3>
-                                            <input type="text" class="form-control" placeholder="慢性病卡號5" id="ssno5" name="ssno5" maxlength="10" title="慢性病卡號5" value="" inputmode="numeric">
-                                            <input type="button" class="btn btn-success" style="background-color:#02326c;border-color:#02326c;" onclick="ClearFields('5');" value="清除" />
-                                            <label id="DEPT5"></label>
-                                        </div>
+                                                </div>
+       
                                       </div>
                                   </div>
 
@@ -287,24 +251,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                             </div>
     </section>
 </form>
-
-
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12" style="color:white">
-                        Copyright &copy; TSGH 2022
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    
-
     <!-- Bootstrap Core JavaScript -->
     <script src="/WebRegSlow/Scripts/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
