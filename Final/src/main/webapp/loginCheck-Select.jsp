@@ -105,7 +105,7 @@ span.psw {
 <header class="w3-container w3-red w3-center" style="padding:25px 16px">
   <h1 class="w3-margin w3-jumbo">登入</h1>
   </header>
-<form action="index.jsp" method="post">
+<form action="homepage.jsp" method="post">
 <center><div class="container">
 	<label for="memberid"><b>帳號</b></label>
     <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
