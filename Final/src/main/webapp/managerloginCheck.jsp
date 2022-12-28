@@ -1,3 +1,4 @@
+
 <%@page contentType="text/html"%>
 <%@page pageEncoding="BIG5"%>
 <%@page import="java.sql.*"%>
@@ -108,7 +109,7 @@ span.psw {
 <form action="index.jsp" method="post">
 <center><div class="container">
 	<label for="memberid"><b>帳號</b></label>
-    <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
+    <input type="text" placeholder="請輸入帳號" name="memberid" required><br>
 	<% if(request.getParameter("memberid")!= null){ %>
 		value = '<%=request.getParameter("memberid") %>'
 	<%}%>
