@@ -15,7 +15,7 @@
 	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
 	smt.execute("INSERT INTO member (memberid, memberpwd) VALUES('"+memberid+"','"+memberpwd+"')");
 	con.close();
-	response.sendRedirect("loginCheak-Select.jsp");
+	response.sendRedirect("loginCheck-Select.jsp");
 	%>
 </body>
 </html>

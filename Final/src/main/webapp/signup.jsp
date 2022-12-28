@@ -57,7 +57,7 @@ span.memberpwd {
 <header class="w3-container w3-red w3-center" style="padding:25px 16px">
   <h1 class="w3-margin w3-jumbo">註冊</h1>
   </header>
-<form action="loginCheck-Select.jsp" method="get" style="border:1px solid #ccc">
+<form action="signup-InsertInto.jsp" method="get" style="border:1px solid #ccc">
   <div class="container">
     <h1> 請先建立一個帳號</h1>
   
