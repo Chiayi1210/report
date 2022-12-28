@@ -86,6 +86,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 </style>
  <h2><center>預約資料登記</center></h2>
- <body>領藥日期:</body>
- 
+ <center><label for='massage'>選擇預約日期：</label>
+<input type="date" id="massage">
+<script>
+var date = document.getElementById('massage'),
+function noSundays(e){
+  // Days in JS range from 0-6 where 0 is Sunday and 6 is Saturday
+  var day = new Date(e.target.value).getUTCDay();
+  if ( day == 0 ){
+    e.target.setCustomValidity('不可選擇週日！');
+  } else {
+    e.target.setCustomValidity('');
+  }
+}
+date.addEventListener('input',noSundays);
+</script></center>
+<style>
+input:invalid {
+  background-color: #E00;
+}
+</style>
+
  
