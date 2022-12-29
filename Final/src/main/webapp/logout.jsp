@@ -8,7 +8,7 @@ if(session.getAttribute("access") !="n"){
 	session.removeAttribute("accessid");
 	//session.invalidate();
 	out.println("您已成功登出！<br>");
-	out.println("<a href='logina.jsp'>登入</a>");
+	out.println("<a href='homepage.jsp'>登入</a>");
 }else{
 	response.sendRedirect("loginCheak-Select.jsp");
 }
