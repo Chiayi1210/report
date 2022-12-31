@@ -6,7 +6,7 @@
 <% session.setAttribute("access","n");
 if(request.getParameter("memberid") !=null &&
 	request.getParameter("memberpwd") !=null){
-	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement
 			(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
@@ -18,7 +18,7 @@ if(request.getParameter("memberid") !=null &&
 		session.setAttribute("access","y");
 		session.setAttribute("accessid",request.getParameter("memberid"));
 		session.setMaxInactiveInterval(5);
-		response.sendRedirect("accesspagea.jsp");
+		response.sendRedirect("index.jsp");
 	}else
 		out.println("帳號密碼不符！請重新登入");
 }
@@ -105,7 +105,8 @@ span.psw {
 <header class="w3-container w3-red w3-center" style="padding:25px 16px">
   <h1 class="w3-margin w3-jumbo">登入</h1>
   </header>
-<form action="homepage.jsp" method="post">
+<form  method="post">
+
 <center><div class="container">
 	<label for="memberid"><b>帳號</b></label>
     <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
