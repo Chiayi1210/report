@@ -59,10 +59,10 @@ span.memberpwd {
   </header>
 <form action="signup-InsertInto.jsp" method="get" style="border:1px solid #ccc">
   <div class="container">
-    <center><h1> 請先建立一個帳號</h1></center>
+    <center><h1> 請先建立一個帳號</h1>
   
     <hr>
-    <center><label for="name"><b>姓名</b></label>
+    <label for="name"><b>姓名</b></label>
     <input type="text" placeholder="請輸入姓名" name="name" required ><br>
     <label for="id"><b>身分證字號</b></label>
     <input type="text" placeholder="請輸入身分證字號" name="id" required><br>
@@ -75,9 +75,10 @@ span.memberpwd {
 
     <div class="clearfix">
       <button type="submit" class="signupbtn">註冊</button>
-      <button class="cancelbtn"><botton onclick="document.location='loginCheck-Select.jsp'">取消</botton></button></center>
+      <button class="cancelbtn" onclick="document.location='loginCheck-Select.jsp'">取消</button>
     </div>
-  </div>
+</div>
+</center>
 </form>
 </body>
 </html>
