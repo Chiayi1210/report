@@ -6,7 +6,7 @@ if(session.getAttribute("access") !="y"){
 }else{
  out.println("登入成功<br>");
  out.println("登入者："+
-   session.getAttribute("naame")+"！<br>");
+   session.getAttribute("name")+"！<br>");
 }
 %>
 <html>
