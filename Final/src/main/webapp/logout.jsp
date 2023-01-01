@@ -5,12 +5,12 @@
 <body>
 <%
 if(session.getAttribute("access") !="n"){
-	session.removeAttribute("memberid");
-	//session.invalidate();
+	session.removeAttribute("accessid");
+	//session.invalidate("memberid");
 	out.println("您已成功登出！<br>");
-	out.println("<a href='index.jsp'>登入</a>");
+	out.println("<a href='index.jsp'>回首頁</a>");
 }else{
-	response.sendRedirect("loginCheak-Select.jsp");
+	response.sendRedirect("index.jsp");
 }
 %>	
 </body>
