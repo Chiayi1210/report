@@ -107,22 +107,23 @@ span.psw {
   </header>
 <form  method="post">
 
-<center><div class="container">
+<center>
+<div class="container">
 	<label for="memberid"><b>帳號</b></label>
     <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
 	<% if(request.getParameter("memberid")!= null){ %>
-		value = '<%=request.getParameter("memberid") %>'
+		
 	<%}%>
     <label for="memberpwd"><b>密碼</b></label>
     <input type="password" placeholder="請輸入密碼" name="memberpwd" required>
     <% if(request.getParameter("memberpwd")!= null){ %>
-		value = '<%=request.getParameter("memberpwd") %>'
+		
 	<%}%>
     <button type="submit" name="loginButton">登入</button>
 </div>
 <div class="container" style="background-color:#white">
 	<a href="signup.jsp" class="signbtn">註冊</a>
-	<a href="index.jsp" class="signbtn">取消</a>
+	<a href="index.jsp" class="signbtn">取消</a></div>
   </center>
 </form>
 </body>
