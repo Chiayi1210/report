@@ -35,7 +35,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-bar w3-red w3-card w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large w3-white">首頁</a>
-      <a href="prescription.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">慢性病連續處方箋預約</a>
+      <a href="Checkin-p.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">慢性病連續處方箋預約</a>
       <a href="Edit.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">查詢/更改/取消預約</a>
     </div>
   </div>
@@ -43,8 +43,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <header class="w3-container w3-red w3-center" style="padding:128px 16px">
    <h1 class="w3-margin w3-jumbo">歡迎光臨</h1>
    <p class="w3-xlarge">石牌藥局預約系統</p>
-   <input type="submit" value="登出" name="logout" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >
-
+   <a href="logout.jsp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >登出</a>
+  </header>
    </header>
 <%}else{%>
 

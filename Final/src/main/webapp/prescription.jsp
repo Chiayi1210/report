@@ -101,6 +101,7 @@ function noSundays(e){
 }
 date.addEventListener('input',noSundays);
 </script></center>
+<center><label for='massage'>選擇時間：</label>
 <style>
 input:invalid {
   background-color: #E00;
