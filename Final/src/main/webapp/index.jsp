@@ -1,13 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=BIG5"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%><%@page import="java.sql.*"%>
+
 <%
 if(session.getAttribute("access") !="y"){
  out.println("您無權存取此網頁，請先登入！");
 }else{
  out.println("登入成功<br>");
- 
+ out.println("登入者："+
+			session.getAttribute("accessid")+"！<br>");
 }
-%>    
+%> 
 <html lang="en">
 <head>
 <title>石牌藥局線上預約系統</title>
@@ -23,42 +25,45 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
 </head>
+
+
 <body>
-<form method="post" action="index.jsp">
+
+<form method="post" action="'logout.jsp" >
 <%if(session.getAttribute("access") == "y"){%>
-<div class="w3-top">
-  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large w3-white">首頁</a>
-    <a href="prescription.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">慢性病連續處方箋預約</a>
-    <a href="Edit.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">查詢/更改/取消預約</a>
+   <div class="w3-top">
+    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large w3-white">首頁</a>
+      <a href="prescription.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">慢性病連續處方箋預約</a>
+      <a href="Edit.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">查詢/更改/取消預約</a>
+    </div>
   </div>
-</div>
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-<h1 class="w3-margin w3-jumbo" session.getAttribute("memberid")>"歡迎光臨，"+
-   +"！");</h1>
-  <p class="w3-xlarge">石牌藥局預約系統</p>
-  <a href="logout.jsp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >登出</a>
-</header>
+  <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+   <h1 class="w3-margin w3-jumbo">歡迎光臨</h1>
+   <p class="w3-xlarge">石牌藥局預約系統</p>
+   <input type="submit" value="登出" name="logout" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >
+
+   </header>
 <%}else{%>
 
 <!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+  <div class="w3-top">
+   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large w3-white">首頁</a>
     <a href="index.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">慢性病連續處方箋預約</a>
     <a href="index.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">查詢/更改/取消預約</a>
+   </div>
   </div>
-</div>
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-<h1 class="w3-margin w3-jumbo">歡迎光臨</h1>
-  <p class="w3-xlarge">石牌藥局預約系統</p>
-  <a href="loginCheck-Select.jsp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >登入</a>
-
-</header>	<%}%>
+  <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+   <h1 class="w3-margin w3-jumbo">歡迎光臨</h1>
+   <p class="w3-xlarge">石牌藥局預約系統</p>
+   <a href="loginCheck-Select.jsp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >登入</a>
+  </header>
+<%}%>
 </form>
 
 
