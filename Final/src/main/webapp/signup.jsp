@@ -63,19 +63,19 @@ span.memberpwd {
   
     <hr>
     <label for="name"><b>姓名</b></label>
-    <input type="text" placeholder="請輸入姓名" name="name" required ><br>
+      <input type="text" placeholder="請輸入姓名" name="name" required ><br>
     <label for="id"><b>身分證字號</b></label>
-    <input type="text" placeholder="請輸入身分證字號" name="id" required><br>
+      <input type="text" placeholder="請輸入身分證字號" name="id" required><br>
     <label for="phone"><b>連絡電話</b></label>
-    <input type="text" placeholder="請輸入連絡電話" name="phone" required><br>
+      <input type="text" placeholder="請輸入連絡電話" name="phone" required><br>
     <label for="memberid"><b>帳號</b></label>
-    <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
+      <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
     <label for="memberpwd"><b>密碼</b></label>
-    <input type="password" placeholder="請輸入密碼" name="memberpwd" required><br>
+      <input type="password" placeholder="請輸入密碼" name="memberpwd" required><br>
 
     <div class="clearfix">
-      <button type="submit" class="signupbtn">註冊</button>
-      <button class="cancelbtn" onclick="document.location='loginCheck-Select.jsp'">取消</button>
+       <button type="submit" class="signupbtn">註冊</button>
+       <button class="cancelbtn" onclick="document.location='loginCheck-Select.jsp'">取消</button>
     </div>
 </div>
 </center>

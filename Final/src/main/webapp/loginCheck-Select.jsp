@@ -18,7 +18,7 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 		session.setAttribute("access","y");
 		session.setAttribute("accessid",request.getParameter("memberid"));
 		session.setAttribute("accessname",request.getParameter("name"));
-		session.setMaxInactiveInterval(5);
+		session.setMaxInactiveInterval(10);
 		response.sendRedirect("index.jsp");
 	}else
 		out.println("帳號密碼不符！請重新登入");

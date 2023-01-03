@@ -39,16 +39,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <a href="Edit.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">查詢/更改/取消預約</a>
     </div>
   </div>
-<!-- Header -->
+<!-- 登出頁 -->
   <header class="w3-container w3-red w3-center" style="padding:128px 16px">
    <h1 class="w3-margin w3-jumbo">歡迎光臨，<%out.println(session.getAttribute("accessname"));%></h1>
    <p class="w3-xlarge">石牌藥局預約系統</p>
-   <a href="logout.jsp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >登出</a>
+   <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='logout.jsp'">登出</button>
   </header>
    </header>
 <%}else{%>
 
-<!-- Navbar -->
+<!-- 上排 -->
   <div class="w3-top">
    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
@@ -57,7 +57,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="index.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">查詢/更改/取消預約</a>
    </div>
   </div>
-<!-- Header -->
+<!-- 登入頁 -->
   <header class="w3-container w3-red w3-center" style="padding:128px 16px">
    <h1 class="w3-margin w3-jumbo">歡迎光臨</h1>
    <p class="w3-xlarge">石牌藥局預約系統</p>
@@ -67,7 +67,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </form>
 
 
-<!-- First Grid -->
+<!--關於我們-->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
@@ -83,12 +83,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
 
-<!-- Second Grid -->
+<!-- 聯絡資訊 -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>聯絡資訊</h1>
-      <h5 class="w3-padding-32">電話：(02)2821-4986<br>
+      <h2>聯絡資訊</h2>
+      <h5 class="w3-padding-32">
+      電話：(02)2821-4986<br>
       <br>地址：台北市北投區石牌路一段49號
       <br>營業時間：
       <br>星期一 09:00–23:00

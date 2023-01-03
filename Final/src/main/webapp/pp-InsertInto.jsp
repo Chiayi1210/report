@@ -9,17 +9,17 @@
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-	String name =request.getParameter("name");
-	String id =request.getParameter("id");
-	String phone =request.getParameter("phone");
-	String memberid =request.getParameter("memberid");
-	String memberpwd =request.getParameter("memberpwd");
+	String date =request.getParameter("date");
+	String time =request.getParameter("time");
+	String cnumber1 =request.getParameter("cnumber1");
+	String cnumber2 =request.getParameter("cnumber2");
+	String cnumber3 =request.getParameter("cnumber3");
 	//String sql;
 	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
-	smt.execute("INSERT INTO member (name, id, phone, memberid, memberpwd) VALUES('"+name+"','"+id+"','"+phone+"','"+memberid+"','"+memberpwd+"')");
+	smt.execute("INSERT INTO prescription (date, time, cnumber1, cnumber2, cnumber3) VALUES('"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	con.close();
-	response.sendRedirect("loginCheck-Select.jsp");
-	out.println("您已成功註冊！");
+	response.sendRedirect("success.jsp");
+	out.println("您已成功預約！");
 	%>
 </body>
 </html>
