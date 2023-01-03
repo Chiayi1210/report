@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <!--連續處方簽預約網頁 -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>石牌藥局線上預約系統</title>
@@ -37,7 +36,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <h3>電話號碼:</h3>
 <h3>電子信箱:</h3><br>
 </center>
-<center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><botton onclick="document.location='prescription.jsp'">確認</button></button></center>
+<center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='prescription.jsp'">確認</button></center>
  
 </body>
 </html>
