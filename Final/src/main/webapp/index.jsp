@@ -1,15 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%><%@page import="java.sql.*"%>
 
-<%
-if(session.getAttribute("access") !="y"){
- out.println("您無權存取此網頁，請先登入！");
-}else{
- out.println("登入成功<br>");
- out.println("登入者："+
-			session.getAttribute("accessid")+"！<br>");
-}
-%> 
+
 <html lang="en">
 <head>
 <title>石牌藥局線上預約系統</title>
@@ -26,11 +18,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </style>
 </head>
 
-
 <body>
 
-<form method="post" action="'logout.jsp" >
-<%if(session.getAttribute("access") == "y"){%>
+<form method="post" action="logout.jsp" >
+<%if (session.getAttribute("access") == "y"){%>
+
    <div class="w3-top">
     <div class="w3-bar w3-red w3-card w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
