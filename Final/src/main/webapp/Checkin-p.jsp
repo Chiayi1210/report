@@ -20,7 +20,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="indexsjsp" class="w3-bar-item w3-button w3-padding-large w3-hover-white">首頁</a>
+    <a href="indexs.jsp" class="w3-bar-item w3-button w3-padding-large w3-hover-white">首頁</a>
     <a href="Checkin-p" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">慢性病連續處方箋預約</a>
     <a href="Edit.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">查詢/更改/取消預約</a>
   </div>
@@ -30,22 +30,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <h1 class="w3-margin w3-jumbo">慢性病連續處方笺預約</h1>
   </header>
 <body >
-<%
-if(session.getAttribute("access") !="y"){%>
 <center><h1>確認您的資料</h1>
-<h3>姓名: <%out.println(session.getAttribute("name"));%></h3>
-<h3>身分證字號:<%out.println(session.getAttribute("id"));%></h3>
-<h3>電話號碼:<%out.println(session.getAttribute("phone"));%></h3>
-<h3>電子信箱:<%out.println(session.getAttribute("email"));%></h3><br>
+<h3>姓名:</h3>
+<h3>身分證字號:</h3>
+<h3>電話號碼:</h3>
+<h3>電子信箱:</h3><br>
 </center>
 <center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='prescription.jsp'">確認</button></center>
-<<<<<<< HEAD
-  <%}else{%>
-  <h1>系統錯誤</h1>
-   <%}%>
-=======
- 
->>>>>>> 2527da62f760cef82026de7846ca9c7bba0f9e8d
 </body>
 </html>
  

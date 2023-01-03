@@ -37,7 +37,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
    <p class="w3-xlarge">石牌藥局預約系統</p>
    <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='logout.jsp'">登出</button>
   </header>
-   </header>
+  
 <%}else{%>
 
 <!-- 上排 -->
@@ -57,8 +57,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </header>
 <%}%>
 </form>
-
-
 <!--關於我們-->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
