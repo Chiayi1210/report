@@ -104,25 +104,26 @@ date.addEventListener('input',noSundays);
 <center><label for='massage'>選擇時間：</label>
 <select>
 <option>請選擇</option>
-    <option>9:00~10:00</option>
     <option>10:00~11:00</option>
     <option>11:00~12:00</option>
     <option>12:00~13:00</option>
-    <option>13:00~14:00</option>
     <option>14:00~15:00</option>
     <option>15:00~16:00</option>
     <option>16:00~17:00</option>
     <option>17:00~18:00</option>
-    <option>18:00~19:00</option>
     <option>19:00~20:00</option>
     <option>20:00~21:00</option>
     <option>21:00~22:00</option>
     <option>22:00~23:00</option>
-</select>
+</select><br><br>
+<form action="/action_page.php">
+  <label for="cnumber">慢性病卡號1：</label>
+  <input type="text" id="cunmber" name="cnumber"><br><br>
+  <label for="cnumber">慢性病卡號2：</label>
+  <input type="text" id="cunmber" name="cnumber"><br><br>
+  <label for="cnumber">慢性病卡號3：</label>
+  <input type="text" id="cunmber" name="cnumber"><br><br>
+</form>
 <center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><botton onclick="document.location='prescription.jsp'">確認</button></button></center>
-<style>
-  background-color: #E00;
-}
-</style>
 </html>
  
