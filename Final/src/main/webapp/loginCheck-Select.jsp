@@ -17,6 +17,7 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	if(paperrs.next()){
 		session.setAttribute("access","y");
 		session.setAttribute("accessid",request.getParameter("memberid"));
+		session.setAttribute("accessname",request.getParameter("name"));
 		session.setMaxInactiveInterval(5);
 		response.sendRedirect("index.jsp");
 	}else

@@ -41,8 +41,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 <!-- Header -->
   <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-   <h3><%out.println(session.getAttribute("name"));%></h3>
-   <h1 class="w3-margin w3-jumbo">歡迎光臨</h1>
+   <h1 class="w3-margin w3-jumbo">歡迎光臨，<%out.println(session.getAttribute("accessname"));%></h1>
    <p class="w3-xlarge">石牌藥局預約系統</p>
    <a href="logout.jsp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >登出</a>
   </header>
