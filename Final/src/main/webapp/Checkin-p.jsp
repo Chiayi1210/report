@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <!--連續處方簽預約網頁 -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>石牌藥局線上預約系統</title>
@@ -40,9 +39,13 @@ if(session.getAttribute("access") !="y"){%>
 <h3>電子信箱:<%out.println(session.getAttribute("email"));%></h3><br>
 </center>
 <center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='prescription.jsp'">確認</button></center>
+<<<<<<< HEAD
   <%}else{%>
   <h1>系統錯誤</h1>
    <%}%>
+=======
+ 
+>>>>>>> 2527da62f760cef82026de7846ca9c7bba0f9e8d
 </body>
 </html>
  

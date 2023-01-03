@@ -16,7 +16,7 @@
 	String cnumber3 =request.getParameter("cnumber3");
 	//String sql;
 	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
-	smt.execute("INSERT INTO prescription (date, time, cnumber1, cnumber2, cnumber3) VALUES('"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
+	smt.execute("INSERT INTO prescription VALUES('"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	con.close();
 	response.sendRedirect("success.jsp");
 	out.println("您已成功預約！");
