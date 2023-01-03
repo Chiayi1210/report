@@ -31,14 +31,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <h1 class="w3-margin w3-jumbo">慢性病連續處方笺預約</h1>
   </header>
 <body >
+<%
+if(session.getAttribute("access") !="y"){%>
 <center><h1>確認您的資料</h1>
-<h3>姓名:</h3>
-<h3>身分證字號:</h3>
-<h3>電話號碼:</h3>
-<h3>電子信箱:</h3><br>
+<h3>姓名: <%out.println(session.getAttribute("name"));%></h3>
+<h3>身分證字號:<%out.println(session.getAttribute("id"));%></h3>
+<h3>電話號碼:<%out.println(session.getAttribute("phone"));%></h3>
+<h3>電子信箱:<%out.println(session.getAttribute("email"));%></h3><br>
 </center>
-<center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><botton onclick="document.location='prescription.jsp'">確認</button></button></center>
- 
+<center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='prescription.jsp'">確認</button></center>
+  <%}else{%>
+  <h1>系統錯誤</h1>
+   <%}%>
 </body>
 </html>
  
