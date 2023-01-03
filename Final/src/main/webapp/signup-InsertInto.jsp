@@ -19,7 +19,6 @@
 	smt.execute("INSERT INTO member (name, id, phone, memberid, memberpwd) VALUES('"+name+"','"+id+"','"+phone+"','"+memberid+"','"+memberpwd+"')");
 	con.close();
 	response.sendRedirect("loginCheck-Select.jsp");
-	out.println("您已成功註冊！");
 	%>
 </body>
 </html>

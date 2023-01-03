@@ -19,7 +19,6 @@
 	smt.execute("INSERT INTO prescription VALUES('"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	con.close();
 	response.sendRedirect("success.jsp");
-	out.println("您已成功預約！");
 	%>
 </body>
 </html>
