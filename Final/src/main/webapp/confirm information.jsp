@@ -1,17 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   
     <!--連續處方簽預約網頁 -->
 <html lang="en">
-<%
-if(session.getAttribute("access") !="y"){
- out.println("預約失敗！");
-}else{
- out.println("預約成功<br>");
- out.println(session.getAttribute("accesscnumber1")+"已預約成功，記得攜帶健保卡來店取藥，我們將以電子信箱提醒您"
-			+"！<br>");
-}
-%> 
 <head>
 <title>石牌藥局線上預約系統</title>
 <meta charset="UTF-8">
@@ -30,10 +20,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large w3-hover-white">首頁</a>
-    <a href="prescriptio.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">慢性病連續處方箋預約</a>
+    <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large w3-hover-white" type="submit">首頁</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">慢性病連續處方箋預約</a>
     <a href="Edit.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">查詢/更改/取消預約</a></div>
-    
+</div>  
 <header class="w3-container w3-red w3-center" style="padding:40px 16px">
   <h1 class="w3-margin w3-jumbo">慢性病連續處方笺預約</h1>
   </header>
@@ -94,10 +84,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     }
 
 </style>
-<center><h2>預約資料登記</h2>
-<h3>這裡是成功</h3>
-</center>
+ <h2><center>確認預約資料</center></h2>
+ <form action="success.jsp">
+ <div><center><label for='massage'>
+ 病人姓名:
+<br>身分證字號:
+<br>連絡電話:
+<br>電子信箱:
 
+<br><br>領藥人姓名:
+<br>領藥人電話:
 
-</html>
- 
+<br><br>領藥時段為:
+<br>OO/OO
+<br>XX:XX-XX:XX
+
+<br><br>第二次領藥
+<br>慢箋號碼為</label>
+
+<br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
+
