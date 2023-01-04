@@ -84,51 +84,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     }
 
 </style>
- <h2><center>預約資料登記</center></h2>
-	<form action="pp-InsertInto.jsp">
-		<div>
-		  <center><h3 value="<%out.print(session.getAttribute("accessname"));%>">姓名：<%out.print(session.getAttribute("accessname"));%></h3><br>
-				<label for='massage'>選擇預約日期：</label> <input type="date" name="date">
-				<script>
-                  var date = document.getElementById('massage'),
-                  function noSundays(e){
-                  // Days in JS range from 0-6 where 0 is Sunday and 6 is Saturday
-                  var day = new Date(e.target.value).getUTCDay();
-                  if ( day == 0 ){
-                  e.target.setCustomValidity('不可選擇週日！');
-                  } else {
-                  e.target.setCustomValidity('');
-                  date.addEventListener('input',noSundays);
-                  }
-                  }
-                </script>
-			</center>
-			<br>
-		</div>
-		<center>
-			<label>選擇時間：</label> <select for='time' name="time">
-				<option>請選擇</option>
-				<option>10:00~11:00</option>
-				<option>11:00~12:00</option>
-				<option>12:00~13:00</option>
-				<option>14:00~15:00</option>
-				<option>15:00~16:00</option>
-				<option>16:00~17:00</option>
-				<option>17:00~18:00</option>
-				<option>19:00~20:00</option>
-				<option>20:00~21:00</option>
-				<option>21:00~22:00</option>
-				<option>22:00~23:00</option>
-			</select><br>
-			<br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
-				name="cnumber1"><br>
-			<br> <label for="cnumber2">慢性病卡號2：</label> <input type="text"
-				name="cnumber2"><br>
-			<br> <label for="cnumber3">慢性病卡號3：</label> <input type="text"
-				name="cnumber3"><br>
-			<br>
-			<button type="submit"
-				class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
-				onclick="document.location='success.jsp'">確認</button>
-	</form></html>
- 
+ <h2><center>確認預約資料</center></h2>
+ <form action="success.jsp">
+ <div><center><label for='massage'>
+ 病人姓名:
+<br>身分證字號:
+<br>連絡電話:
+<br>電子信箱:
+
+<br><br>領藥人姓名:
+<br>領藥人電話:
+
+<br><br>領藥時段為:
+<br>OO/OO
+<br>XX:XX-XX:XX
+
+<br><br>第二次領藥
+<br>慢箋號碼為</label>
+
+<br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
+
