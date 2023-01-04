@@ -22,7 +22,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <form method="post" action="logout.jsp" >
 <%if (session.getAttribute("access") == "y"){%>
-<%session.setAttribute("accessname",request.getParameter("name")); %>
+
    <div class="w3-top">
     <div class="w3-bar w3-red w3-card w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
@@ -92,15 +92,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <br>星期日 休息</h5>
       <p class="w3-text-grey"></p>
     </div>
-
     <div class="w3-third w3-center">
       <i class=" w3-padding-64 "><img  src="pic/pic.png" ></i>
     </div>
   </div>
 </div>
-
-
-
 </body>
 </html>
     
