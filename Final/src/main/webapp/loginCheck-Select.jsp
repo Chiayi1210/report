@@ -10,14 +10,15 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement
 			(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-	String getpaperdata = "SELECT * FROM member WHERE memberid='"+
+	String getmemberdata = "SELECT * FROM member WHERE memberid='"+
 			request.getParameter("memberid")+"' AND memberpwd='" +
 			request.getParameter("memberpwd")+"'";
-	ResultSet paperrs = smt.executeQuery(getpaperdata);
-	if(paperrs.next()){
+	ResultSet members = smt.executeQuery(getmemberdata);
+	if(members.next()){
 		session.setAttribute("access","y");
 		session.setAttribute("accessid",request.getParameter("memberid"));
-		session.setMaxInactiveInterval(5);
+		session.setAttribute("accessname",members.getString("name"));
+		session.setMaxInactiveInterval(10);
 		response.sendRedirect("index.jsp");
 	}else
 		out.println("帳號密碼不符！請重新登入");
