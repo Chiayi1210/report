@@ -18,6 +18,8 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 		session.setAttribute("access","y");
 		session.setAttribute("accessid",request.getParameter("memberid"));
 		session.setAttribute("accessname",members.getString("name"));
+		session.setAttribute("memberid",members.getString("id"));
+		session.setAttribute("memberphone",members.getString("phone"));
 		session.setMaxInactiveInterval(10);
 		response.sendRedirect("index.jsp");
 	}else
