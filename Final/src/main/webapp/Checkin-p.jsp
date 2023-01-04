@@ -16,7 +16,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
 </head>
-<body>
+
+<body >
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
@@ -29,14 +30,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-red w3-center" style="padding:40px 16px">
   <h1 class="w3-margin w3-jumbo">慢性病連續處方笺預約</h1>
   </header>
-<body >
+<%if (session.getAttribute("access") == "y"){%>
 <center><h1>確認您的資料</h1>
-<h3>姓名:</h3>
-<h3>身分證字號:</h3>
-<h3>電話號碼:</h3>
-<h3>電子信箱:</h3><br>
+<h3>姓名:<%out.print(session.getAttribute("accessname"));%></h3>
+<h3>身分證字號:<%out.print(session.getAttribute("memberid"));%></h3>
+<h3>電話號碼:<%out.print(session.getAttribute("memberphone"));%></h3>
+<h3>電子信箱:<%out.print(session.getAttribute("accessid"));%></h3><br>
 </center>
 <center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='prescription.jsp'">確認</button></center>
+<%}else{%>
+<h3>錯誤!!找不到資料，請至藥局確認資料</h3>
+
+<%}%>
 </body>
 </html>
  
