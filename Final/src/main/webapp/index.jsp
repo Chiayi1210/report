@@ -10,8 +10,6 @@
 <form method="post" action="logout.jsp" >
 <%if (session.getAttribute("access") == "y"){%>
 
-<<<<<<< HEAD
-=======
    <div class="w3-top">
     <div class="w3-bar w3-red w3-card w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
@@ -21,7 +19,6 @@
       
     </div>
   </div>
->>>>>>> 9c368fffa0505da93f6589f25b8341ff065767b5
 <!-- 登出頁 -->
   <header class="w3-container w3-red w3-center" style="padding:128px 16px">
    <h1 class="w3-margin w3-jumbo">歡迎光臨，<%out.print(session.getAttribute("accessname"));%></h1>
