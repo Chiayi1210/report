@@ -18,7 +18,6 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 		session.setAttribute("access","y");
 		session.setAttribute("accessid",request.getParameter("memberid"));
 		session.setAttribute("accessname",members.getString("name"));
-		session.setMaxInactiveInterval(3600);
 		session.setAttribute("memberid",members.getString("id"));
 		session.setAttribute("memberphone",members.getString("phone"));
 		session.setMaxInactiveInterval(3600);
