@@ -105,7 +105,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			<br>
 		</div>
 		<center>
-			<label>選擇時間：</label><select name="time">
+			<label>選擇時間：</label><select name="time" required>
 				<option>請選擇</option>
 				<option>11:00~12:00</option>
 				<option>12:00~13:00</option>
@@ -119,7 +119,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 				<option>22:00~23:00</option>
 			</select><br>
 			<br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
-				name="cnumber1"><br>
+				name="cnumber1" required><br>
 			<br> <label for="cnumber2">慢性病卡號2：</label> <input type="text"
 				name="cnumber2"><br>
 			<br> <label for="cnumber3">慢性病卡號3：</label> <input type="text"
