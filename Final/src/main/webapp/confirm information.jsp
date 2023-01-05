@@ -103,4 +103,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <br>慢箋號碼為</label>
 
 <br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
-
+</center>
+</div>
+</form>
