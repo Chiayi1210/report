@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>  
-    <!--預約成功網頁 -->
+    pageEncoding="UTF-8"%>
+   
+    <!--連續處方簽預約網頁 -->
 <html lang="en">
-<<<<<<< HEAD
-=======
 
->>>>>>> 318ac056672c99fc98e3561d496fa287177503f5
 <head>
 <title>石牌藥局線上預約系統</title>
 <meta charset="UTF-8">
@@ -98,15 +96,9 @@ if(session.getAttribute("access") !="y"){
 }
 %> 
 <center><h2>預約資料登記</h2><br>
-<%
-if(session.getAttribute("access") !="y"){
- out.println("預約失敗！");
-}else{
- out.println("預約成功<br>");
- out.println(session.getAttribute("accesscnumber1")+"已預約成功，記得攜帶健保卡來店取藥，我們將以電子信箱提醒您"
-			+"！<br>");
-}
-%> 
+<h3>已預約成功！記得攜帶健保卡來店取藥</h3>
+<h3>我們將以電子信箱提醒您！</h3>
+</center>
 <center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">回首頁</button></center>
 
 
