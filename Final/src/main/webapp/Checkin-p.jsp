@@ -34,10 +34,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </header>
 <%if (session.getAttribute("access") == "y"){%>
 <center><h1>確認您的資料</h1>
-<h3>姓名:<%out.print(session.getAttribute("accessname"));%></h3>
-<h3>身分證字號:<%out.print(session.getAttribute("memberid"));%></h3>
-<h3>電話號碼:<%out.print(session.getAttribute("memberphone"));%></h3>
-<h3>電子信箱:<%out.print(session.getAttribute("accessid"));%></h3><br>
+<h3>姓名：<%out.print(session.getAttribute("accessname"));%></h3>
+<h3>身分證字號：<%out.print(session.getAttribute("memberid"));%></h3>
+<h3>電話號碼：<%out.print(session.getAttribute("memberphone"));%></h3>
+<h3>電子信箱：<%out.print(session.getAttribute("accessid"));%></h3><br>
 </center>
 <center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='prescription.jsp'">確認</button></center>
 <%}else{%>

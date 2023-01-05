@@ -87,18 +87,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
  <h2><center>確認預約資料</center></h2>
  <form action="success.jsp">
  <div><center><label for='massage'>
- 病人姓名:
-<br>身分證字號:
-<br>連絡電話:
-<br>電子信箱:
+ 病人姓名：<%out.print(session.getAttribute("accessname"));%>
+<br>身分證字號：<%out.print(session.getAttribute("memberid"));%>
+<br>連絡電話：<%out.print(session.getAttribute("memberphone"));%>
+<br>電子信箱：<%out.print(session.getAttribute("accessid"));%>
 
-<br><br>領藥時段為:
-<br>OO/OO
-<br>XX:XX-XX:XX
-
-<br><br>第二次領藥
-<br>慢箋號碼為</label>
-
+<br><br>領藥時段為：
+<br><%out.print(session.getAttribute("accessdate"));%>
+<br><%out.print(session.getAttribute("accesstime"));%>
 <br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
 </center>
 </div>

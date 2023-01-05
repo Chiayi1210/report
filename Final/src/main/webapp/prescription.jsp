@@ -88,11 +88,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	<form action="pp-InsertInto.jsp">
 		<div>
 		  <center><h3 value="<%out.print(session.getAttribute("accessname"));%>">姓名：<%out.print(session.getAttribute("accessname"));%></h3><br>
-				<label for='massage'>選擇預約日期：</label> <input type="date" name="date">
+				<label for='massage'>選擇預約日期：</label> <input type="date" name="date" required>
 				<script>
                   var date = document.getElementById('massage'),
                   function noSundays(e){
-                  // Days in JS range from 0-6 where 0 is Sunday and 6 is Saturday
                   var day = new Date(e.target.value).getUTCDay();
                   if ( day == 0 ){
                   e.target.setCustomValidity('不可選擇週日！');
@@ -106,9 +105,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			<br>
 		</div>
 		<center>
-			<label>選擇時間：</label> <select for='time' name="time">
+			<label>選擇時間：</label><select name="time">
 				<option>請選擇</option>
-				<option>10:00~11:00</option>
 				<option>11:00~12:00</option>
 				<option>12:00~13:00</option>
 				<option>14:00~15:00</option>
@@ -129,6 +127,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			<br>
 			<button type="submit"
 				class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
-				onclick="document.location='confirm information.jsp'">確認</button>
+				onclick="document.location='confirm-pp.jsp'">確認</button>
 	</form></html>
  
