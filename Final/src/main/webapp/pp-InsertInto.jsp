@@ -20,7 +20,7 @@
 	smt.execute("INSERT INTO prescription (name, date, time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("accessname")+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	//,'"+cnumber2+"','"+cnumber3+"'
 	con.close();
-	response.sendRedirect("success.jsp");
+	response.sendRedirect("confirm-pp.jsp");
 	%>
 </body>
 </html>
