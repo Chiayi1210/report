@@ -92,9 +92,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <br>連絡電話:
 <br>電子信箱:
 
-<br><br>領藥人姓名:
-<br>領藥人電話:
-
 <br><br>領藥時段為:
 <br>OO/OO
 <br>XX:XX-XX:XX
