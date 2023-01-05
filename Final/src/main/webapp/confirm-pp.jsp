@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <!--連續處方簽預約網頁 -->
+
 <html lang="en">
 <head>
 <title>石牌藥局線上預約系統</title>
@@ -86,6 +87,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </style>
  <h2><center>確認預約資料</center></h2>
  <form action="success.jsp">
+ <%if (session.getAttribute("access") == "y"){%>
  <div><center><label for='massage'>
  病人姓名：<%out.print(session.getAttribute("accessname"));%>
 <br>身分證字號：<%out.print(session.getAttribute("memberid"));%>
@@ -93,9 +95,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <br>電子信箱：<%out.print(session.getAttribute("accessid"));%>
 
 <br><br>領藥時段為：
-<br><%out.print(session.getAttribute("accessdate"));%>
-<br><%out.print(session.getAttribute("accesstime"));%>
+<br><%out.print(session.getAttribute("date"));%>
+<br><%out.print(session.getAttribute("time"));%>
 <br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
 </center>
 </div>
+<%}else{%>
+<h3>錯誤!!找不到資料，請至藥局確認資料</h3>
+
+<%}%>
+
 </form>
+</body>
+</html>
