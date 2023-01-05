@@ -3,15 +3,7 @@
    
     <!--連續處方簽預約網頁 -->
 <html lang="en">
-<%
-if(session.getAttribute("access") !="y"){
- out.println("預約失敗！");
-}else{
- out.println("預約成功<br>");
- out.println(session.getAttribute("accesscnumber1")+"已預約成功，記得攜帶健保卡來店取藥，我們將以電子信箱提醒您"
-			+"！<br>");
-}
-%> 
+
 <head>
 <title>石牌藥局線上預約系統</title>
 <meta charset="UTF-8">
@@ -94,6 +86,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     }
 
 </style>
+<%
+if(session.getAttribute("access") !="y"){
+ out.println("預約失敗！");
+}else{
+ out.println("預約成功<br>");
+ out.println(session.getAttribute("accesscnumber1")+"已預約成功，記得攜帶健保卡來店取藥，我們將以電子信箱提醒您"
+			+"！<br>");
+}
+%> 
 <center><h2>預約資料登記</h2><br>
 <h3>已預約成功！記得攜帶健保卡來店取藥</h3>
 <h3>我們將以電子信箱提醒您！</h3>
@@ -101,6 +102,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">回首頁</button></center>
 
 
-
+</div>
+</body>
 </html>
  

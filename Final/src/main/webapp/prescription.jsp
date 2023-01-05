@@ -105,7 +105,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			<br>
 		</div>
 		<center>
+<<<<<<< Updated upstream
 			<label>選擇時間：</label><select name="time" required>
+=======
+			<label>選擇時間：</label> <select for='time' name="time" required>
+>>>>>>> Stashed changes
 				<option>請選擇</option>
 				<option>11:00~12:00</option>
 				<option>12:00~13:00</option>
