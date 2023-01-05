@@ -1,5 +1,5 @@
 <%@page contentType="text/html"%>
-<%@page pageEncoding="BIG5"%>
+<%@page pageEncoding="utf-8"%>
 <%@page import="java.sql.*"%>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
 
@@ -9,7 +9,7 @@
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-	//String name =request.getParameter("name");
+	String name =request.getParameter("accessname");
 	String date =request.getParameter("date");
 	String time =request.getParameter("time");
 	String cnumber1 =request.getParameter("cnumber1");
