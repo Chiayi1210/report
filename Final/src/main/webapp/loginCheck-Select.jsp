@@ -21,7 +21,7 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 		session.setMaxInactiveInterval(3600);
 		session.setAttribute("memberid",members.getString("id"));
 		session.setAttribute("memberphone",members.getString("phone"));
-		session.setMaxInactiveInterval(10);
+		session.setMaxInactiveInterval(3600);
 		response.sendRedirect("index.jsp");
 	}else
 		out.println("帳號密碼不符！請重新登入");
