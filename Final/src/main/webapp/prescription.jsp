@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
     <!--連續處方簽預約網頁 -->
+
 <html lang="en">
 <head>
 <title>石牌藥局線上預約系統</title>
@@ -105,6 +106,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			<br>
 		</div>
 		<center>
+<<<<<<< HEAD
 			<label>選擇時間：</label><select name="time" required>
 				<option>請選擇</option>
 				<option>11:00~12:00</option>
@@ -117,6 +119,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 				<option>20:00~21:00</option>
 				<option>21:00~22:00</option>
 				<option>22:00~23:00</option>
+=======
+			<label >選擇時間：</label> <select required name="time">
+
+				<option value="">請選擇</option>
+				<option value="">11:00~12:00</option>
+				<option value="">12:00~13:00</option>
+				<option value="">14:00~15:00</option>
+				<option value="">15:00~16:00</option>
+				<option value="">16:00~17:00</option>
+				<option value="">17:00~18:00</option>
+				<option value="">19:00~20:00</option>
+				<option value="">20:00~21:00</option>
+				<option value="">21:00~22:00</option>
+				<option value="">22:00~23:00</option>
+>>>>>>> 4dca879b7789ac128c7ff25d43f06edeadb55b6e
 			</select><br>
 			<br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
 				name="cnumber1" required><br>
@@ -127,6 +144,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			<br>
 			<button type="submit"
 				class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
-				onclick="document.location='confirm-pp.jsp'">確認</button>
+				>確認</button>
 	</form></html>
  
