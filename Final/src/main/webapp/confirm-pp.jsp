@@ -88,15 +88,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
  <h2><center>確認預約資料</center></h2>
  <form action="success.jsp">
  <%if (session.getAttribute("access") == "y"){%>
- <div><center><label for='massage'>
- 病人姓名：<%out.print(session.getAttribute("accessname"));%>
-<br>身分證字號：<%out.print(session.getAttribute("memberid"));%>
-<br>連絡電話：<%out.print(session.getAttribute("memberphone"));%>
-<br>電子信箱：<%out.print(session.getAttribute("accessid"));%>
-
-<br><br>領藥時段為：
-<br><%out.print(session.getAttribute("date"));%>
-<br><%out.print(session.getAttribute("time"));%>
+ <div><center>
+<h3>病人姓名：<%out.print(session.getAttribute("accessname"));%></h3> 
+<h3>身分證字號：<%out.print(session.getAttribute("memberid"));%></h3> 
+<h3>連絡電話：<%out.print(session.getAttribute("memberphone"));%></h3> 
+<h3>電子信箱：<%out.print(session.getAttribute("accessid"));%></h3> 
+<h3>領藥時段為：</h3> 
+<h3><%out.print(session.getAttribute("date"));%></h3>  //這邊沒辦法印出來
+<h3><%out.print(session.getAttribute("time"));%></h3> //這邊沒辦法印出來
 <br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
 </center>
 </div>
