@@ -89,7 +89,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	<form action="pp-InsertInto.jsp">
 		<div>
 		  <center><h3 value="<%out.print(session.getAttribute("accessname"));%>">姓名：<%out.print(session.getAttribute("accessname"));%></h3><br>
-				<label for='massage'>選擇預約日期：</label> <input type="date" name="date" required>
+				<label for='massage'>選擇預約日期：</label><input type="date" name="date" required>
 				<script>
                   var date = document.getElementById('massage'),
                   function noSundays(e){

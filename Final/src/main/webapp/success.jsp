@@ -95,10 +95,6 @@ if(session.getAttribute("access") !="y"){
 			+"！<br>");
 }
 %> 
-<center><h2>預約資料登記</h2><br>
-<h3>已預約成功！記得攜帶健保卡來店取藥</h3>
-<h3>我們將以電子信箱提醒您！</h3>
-</center>
 <center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">回首頁</button></center>
 
 
