@@ -94,8 +94,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <h3>連絡電話：<%out.print(session.getAttribute("memberphone"));%></h3> 
 <h3>電子信箱：<%out.print(session.getAttribute("accessid"));%></h3> 
 <h3>領藥時段為：</h3> 
-<h3><%out.print(session.getAttribute("date"));%></h3>  //這邊沒辦法印出來
-<h3><%out.print(session.getAttribute("time"));%></h3> //這邊沒辦法印出來
+<h3><%out.print(session.getAttribute("accessdate"));%></h3>  //這邊沒辦法印出來
+<h3><%out.print(session.getAttribute("accesstime"));%></h3> //這邊沒辦法印出來
 <br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
 </center>
 </div>
