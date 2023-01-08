@@ -28,13 +28,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-red w3-center" style="padding:40px 16px">
   <h1 class="w3-margin w3-jumbo">查詢/更改/取消預約</h1>
   </header>
- <center><h4 class="w3-margin w3-jumbo">病人姓名：<%out.print(session.getAttribute("accessname"));%>
-身分證字號：<%out.print(session.getAttribute("memberid"));%>
-連絡電話：<%out.print(session.getAttribute("memberphone"));%>
-電子信箱：<%out.print(session.getAttribute("accessid"));%>
-領藥時段為：<%out.print(session.getAttribute("accessdate"));%>
-<%out.print(session.getAttribute("accesstime"));%>
-<br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
+ <center><h4 class="w3-margin w3-jumbo">
+<br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認</button>
 </center></h4>
 <table border=1>
 		<%
