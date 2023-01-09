@@ -38,7 +38,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <h3>病人姓名：<%out.print(session.getAttribute("accessname"));%></h3> 
         <h3>身分證字號：<%out.print(session.getAttribute("memberid"));%></h3>  
         <h3>領藥時段為：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <%out.print(session.getAttribute("time"));%><%out.print(session.getAttribute("date"));%></h3> 
+        <%out.print(session.getAttribute("time"));%>
+        <%out.print(session.getAttribute("date"));%></h3> 
         <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">上一步</button>
         <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認</button>
       </center>

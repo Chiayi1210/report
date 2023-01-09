@@ -25,6 +25,6 @@
 	con.close();
 	response.sendRedirect("confirm-pp.jsp");
 	%>
-	
+ 
 </body>
 </html>
