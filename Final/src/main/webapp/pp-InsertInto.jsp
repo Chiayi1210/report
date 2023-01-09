@@ -8,14 +8,28 @@
 	<%
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
-	Statement smt= con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+	Statement smt= con.createStatement
+			(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+	String getprescriptiondata = "SELECT * FROM prescription WHERE prescriptiondate='"+
+			request.getParameter("prescriptiondate")+"' AND prescriptiontime='" +
+			request.getParameter("prescriptiontime")+"'";
+	ResultSet prescription = smt.executeQuery(getprescriptiondata);
 	String name =request.getParameter("accessname");
 	String id =request.getParameter("memberid");
-	String date =request.getParameter("date");
-	String time =request.getParameter("time");
+	String date =request.getParameter("prescriptiondate");
+	String time =request.getParameter("prescriptiontime");
 	String cnumber1 =request.getParameter("cnumber1");
 	String cnumber2 =request.getParameter("cnumber2");
 	String cnumber3 =request.getParameter("cnumber3");
+	
+	if(prescription.next()){
+		session.setAttribute("access","y");
+		session.setAttribute("prescriptiontdate",prescription.getString("date"));
+		session.setAttribute("prescriptiontime",prescription.getString("time"));
+	}else
+		out.println("找不到資料!!!");
+	
+	
 	//String sql;
 	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
 	smt.execute("INSERT INTO prescription (name, id, date, time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("accessname")+"','"+session.getAttribute("memberid")+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
