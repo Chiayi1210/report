@@ -58,8 +58,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 		%>
 	</table>
 	 <center><h4 class="w3-margin w3-jumbo">
-<br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認</button>
-</center></h4>
+	 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">上一步</button>
+	 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認</button>
+     </center></h4>
 </div>
 </body>
 </html>
