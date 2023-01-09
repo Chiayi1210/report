@@ -38,7 +38,7 @@
 				<option >11:00~12:00</option>
 				<option >12:00~13:00</option>
 				<option >14:00~15:00</option>
-				<option>15:00~16:00</option>
+				<option >15:00~16:00</option>
 				<option >16:00~17:00</option>
 				<option >17:00~18:00</option>
 				<option >19:00~20:00</option>
