@@ -71,11 +71,11 @@
  <div>
  <center><h3>病人姓名：<%out.print(session.getAttribute("accessname"));%></h3> 
 <h3>身分證字號：<%out.print(session.getAttribute("memberid"));%></h3> 
-<h3>連絡電話：<%out.print(session.getAttribute("memberphone"));%></h3> 
+<h3>連絡電話：<%out.print(session.getAttribute("memberphone"));%></h3>   
 <h3>電子信箱：<%out.print(session.getAttribute("accessid"));%></h3> 
 <h3>領藥時段為：<%out.print(session.getAttribute("time"));%></h3> 
-<h3 value="<%out.print(session.getAttribute("date"));%>"><%out.print(session.getAttribute("date"));%></h3>
-<h3 value="<%out.print(session.getAttribute("time"));%>"><%out.print(session.getAttribute("time"));%></h3>
+<h3><%out.print(session.getAttribute("date"));%></h3>       <!-- value="<%out.print(session.getAttribute("date"));%>  -->
+
 <br><button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
 </center>
 </div>
