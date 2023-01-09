@@ -15,7 +15,7 @@ if(session.getAttribute("access") !="y"){
  out.println("預約失敗！");
 }else{
  out.println("預約成功<br>");
- out.println("慢箋號碼:"+session.getAttribute("accesscnumber1")+"已預約成功，記得攜帶健保卡來店取藥，我們將以電子信箱提醒您"
+ out.println("已預約成功，記得攜帶健保卡來店取藥，我們將以電子信箱提醒您"
 			+"！<br>");
 }
 %> 
