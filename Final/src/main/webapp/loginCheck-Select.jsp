@@ -14,6 +14,7 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 			request.getParameter("memberid")+"' AND memberpwd='" +
 			request.getParameter("memberpwd")+"'";
 	ResultSet members = smt.executeQuery(getmemberdata);
+	
 	if(members.next()){
 		session.setAttribute("access","y");
 		session.setAttribute("accessid",request.getParameter("memberid"));
