@@ -32,15 +32,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-red w3-center" style="padding:80px 16px">
   <h1 class="w3-margin w3-jumbo">查詢/更改/取消預約</h1>
   </header>
-<center><h3>病人姓名：<%out.print(session.getAttribute("accessname"));%></h3> 
+<form action="" >
+ <%if (session.getAttribute("access") == "y"){%>
+<h3>病人姓名：<%out.print(session.getAttribute("accessname"));%></h3> 
         <h3>身分證字號：<%out.print(session.getAttribute("memberid"));%></h3>  
         <h3>領藥時段為：</h3> 
-        <h3><%out.print(session.getAttribute("accessdate"));%></h3>
-        <h3><%out.print(session.getAttribute("accesstime"));%></h3>
+        <h3 value="<%out.print(session.getAttribute("date"));%>"><%out.print(session.getAttribute("date"));%></h3>
+        <h3 value="<%out.print(session.getAttribute("time"));%>"><%out.print(session.getAttribute("time"));%></h3>
         <br>
         <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">上一步</button>
         <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認</button>
-</center>
+</form>
 </body>
 </body>
 </html>
