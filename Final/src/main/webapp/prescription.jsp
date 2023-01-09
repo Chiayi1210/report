@@ -60,9 +60,15 @@
 Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 Statement stmt= con.createStatement
 (ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-String getprescriptiondata = "SELECT * FROM prescription WHERE accessid='"+request.getParameter("accessid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
+String getprescriptiondata = "SELECT * FROM prescription WHERE accessid='"+request.getParameter("accessid")
++"' AND date='" +request.getParameter("date")
++"' AND time='" +request.getParameter("time")
++"' AND cnumber1='" +request.getParameter("cnumber1")
++"' AND cnumber2='" +request.getParameter("cnumber2")
++"' AND cnumber3='" +request.getParameter("cnumber3")+"'";
 //WHERE memberid='"+request.getParameter("memberid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
 ResultSet pp = stmt.executeQuery("SELECT * FROM prescription");
+//SELECT * FROM prescription
 if (pp.next())
 	session.setAttribute("access","y");
 session.setAttribute("pdate",pp.getString("date"));
