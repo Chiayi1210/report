@@ -30,7 +30,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </header>
 <table border=1>
 		<%
-			String[] arr_test = {"IT幫_A","IT幫_B","IT幫_C"};
+			String[] arr_test = {"姓名","IT幫_B","IT幫_C"};
 			//如果參數不等於空，只顯示一筆資料
 			Integer ID = request.getParameter("ID")!=null?Integer.parseInt(request.getParameter("ID")):null;
 			if( ID != null){
