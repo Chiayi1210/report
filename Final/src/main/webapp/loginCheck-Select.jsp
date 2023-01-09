@@ -1,5 +1,5 @@
 <%@page contentType="text/html"%>
-<%@page pageEncoding="BIG5"%>
+<%@page pageEncoding="utf-8"%>
 <%@page import="java.sql.*"%>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
 
@@ -24,11 +24,11 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 		session.setMaxInactiveInterval(3600);
 		response.sendRedirect("index.jsp");
 	}else
-		out.println("�b���K�X���šI�Э��s�n�J");
+		out.println("帳號密碼不符！請重新登入");
 }
 %>
 <html>
-<head><title>�۵P�ħ�-�n�J</title>
+<head><title>石牌藥局-登入</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -107,27 +107,27 @@ span.psw {
 </style>
 <body>
 <header class="w3-container w3-red w3-center" style="padding:25px 16px">
-  <h1 class="w3-margin w3-jumbo">�n�J</h1>
+  <h1 class="w3-margin w3-jumbo">登入</h1>
   </header>
 <form  method="post">
 
 <center>
 <div class="container">
-	<label for="memberid"><b>�b��</b></label>
-    <input type="text" placeholder="�п�J�b��(�q�l�H�c)" name="memberid" required><br>
+	<label for="memberid"><b>帳號</b></label>
+    <input type="text" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
 	<% if(request.getParameter("memberid")!= null){ %>
 		
 	<%}%>
-    <label for="memberpwd"><b>�K�X</b></label>
-    <input type="password" placeholder="�п�J�K�X" name="memberpwd" required>
+    <label for="memberpwd"><b>密碼</b></label>
+    <input type="password" placeholder="請輸入密碼" name="memberpwd" required>
     <% if(request.getParameter("memberpwd")!= null){ %>
 		
 	<%}%>
-    <button type="submit" name="loginButton">�n�J</button>
+    <button type="submit" name="loginButton">登入</button>
 </div>
 <div class="container" style="background-color:#white">
-	<a href="signup.jsp" class="signbtn">���U</a>
-	<a href="index.jsp" class="signbtn">����</a></div>
+	<a href="signup.jsp" class="signbtn">註冊</a>
+	<a href="index.jsp" class="signbtn">取消</a></div>
   </center>
 </form>
 </body>
