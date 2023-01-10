@@ -19,7 +19,8 @@
 	smt.executeUpdate("DELETE FROM prescription WHERE id='"+session.getAttribute("numberid")+"'");
 	response.sendRedirect("index.jsp?id='"+session.getAttribute("numberid")+"");
 	%>
-<%out.println("預約已取消！請重新預約"); %>
+<%out.println("預約已取消！請重新預約"); 
+out.println("<a href='index.jsp'>回首頁</a>");%>
 
 </body>
 </html>

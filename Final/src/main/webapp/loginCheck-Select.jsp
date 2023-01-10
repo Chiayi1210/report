@@ -107,6 +107,7 @@ span.psw {
 }
 </style>
 <body>
+<a href="manager.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">管理者入口</a>
 <header class="w3-container w3-red w3-center" style="padding:25px 16px">
   <h1 class="w3-margin w3-jumbo">登入</h1>
   </header>

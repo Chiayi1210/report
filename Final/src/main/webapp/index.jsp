@@ -12,7 +12,9 @@
 <%if (session.getAttribute("access") == "y"){%>
 
 <!-- 登出頁 -->
-  <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <header class="w3-container w3-red w3-center" style="padding:100px 16px">
+  <h1><marquee direction="right" height="45" 
+scrollamount="8" >疫情期間，出入公共場合記得配戴口罩，勤洗手</marquee></h1>
    <h1 class="w3-margin w3-jumbo">歡迎光臨，<%out.print(session.getAttribute("membername"));%></h1>
    <p class="w3-xlarge">石牌藥局預約系統</p>
    <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='logout.jsp'">登出</button>
@@ -22,7 +24,7 @@
 
 
 <!-- 登入頁 -->
-  <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <header class="w3-container w3-red w3-center" style="padding:105px 16px">
    <h1 class="w3-margin w3-jumbo">歡迎光臨</h1>
    <p class="w3-xlarge">石牌藥局預約系統</p>
    <a href="loginCheck-Select.jsp" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >登入</a>

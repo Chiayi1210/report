@@ -29,10 +29,10 @@
 	%>
 <form action="Edit-Update.jsp?id=<%=session.getAttribute("numberid")%>" method="post" name="form" >
 
-<h3 value="">姓名：<%out.print(session.getAttribute("membername"));%></h3>
+<center><h3 value="">姓名：<%out.print(session.getAttribute("membername"));%></h3>
         <h3>身分證字號：<%out.print(session.getAttribute("numberid"));%></h3>
         <label for='massage'>選擇預約日期：</label><input type="date" name="date" value="<%=rs.getString("date")%>" required>
-				<center><script>
+				<script>
                   var date = document.getElementById('massage'),
                   function noSundays(e){
                   var day = new Date(e.target.value).getUTCDay();
@@ -43,7 +43,7 @@
                   date.addEventListener('input',noSundays);
                   }
                   }
-                </script>
+                </script><br><br>
         <label for="time" >選擇時間：</label> <select required name="time" value="<%=rs.getString("ptime") %>" >
 
 				<option value="">請選擇</option>

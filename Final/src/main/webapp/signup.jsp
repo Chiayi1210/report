@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html>
+
 <head><title>註冊</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +54,13 @@ span.memberpwd {
 }
 
 </style>
+
 <body>
+<%if (request.getParameter("status")!="" && request.getParameter("status")!=null){
+					if(request.getParameter("status").equals("IDexist")){ %>
+					<p><font color="red">帳號已存在，請登入或重新註冊!</font></p>
+				<%}else{}%> 
+    					<p>請填寫資料以建立帳號</p><%}%>
 <header class="w3-container w3-red w3-center" style="padding:25px 16px">
   <h1 class="w3-margin w3-jumbo">註冊</h1>
   </header>

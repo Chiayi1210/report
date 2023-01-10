@@ -32,7 +32,7 @@
 <br>
  
 <div>
-<form action="DELETE.jsp?id=<%=session.getAttribute("numberid")%>" method="post" name="form" >
+<form action="remove.jsp?id=<%=session.getAttribute("numberid")%>" method="post" name="form" >
       <center><h3><table>
              <tr>
                  <td>病人姓名：</td>

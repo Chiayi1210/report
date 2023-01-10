@@ -43,8 +43,6 @@
 				<option >17:00~18:00</option>
 				<option >19:00~20:00</option>
 				<option >20:00~21:00</option>
-				<option >21:00~22:00</option>
-				<option >22:00~23:00</option>
 			</select><br>
 			<br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
 				name="cnumber1" required><br>

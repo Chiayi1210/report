@@ -25,6 +25,7 @@
 	//,'"+cnumber2+"','"+cnumber3+"'
 	con.close();
 	response.sendRedirect("confirm-pp.jsp");
+	
 	}else{
 		out.println("已有預約，請至查詢確認!!");
 		out.println("<a href='Inquire.jsp'>查詢</a>");
