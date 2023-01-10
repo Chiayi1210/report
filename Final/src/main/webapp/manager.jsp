@@ -23,12 +23,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="manager.jsp" class="w3-bar-item w3-button w3-padding-large w3-hover-white">首頁</a>
     <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large w3-hover-white">系統首頁</a>
-    <a href="managerP.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">預約資料列印</a></div>
+    <a href="#.jsp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">預約資料列印</a></div>
    </div>
   </div>
 <header class="w3-container w3-red w3-center" style="padding:100px 16px">
   <h1 class="w3-margin w3-jumbo">管理者入口</h1>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><botton onclick="document.location='managerloginCheck.jsp'"> 登入</button></button>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><botton onclick="document.location='#.jsp'"> 登入</button></button>
 </header>
   
  

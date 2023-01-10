@@ -11,7 +11,7 @@
 <header class="w3-container w3-red w3-center" style="padding:80px 16px">
   <h1 class="w3-margin w3-jumbo">查詢/更改/取消預約</h1>
   </header>
-<%
+<% 
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	//out.println("Con= "+con);
