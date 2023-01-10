@@ -15,7 +15,7 @@
 		<div>
 		  <center><h3 value="<%out.print(session.getAttribute("accessname"));%>">姓名：<%out.print(session.getAttribute("accessname"));%></h3>
 		  <h4 value="<%out.print(session.getAttribute("memberid"));%>">身分證字號：<%out.print(session.getAttribute("memberid"));%></h4><br>
-				<label for='massage'>選擇預約日期：</label><input type="date" name="date" required>
+				<label for='massage'>選擇預約日期：</label><input type="date" for="date" name="date" required>
 				<script>
                   var date = document.getElementById('massage'),
                   function noSundays(e){
@@ -32,7 +32,7 @@
 			<br>
 		</div>
 		<center>
-			<label for="time" >選擇時間：</label> <select required name="time">
+			<label  >選擇時間：</label> <select required name="time" for="time">
 
 				<option value="">請選擇</option>
 				<option >11:00~12:00</option>
@@ -56,6 +56,7 @@
 			<button type="submit"
 				class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
 				>確認</button>
+<<<<<<< HEAD
 	<%Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
       Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
       Statement stmt= con.createStatement
@@ -79,4 +80,8 @@
       %> 
 	</form>
 	</html>
+=======
+	
+	</form></html>
+>>>>>>> b7317fe58c5703b8eaa0cdd363ba938ba776f33d
  
