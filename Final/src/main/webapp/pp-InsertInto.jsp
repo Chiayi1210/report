@@ -5,7 +5,7 @@
 
 <html>
 <body>
-	<% 
+	<% if (request.getParameter("numberid") !=null){
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement
@@ -23,8 +23,11 @@
 	smt.execute("INSERT INTO prescription (name, id, date, time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("membername")+"','"+session.getAttribute("numberid")+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	//,'"+cnumber2+"','"+cnumber3+"'
 	con.close();
-	response.sendRedirect("confirm-pp.jsp");
-	%>
+	response.sendRedirect("confirm-pp.jsp");%>
+	<%}else{%>
+	已有預約，請至查詢確認!!
+<a href='Inquire.jsp'>查詢</a> 
+<%}%>
  
 </body>
 </html>

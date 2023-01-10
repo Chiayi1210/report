@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@page import="java.sql.*"%>
+<%@page import="java.io.*,java.util.*"%>
     <%@include file ="menu.jsp" %>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
-<%%>
-<!DOCTYPE html>
- <!--查詢/更改/取消預約網頁 -->
-<html>
 
+<!DOCTYPE html>
+ <!--取消預約網頁 -->
+<html>
 <title>查詢/更改/取消預約</title>
-</head>
 <body>
 <header class="w3-container w3-red w3-center" style="padding:40px 16px">
   <h1 class="w3-margin w3-jumbo">查詢/更改/取消預約</h1>

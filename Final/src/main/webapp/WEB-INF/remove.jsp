@@ -16,9 +16,9 @@
 	Statement smt= con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 
 	
-	smt.executeUpdate("DELETE from prescription where id='"+session.getAttribute("numberid")+"'");
-	response.sendRedirect("Inquire.jsp?id='"+session.getAttribute("numberid")+"");
-%>
+	smt.executeUpdate("DELETE FROM prescription WHERE id='"+session.getAttribute("numberid")+"'");
+	response.sendRedirect("index.jsp?id='"+session.getAttribute("numberid")+"");
+	%>
 <%out.println("預約已取消！請重新預約"); %>
 
 </body>

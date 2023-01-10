@@ -3,14 +3,18 @@
     <!--連續處方簽預約網頁 -->
 <%@include file ="menu.jsp" %>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
-<%Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+<%
+Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 Statement stmt= con.createStatement
 (ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-//WHERE memberid='"+request.getParameter("memberid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
 ResultSet pp = stmt.executeQuery("SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'");
 //SELECT * FROM prescription
- %>
+%>
+
+	
+
+
  
 <html lang="en">
 
