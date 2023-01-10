@@ -56,6 +56,10 @@
 			<button type="submit"
 				class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
 				>確認</button>
+	</form>
+	</html>
+
 	
-	</form></html>
+	</html>
+
  
