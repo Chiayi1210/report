@@ -2,7 +2,23 @@
 <%@page pageEncoding="utf-8"%>
 <%@page import="java.sql.*"%>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
-
+<%Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
+Statement stmt= con.createStatement
+(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+//WHERE memberid='"+request.getParameter("memberid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
+ResultSet pp = stmt.executeQuery("SELECT * FROM prescription WHERE id='"+request.getParameter("memberid")+"'");
+//SELECT * FROM prescription
+if (pp.next())
+session.setAttribute("access","y");
+session.setAttribute("pid",pp.getString("id"));
+session.setAttribute("pdate",pp.getString("date"));
+session.setAttribute("ptime",pp.getString("time"));
+session.setAttribute("pcnumber1",pp.getString("cnumber1"));
+session.setAttribute("pcnumber2",pp.getString("cnumber2"));
+session.setAttribute("pcnumber3",pp.getString("cnumber3"));
+//pp.getString
+%> 
 <html>
 <body>
 	<%

@@ -20,9 +20,7 @@
          <h3>電子信箱：<%out.print(session.getAttribute("accessid"));%></h3> 
          <h3>領藥日期為：<%out.print(session.getAttribute("pdate"));%></h3> 
          <h3>領藥時段為：<%out.print(session.getAttribute("ptime"));%></h3> 
-         <h3>慢箋號碼為：<%out.print(session.getAttribute("pcnumber1"));%>
-         <%out.print(session.getAttribute("pcnumber2"));%>
-         <%out.print(session.getAttribute("pcnumber3"));%></h3><br>
+         <h3>慢箋號碼為：<%out.print(session.getAttribute("pcnumber1"));%></h3><br>
 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
 </center>
 </div>
