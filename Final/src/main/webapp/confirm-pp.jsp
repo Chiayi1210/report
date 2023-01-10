@@ -11,10 +11,10 @@
   <h1 class="w3-margin w3-jumbo">慢性病連續處方笺預約</h1>
   </header>
  
- <h2><center>確認預約資料</center></h2>
+ <h2><center>確認預約資料</h2>
  <form action="success.jsp">
  <div>
- <center><h3>病人姓名：<%out.print(session.getAttribute("accessname"));%></h3> 
+         <h3>病人姓名：<%out.print(session.getAttribute("accessname"));%></h3> 
          <h3>身分證字號：<%out.print(session.getAttribute("memberid"));%></h3> 
          <h3>連絡電話：<%out.print(session.getAttribute("memberphone"));%></h3>   
          <h3>電子信箱：<%out.print(session.getAttribute("accessid"));%></h3> 
@@ -24,8 +24,6 @@
 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
 </center>
 </div>
-
-
 </form>
 </body>
 </html>

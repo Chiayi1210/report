@@ -9,7 +9,27 @@
 <header class="w3-container w3-red w3-center" style="padding:80px 16px">
   <h1 class="w3-margin w3-jumbo">慢性病連續處方笺預約</h1>
   </header>
- 
+ <%Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+      Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
+      Statement stmt= con.createStatement
+      (ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+      String getprescriptiondata = "SELECT * FROM prescription WHERE accessid='"+request.getParameter("accessid")
+      +"' AND date='" +request.getParameter("date")
+      +"' AND time='" +request.getParameter("time")
+      +"' AND cnumber1='" +request.getParameter("cnumber1")
+      +"' AND cnumber2='" +request.getParameter("cnumber2")
+      +"' AND cnumber3='" +request.getParameter("cnumber3")+"'";
+      //WHERE memberid='"+request.getParameter("memberid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
+      ResultSet pp = stmt.executeQuery("SELECT * FROM prescription");
+      //SELECT * FROM prescription
+      if (pp.next())
+      session.setAttribute("access","y");
+      session.setAttribute("pdate",pp.getString("date"));
+      session.setAttribute("ptime",pp.getString("time"));
+      session.setAttribute("pcnumber1",pp.getString("cnumber1"));
+      session.setAttribute("pcnumber2",pp.getString("cnumber2"));
+      session.setAttribute("pcnumber3",pp.getString("cnumber3"));
+      %>
  <h2><center>預約資料登記</center></h2>
 	<form action="pp-InsertInto.jsp">
 		<div>
@@ -32,7 +52,7 @@
 			<br>
 		</div>
 		<center>
-			<label  >選擇時間：</label> <select required name="time" for="time">
+			<label  >選擇時間：</label> <select required name="time">
 
 				<option value="">請選擇</option>
 				<option >11:00~12:00</option>
@@ -55,33 +75,9 @@
 			<br>
 			<button type="submit"
 				class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
-				>確認</button>
-<<<<<<< HEAD
-	<%Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-      Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
-      Statement stmt= con.createStatement
-      (ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-      String getprescriptiondata = "SELECT * FROM prescription WHERE accessid='"+request.getParameter("accessid")
-      +"' AND date='" +request.getParameter("date")
-      +"' AND time='" +request.getParameter("time")
-      +"' AND cnumber1='" +request.getParameter("cnumber1")
-      +"' AND cnumber2='" +request.getParameter("cnumber2")
-      +"' AND cnumber3='" +request.getParameter("cnumber3")+"'";
-      //WHERE memberid='"+request.getParameter("memberid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
-      ResultSet pp = stmt.executeQuery("SELECT * FROM prescription");
-      //SELECT * FROM prescription
-      if (pp.next())
-      session.setAttribute("access","y");
-      session.setAttribute("pdate",pp.getString("date"));
-      session.setAttribute("ptime",pp.getString("time"));
-      session.setAttribute("pcnumber1",pp.getString("cnumber1"));
-      session.setAttribute("pcnumber2",pp.getString("cnumber2"));
-      session.setAttribute("pcnumber3",pp.getString("cnumber3"));
-      %> 
+				>確認</button> 
 	</form>
+	</html>	
 	</html>
-=======
-	
-	</form></html>
->>>>>>> b7317fe58c5703b8eaa0cdd363ba938ba776f33d
+
  
