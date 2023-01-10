@@ -13,7 +13,7 @@
 	String time= new String(request.getParameter("time"));
 	
 	smt.executeUpdate("UPDATE prescription SET date ='" + date+"', time ='" + time+"' WHERE id='"+session.getAttribute("numberid")+"'");
-	response.sendRedirect("Inquire.jsp?tid='"+session.getAttribute("numberid")+"");
+	response.sendRedirect("Inquire.jsp?id='"+session.getAttribute("numberid")+"");
 %>
 </body>
 </html>

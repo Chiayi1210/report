@@ -25,13 +25,14 @@
 	String cnumber3 =request.getParameter("cnumber3");
 	String sql1 = "SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'";
 	
-    ResultSet rs = smt.executeQuery(sql1);
+    ResultSet pp = smt.executeQuery(sql1);
     
-	rs.next();
+	pp.next();
 	%>
 <br>
  
 <div>
+<form action="remove.jsp?id=<%=session.getAttribute("numberid")%>" method="post" name="form" >
       <center><h3><table>
              <tr>
                  <td>病人姓名：</td>
@@ -47,25 +48,16 @@
              </tr>
       <tr>
            <td>慢箋卡號為：</td>
-                 <td><%=pp.getString("cnumber1")%></td>
+                 <td><%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%></td>
              </tr>
       
       </table>
    </h3>
-        
         <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">上一步</button>
-        <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認</button>
+<button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >確認</button>
+        
       </center>
+      </form>
       </div>
-
-
-
-
-
-<br><center>
-<button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">上一步</button>
-<button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認</button>
-</center>
-</div>
 </body>
 </html>
