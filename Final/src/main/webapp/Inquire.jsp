@@ -32,7 +32,8 @@
              </tr>
       <tr>
            <td>領藥時段為：</td>
-                 <td><%=pp.getString("date")%><br><%=pp.getString("time")%></td>
+                 <td><%=pp.getString("date")%><br>
+                 <%=pp.getString("time")%></td>
              </tr>
       <tr>
            <td>慢箋卡號為：</td>
@@ -46,8 +47,8 @@
         <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認</button>
       </center>
       </div>
-      	<%
-      	//Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+    
+ <!--    //Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
       //Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
       //Statement stmt= con.createStatement
       //(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
@@ -66,8 +67,8 @@
       //session.setAttribute("ptime",pp.getString("time"));
       //session.setAttribute("pcnumber1",pp.getString("cnumber1"));
       //session.setAttribute("pcnumber2",pp.getString("cnumber2"));
-      //session.setAttribute("pcnumber3",pp.getString("cnumber3"));
-      %> 
+      //session.setAttribute("pcnumber3",pp.getString("cnumber3")); --> 
+     
       
 </body>
 </html>
