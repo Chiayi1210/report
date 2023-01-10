@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <!--連續處方簽預約網頁 -->
 <%@include file ="menu.jsp" %>
 <html lang="en">
@@ -13,8 +13,8 @@
  <h2><center>預約資料登記</center></h2>
 	<form action="pp-InsertInto.jsp">
 		<div>
-		  <center><h3 value="<%out.print(session.getAttribute("accessname"));%>">姓名：<%out.print(session.getAttribute("accessname"));%></h3>
-		  <h4 value="<%out.print(session.getAttribute("memberid"));%>">身分證字號：<%out.print(session.getAttribute("memberid"));%></h4><br>
+		  <center><h3 value="<%out.print(session.getAttribute("membername"));%>">姓名：<%out.print(session.getAttribute("membername"));%></h3>
+		  <h4 value="<%out.print(session.getAttribute("numberid"));%>">身分證字號：<%out.print(session.getAttribute("numberid"));%></h4><br>
 				<label for='massage'>選擇預約日期：</label><input type="date" for="date" name="date" required>
 				<script>
                   var date = document.getElementById('massage'),

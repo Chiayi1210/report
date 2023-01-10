@@ -1,5 +1,5 @@
 <%@page contentType="text/html"%>
-<%@page pageEncoding="utf-8"%>
+<%@page pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
 
@@ -14,13 +14,14 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 			request.getParameter("memberid")+"' AND memberpwd='" +
 			request.getParameter("memberpwd")+"'";
 	ResultSet members = smt.executeQuery(getmemberdata);
-	
+//memberid 帳號 memberpwd 密碼 email 電子信箱	membername 姓名 numberid 身分證字號 memberphone電話
 	if(members.next()){
 		session.setAttribute("access","y");
-		session.setAttribute("accessid",request.getParameter("memberid"));
-		session.setAttribute("accessname",members.getString("name"));
-		session.setAttribute("memberid",members.getString("id"));
+		session.setAttribute("email",request.getParameter("memberid"));
+		session.setAttribute("membername",members.getString("name"));
+		session.setAttribute("numberid",members.getString("id"));
 		session.setAttribute("memberphone",members.getString("phone"));
+		
 		session.setMaxInactiveInterval(3600);
 		response.sendRedirect("index.jsp");
 	}else

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <!--連續處方簽預約網頁 -->
 <%@include file ="menu.jsp" %>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
@@ -8,7 +8,7 @@ Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.File
 Statement stmt= con.createStatement
 (ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 //WHERE memberid='"+request.getParameter("memberid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
-ResultSet pp = stmt.executeQuery("SELECT * FROM prescription WHERE id='"+session.getAttribute("id")+"' And name='"+session.getAttribute("name")+"' And date='"+session.getAttribute("date")+"'And time='"+session.getAttribute("time")+"'And cnumber1='"+session.getAttribute("cnumber1")+"'");
+ResultSet pp = stmt.executeQuery("SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'");
 //SELECT * FROM prescription
  %>
  
@@ -23,19 +23,19 @@ ResultSet pp = stmt.executeQuery("SELECT * FROM prescription WHERE id='"+session
  <h2><center>確認預約資料</center></h2>
 
  <form action="success.jsp">
-
- 
  <center>
- <br><table font size="8">
+ <br>
+ <%while(pp.next()){ %> 
+ <h3><table>
  <tr>
     <td>病人姓名：</td>
-    <td><%out.print(session.getAttribute("accessname"));%></td>
+    <td><%=pp.getString("name")%></td>
  </tr>
  <tr>
     <td>身分證字號：</td>
-    <td><%out.print(session.getAttribute("memberid"));%></td>
+    <td><%=pp.getString("id")%></td>
  </tr>
- <%while(pp.next()){ %>
+ 
  <tr>
    <td>日期:</td>
     <td><%=pp.getString("date") %><br></td>
@@ -46,16 +46,10 @@ ResultSet pp = stmt.executeQuery("SELECT * FROM prescription WHERE id='"+session
  </tr>
  <tr>
     <td>慢箋卡號:</td>
-    <td><%=pp.getString("pcnumber1") %></td>
- </tr>
-
- </table><br><%}%>  </center>
- 
- 
+    <td><%=pp.getString("cnumber1") %></td>
+</tr>
+</table></h3><br><%}%>
+<button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button> 
  </form>
-
-<button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='success.jsp'">確認</button>
-
-
 </body>
 </html>

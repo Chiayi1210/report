@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%><%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%><%@page import="java.sql.*"%>
 <%@include file ="menu.jsp" %>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 
 <!-- 登出頁 -->
   <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-   <h1 class="w3-margin w3-jumbo">歡迎光臨，<%out.print(session.getAttribute("accessname"));%></h1>
+   <h1 class="w3-margin w3-jumbo">歡迎光臨，<%out.print(session.getAttribute("membername"));%></h1>
    <p class="w3-xlarge">石牌藥局預約系統</p>
    <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='logout.jsp'">登出</button>
   </header>

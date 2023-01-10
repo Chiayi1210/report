@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=BIG5" pageEncoding="BIG5"%>
+<%@ page language="java" contentType="text/html; charset=BIG5" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="BIG5">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>LeeLab Web</title>
   <link href="//fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
@@ -28,13 +28,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.jsp">­º­¶</a>
+              <a class="nav-link" href="index.jsp">é¦–é </a>
             </li>
             <li class="nav-item @@about__active">
-              <a class="nav-link" href="memberList.jsp">¹Î¶¤¦¨­û<br></a>
+              <a class="nav-link" href="memberList.jsp">åœ˜éšŠæˆå“¡<br></a>
             </li>
             <li class="nav-item @@contact__active">
-              <a class="nav-link" href="instruct.jsp">½×¤å»P±MÃD«ü¾É</a>
+              <a class="nav-link" href="instruct.jsp">è«–æ–‡èˆ‡å°ˆé¡ŒæŒ‡å°Ž</a>
             </li>
             <li class="nav-item @@contact__active" >
               <a class="nav-link" href="member.jsp?memberId=<%=session.getAttribute("accessId")%>">
@@ -49,9 +49,9 @@
           </ul>
           <div class="ml-lg-3">
           <%if(session.getAttribute("accessId") != null){%>
-          	<input type="submit" value="µn¥X" name="logout" class="btn btn-style btn-effect">
+          	<input type="submit" value="ç™»å‡º" name="logout" class="btn btn-style btn-effect">
 		  <%}else{%>
-			<a href="login.jsp" class="btn btn-style btn-effect">µn¤J</a>
+			<a href="login.jsp" class="btn btn-style btn-effect">ç™»å…¥</a>
 	  	  <%}%>
           </div>
         </div>

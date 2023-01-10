@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=BIG5"
-    pageEncoding="BIG5"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html>
-<head><title>µn¥X</title></head>
+<head><title>ç™»å‡º</title></head>
 <body>
 <%
 if(session.getAttribute("access") !="n"){
@@ -9,8 +9,8 @@ if(session.getAttribute("access") !="n"){
 	session.removeAttribute("membername");
 	session.removeAttribute("access");
 	//session.invalidate("memberid");
-	out.println("±z¤w¦¨¥\µn¥X¡I<br>");
-	out.println("<a href='index.jsp'>¦^­º­¶</a>");
+	out.println("æ‚¨å·²æˆåŠŸç™»å‡ºï¼<br>");
+	out.println("<a href='index.jsp'>å›é¦–é </a>");
 }else{
 	response.sendRedirect("index.jsp");
 }
