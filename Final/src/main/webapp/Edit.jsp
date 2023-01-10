@@ -34,16 +34,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
     Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-	String sql = "SELECT * prescription left join position on prescription.time=time.date WHERE prescription ='" +request.getParameter("time")+"'";
-	String option="SELECT * FROM prescription";
-	ResultSet rs = smt.executeQuery(sql);
-	ResultSet rs2 = smt.executeQuery(option);
+	String sql = "SELECT * prescription  WHERE pdate ='" + request.getParameter("date") +"'";
+    ResultSet rs = smt.executeQuery(sql);
 	rs.next();
 	%>
-<center><h3 value="<%out.print(session.getAttribute("accessname"));%>">姓名：<%out.print(session.getAttribute("accessname"));%></h3>
+<form action="Edit-Update.jsp?prescription=<%=request.getParameter("memberId")%>" method="post" name="form" >
+
+<h3 value="<%out.print(session.getAttribute("accessname"));%>">姓名：<%out.print(session.getAttribute("accessname"));%></h3>
         <h3>身分證字號：<%out.print(session.getAttribute("memberid"));%></h3>
-        <label for='massage'>選擇預約日期：</label><input type="date" name="date" required>
-				<script>
+        <label for='massage'>選擇預約日期：</label><input type="date" name="date" value="<%=rs.getString("pdate")%>" required>
+				<center><script>
                   var date = document.getElementById('massage'),
                   function noSundays(e){
                   var day = new Date(e.target.value).getUTCDay();
@@ -55,7 +55,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                   }
                   }
                 </script>
-        <label for="time" >選擇時間：</label> <select required name="time">
+        <label for="time" >選擇時間：</label> <select required name="time" value="<%=rs.getString("ptime") %>" >
 
 				<option value="">請選擇</option>
 				<option >11:00~12:00</option>
@@ -70,8 +70,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 				<option >22:00~23:00</option>
 			</select><br>
 	 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">上一步</button>
-	 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認</button>
+	 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">確認修改</button>
 </center>
+</form>
 </div>
 </body>
 </html>
