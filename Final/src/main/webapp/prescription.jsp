@@ -57,25 +57,26 @@
 				class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
 				>確認</button>
 	<%Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
-Statement stmt= con.createStatement
-(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-String getprescriptiondata = "SELECT * FROM prescription WHERE accessid='"+request.getParameter("accessid")
-+"' AND date='" +request.getParameter("date")
-+"' AND time='" +request.getParameter("time")
-+"' AND cnumber1='" +request.getParameter("cnumber1")
-+"' AND cnumber2='" +request.getParameter("cnumber2")
-+"' AND cnumber3='" +request.getParameter("cnumber3")+"'";
-//WHERE memberid='"+request.getParameter("memberid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
-ResultSet pp = stmt.executeQuery("SELECT * FROM prescription");
-//SELECT * FROM prescription
-if (pp.next())
-	session.setAttribute("access","y");
-session.setAttribute("pdate",pp.getString("date"));
-session.setAttribute("ptime",pp.getString("time"));
-session.setAttribute("pcnumber1",pp.getString("cnumber1"));
-session.setAttribute("pcnumber2",pp.getString("cnumber2"));
-session.setAttribute("pcnumber3",pp.getString("cnumber3"));
-%> 
-	</form></html>
+      Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
+      Statement stmt= con.createStatement
+      (ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+      String getprescriptiondata = "SELECT * FROM prescription WHERE accessid='"+request.getParameter("accessid")
+      +"' AND date='" +request.getParameter("date")
+      +"' AND time='" +request.getParameter("time")
+      +"' AND cnumber1='" +request.getParameter("cnumber1")
+      +"' AND cnumber2='" +request.getParameter("cnumber2")
+      +"' AND cnumber3='" +request.getParameter("cnumber3")+"'";
+      //WHERE memberid='"+request.getParameter("memberid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
+      ResultSet pp = stmt.executeQuery("SELECT * FROM prescription");
+      //SELECT * FROM prescription
+      if (pp.next())
+      session.setAttribute("access","y");
+      session.setAttribute("pdate",pp.getString("date"));
+      session.setAttribute("ptime",pp.getString("time"));
+      session.setAttribute("pcnumber1",pp.getString("cnumber1"));
+      session.setAttribute("pcnumber2",pp.getString("cnumber2"));
+      session.setAttribute("pcnumber3",pp.getString("cnumber3"));
+      %> 
+	</form>
+	</html>
  
