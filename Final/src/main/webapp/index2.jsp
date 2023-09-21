@@ -15,7 +15,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Mico</title>
+   <title>北護智慧藥局線上預約平台</title>
 
 
   <!-- bootstrap core css -->
@@ -39,14 +39,11 @@
   <link href="css/responsive.css" rel="stylesheet" />
 
 </head>
-
-
 <body>
 
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-     
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
