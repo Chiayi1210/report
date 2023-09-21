@@ -24,16 +24,14 @@
                       </button>
                     </div>
                     <h1>
-                      Mico <br>
-                      <span>
-                        Hospital
-                      </span>
+                      北護智慧藥局
+         
                     </h1>
                     <p>
-                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                      簡介1234548789
                     </p>
                     <a href="">
-                      Contact Us
+                      聯絡我們
                     </a>
                   </div>
                 </div>
@@ -51,9 +49,7 @@
                 <div class="col-md-6">
                   <div class="detail-box">
                     <div class="play_btn">
-                      <button>
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                      </button>
+                  
                     </div>
                     <h1>
                       Mico <br>
@@ -698,18 +694,7 @@
   </footer>
   <!-- footer section -->
 
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <!-- datepicker -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
+
 
 
 </body>
