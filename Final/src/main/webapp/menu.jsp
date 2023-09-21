@@ -47,10 +47,12 @@ pageEncoding="UTF-8"%><%@page import="java.sql.*"%>
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index2.jsp">
-              <img src="images/logo.png" alt="">
+              <img src="images/logo.png" width="25" height="60" alt="">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            </button>
+           
+           
+            
+            
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
@@ -61,16 +63,13 @@ pageEncoding="UTF-8"%><%@page import="java.sql.*"%>
                     <a class="nav-link" href="about.html"> 關於我們</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="treatment.html">Treatment</a>
+                    <a class="nav-link" href="doctor.html">藥師簡介</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="doctor.html">藥師</a>
+                    <a class="nav-link" href="treatment.html">慢箋預約</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="testimonial.html">Testimonial</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-link" href="contact.html">聯絡我們</a>
                   </li>
                 </ul>
               </div>
@@ -98,62 +97,6 @@ pageEncoding="UTF-8"%><%@page import="java.sql.*"%>
         </div>
       </div>
     </header>
-    <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <div class="play_btn">
-                      <button>
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                      </button>
-                    </div>
-                    
-                <div class="col-md-6">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <div class="play_btn">
-                      <button>
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                      </button>
-                    </div>
-                   
-                  </div>
-                </div>
-                <div class="col-md-6">
-                
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel_btn-box">
- 
-        </div>
-      </div>
-
-    </section>
+    
 </body>
 </html>
