@@ -29,7 +29,7 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 }
 %>
 <html>
-<head><title>石牌藥局-登入</title>
+<head><title>北護智慧藥局預約平台-登入</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -129,7 +129,7 @@ span.psw {
 </div>
 <div class="container" style="background-color:#white">
 	<a href="signup.jsp" class="signbtn">註冊</a>
-	<a href="index.jsp" class="signbtn">取消</a></div>
+	<a href="index2.jsp" class="signbtn">取消</a></div>
   </center>
 </form>
 </body>
