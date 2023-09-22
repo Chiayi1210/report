@@ -63,19 +63,16 @@
                     <a class="nav-link" href="index2.jsp">首頁 <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html"> About</a>
+                    <a class="nav-link" href="about.html">  關於我們</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="treatment.html">Treatment</a>
+                    <a class="nav-link" href="treatment.html">慢箋預約</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="doctor.html">藥師</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="testimonial.html">Testimonial</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-link" href="contact.html">聯絡我們</a>
                   </li>
                 </ul>
               </div>
@@ -122,9 +119,9 @@
                       </button>
                     </div>
                     <h1>
-                      Mico <br>
+                     北護智慧藥局線上預約平台 <br>
                       <span>
-                        Hospital
+                        Pharmacy
                       </span>
                     </h1>
                     <p>
