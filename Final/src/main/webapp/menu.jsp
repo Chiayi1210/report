@@ -4,6 +4,32 @@ pageEncoding="UTF-8"%><%@page import="java.sql.*"%>
 
 <!DOCTYPE html>
 <html>
+<script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- datepicker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+<script>
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+if (window != top) top.location.href = location.href;
+jQuery(document).ready(function($){ $('img').removeAttr('width height'); });
+var gaProperty = 'UA-120201777-1';
+var disableStr = 'ga-disable-' + gaProperty;if (document.cookie.indexOf(disableStr + '=true') > -1) {window[disableStr] = true;}
+function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2045 23:59:59 UTC; path=/';window[disableStr] = true;alert('Google Tracking has been deactivated');}
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-120201777-1', 'auto');ga('set', 'anonymizeIp', true);ga('send', 'pageview');
+</script>
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -43,17 +69,23 @@ pageEncoding="UTF-8"%><%@page import="java.sql.*"%>
  <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
+        <div class="container">
+          <div class="contact_nav">
+          </div>
+          </div>
+          
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index2.jsp">
-              <img src="images/logo.png" width="25" height="60" alt="">
+              <img src="images/logo.png"  alt="">
             </a>
-           
-           
             
-            
-             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>   
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
                   <li class="nav-item active">
@@ -73,6 +105,7 @@ pageEncoding="UTF-8"%><%@page import="java.sql.*"%>
                   </li>
                 </ul>
               </div>
+       
               <div class="quote_btn-container">
                 <a href="loginCheck-Select.jsp">
                   <i class="fa fa-user" aria-hidden="true"></i>
@@ -87,16 +120,16 @@ pageEncoding="UTF-8"%><%@page import="java.sql.*"%>
                   </span>
                 </a>
                 <form class="form-inline">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
                 </form>
+                </div>
+                </div>
               </div>
             </div>
-          </nav>
         </div>
-      </div>
-    </header>
-    
+      </div>         
+    </header> 
 </body>
+
 </html>
+
+
