@@ -34,12 +34,12 @@
                     <h1>
                      北護智慧藥局線上預約平台 <br>
                        <span>
-                        Pharmacy
+                        NTUNHS Pharmacy
                         </span>
                     </h1>    
                      <p>
                       when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                       </p>
+                       </p>  <!-- 這裡要打簡介 -->
                     <a href="">
                       聯絡我們
                     </a>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="images/slider-img.jpg" alt="">
+                    <img src="images/Pharmacy.jpg" alt="">
                   </div>
                 </div>
               </div>
@@ -82,7 +82,9 @@
     <div class="container  ">
       <div class="row">
         <div class="col-md-6 ">
-          
+          <div class="img-box">
+                    <img src="images/about.jpg" alt="">
+                  </div>
         </div>
         <div class="col-md-6">
           <div class="detail-box">
@@ -93,10 +95,8 @@
             </div>
             <p>
               has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
-            </p>
-            <a href="">
-              Read More
-            </a>
+            </p><!-- 改成關於藥局的資料 -->
+            
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Hospital <span>Treatment</span>
+          服務 <span>項目</span>
         </h2>
       </div>
       <div class="row">
@@ -126,7 +126,7 @@
             </div>
             <div class="detail-box">
               <h4>
-                Nephrologist Care
+                各類處方箋調劑
               </h4>
               <p>
                 alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
@@ -142,7 +142,7 @@
             </div>
             <div class="detail-box">
               <h4>
-                Eye Care
+                日常保健
               </h4>
               <p>
                 alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
@@ -158,7 +158,7 @@
             </div>
             <div class="detail-box">
               <h4>
-                Pediatrician Clinic
+                醫療器材
               </h4>
               <p>
                 alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
@@ -174,7 +174,7 @@
             </div>
             <div class="detail-box">
               <h4>
-                Parental Care
+                用藥諮詢
               </h4>
               <p>
                 alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
@@ -190,107 +190,53 @@
   <!-- end treatment section -->
 
   <!-- team section -->
-
-  <section class="team_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          關於 <span>藥師</span>
-        </h2>
-      </div>
-      <div class="carousel-wrap ">
-        <div class="owl-carousel team_carousel">
-          <div class="item">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/team1.jpg" alt="" />
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Hennry
-                </h5>
-                <h6>
-                  MBBS
-                </h6>
-                <div class="social_box">
-                  <a href="">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/team2.jpg" alt="" />
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Jenni
-                </h5>
-                <h6>
-                  MBBS
-                </h6>
-                <div class="social_box">
-                  <a href="">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/team3.jpg" alt="" />
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Morco
-                </h5>
-                <h6>
-                  MBBS
-                </h6>
-                <div class="social_box">
-                  <a href="">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+ <section class="team_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>藥師 <span>簡介</span></h2>
     </div>
-  </section>
+    <div class="carousel-wrap">
+      <div class="owl-carousel team_carousel owl-loaded owl-drag">
+      <div class="owl-stage-outer"><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
+          <div class="box">
+            <div class="img-box"><img src="assets/images/PT2.jpg" alt="website template image"></div>
+            <div class="detail-box">
+              <h5>陳湘婷</h5>
+              <h6>MBBS</h6>
+              <div class="social_box"><a href="https://www.free-css.com/free-css-templates"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+        </div></div><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
+          <div class="box">
+            <div class="img-box"><img src="assets/images/team3.jpg" alt="website template image"></div>
+            <div class="detail-box">
+              <h5>林新義</h5>
+              <h6>MBBS</h6>
+              <div class="social_box"><a href="https://www.free-css.com/free-css-templates"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+        </div></div><div class="owl-item active" style="width: 247.5px; margin-right: 15px;"><div class="item">
+          <div class="box">
+            </div>
+        </div></div><div class="owl-item active" style="width: 247.5px; margin-right: 15px;"><div class="item">
+          <div class="box">
+            </div>
+        </div></div><div class="owl-item" style="width: 247.5px; margin-right: 15px;"><div class="item">
+          <div class="box">
+            
+        </div></div><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
+          <div class="box">
+            
+        </div></div><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
+          <div class="box">
+            </div></div></div>
+        <div class="owl-nav disabled"></div><div class="owl-dots"></div></div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+  
 
   <!-- end team section -->
 
@@ -300,7 +246,7 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          <span>Testimonial</span>
+          <span>最新消息</span>
         </h2>
       </div>
     </div>
@@ -343,24 +289,7 @@
               </p>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="box">
-              <div class="client_info">
-                <div class="client_name">
-                  <h5>
-                    Brad Johns
-                  </h5>
-                  <h6>
-                    Default model text
-                  </h6>
-                </div>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-              <p>
-                Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
-              </p>
-            </div>
-          </div>
+          
         </div>
         <div class="carousel_btn-box">
           <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
