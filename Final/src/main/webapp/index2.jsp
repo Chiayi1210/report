@@ -86,9 +86,9 @@
                     <img src="images/about.jpg" alt="">
                   </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="112233">
           <div class="detail-box">
-            <div class="heading_container">
+            <div class="heading_container"  >
               <h2>
                 關於 <span>北護智慧藥局</span>
               </h2>
@@ -191,7 +191,7 @@
 
   <!-- team section -->
  <section class="team_section layout_padding">
-  <div class="container">
+  <div class="container" id="1234">
     <div class="heading_container heading_center">
       <h2>藥師 <span>簡介</span></h2>
     </div>
@@ -199,20 +199,20 @@
       <div class="owl-carousel team_carousel owl-loaded owl-drag">
       <div class="owl-stage-outer"><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
           <div class="box">
-            <div class="img-box"><img src="assets/images/PT2.jpg" alt="website template image"></div>
+            <div class="img-box"><img src="images/PT2.jpg" alt=" "></div>
             <div class="detail-box">
               <h5>陳湘婷</h5>
-              <h6>MBBS</h6>
-              <div class="social_box"><a href="https://www.free-css.com/free-css-templates"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+              <h6>北醫大藥學系學士</h6>
+              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
             </div>
           </div>
         </div></div><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
           <div class="box">
-            <div class="img-box"><img src="assets/images/team3.jpg" alt="website template image"></div>
+            <div class="img-box"><img src="images/PT1.jpg" alt=""></div>
             <div class="detail-box">
               <h5>林新義</h5>
-              <h6>MBBS</h6>
-              <div class="social_box"><a href="https://www.free-css.com/free-css-templates"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.free-css.com/free-css-templates"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+              <h6>台灣大學藥學系學士</h6>
+              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
             </div>
           </div>
         </div></div><div class="owl-item active" style="width: 247.5px; margin-right: 15px;"><div class="item">
@@ -234,6 +234,7 @@
     </div>
 </div>
 </div>
+
 </div>
 </div>
 </section>
@@ -309,10 +310,10 @@
 
   <!-- contact section -->
   <section class="contact_section layout_padding-bottom">
-    <div class="container">
+    <div class="container" id="3456">
       <div class="heading_container">
         <h2>
-          Get In Touch
+         聯絡我們
         </h2>
       </div>
       <div class="row">
@@ -320,20 +321,20 @@
           <div class="form_container">
             <form action="">
               <div>
-                <input type="text" placeholder="Full Name" />
+                <input type="text" placeholder="姓名" />
               </div>
               <div>
                 <input type="email" placeholder="Email" />
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" placeholder="手機" />
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" placeholder="留言" />
               </div>
               <div class="btn_box">
                 <button>
-                  SEND
+                 送出
                 </button>
               </div>
             </form>
@@ -403,7 +404,7 @@
               <a href="">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <a href="https://www.instagram.com/ntunhs_dhcm/">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </div>
