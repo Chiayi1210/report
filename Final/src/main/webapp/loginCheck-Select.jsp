@@ -175,17 +175,23 @@ span.psw {
 }
 </style>
 <body >
-    <header class="header_section"> 
+    <header class="header_section">
+    
       <div class="header_bottom">
         <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index2.jsp">
-              <img src="images/logo.png"  alt=""></a>
-    
-       
+         <a class="navbar-brand" href="index2.jsp">
+              <img src="images/logo.png"  alt="">
+ </a>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                    <a class="nav-link" >登入 </a>
+                  </li>
+    </ul></div>
+ 
               </div>
                 </div>
-               
     </header> 
 
   
