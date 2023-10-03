@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 <html>
-
+<title>北護智慧藥局線上預約平台</title>
 <body>
 
   <div class="hero_area">

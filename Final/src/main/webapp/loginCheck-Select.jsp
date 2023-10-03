@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" 
-pageEncoding="utf-8"%><%@page import="java.sql.*"%>
+pageEncoding="utf-8"%>
+<%@page import="java.sql.*"%>
+<%@include file ="menu.jsp" %>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
+
+<!-- 登入主體 -->
 <% session.setAttribute("access","n");
 if(request.getParameter("memberid") !=null &&
 	request.getParameter("memberpwd") !=null){
@@ -27,93 +31,12 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 		//out.println("帳號密碼不符！請重新登入");
 }
 %>
-<%@include file ="menu.jsp" %>
-<script src="js/jquery-3.4.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <!-- datepicker -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-<script>
-(function(){
-  var bsa = document.createElement('script');
-     bsa.type = 'text/javascript';
-     bsa.async = true;
-     bsa.src = '//s3.buysellads.com/ac/bsa.js';
-  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
-})();
-if (window != top) top.location.href = location.href;
-jQuery(document).ready(function($){ $('img').removeAttr('width height'); });
-var gaProperty = 'UA-120201777-1';
-var disableStr = 'ga-disable-' + gaProperty;if (document.cookie.indexOf(disableStr + '=true') > -1) {window[disableStr] = true;}
-function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2045 23:59:59 UTC; path=/';window[disableStr] = true;alert('Google Tracking has been deactivated');}
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-120201777-1', 'auto');ga('set', 'anonymizeIp', true);ga('send', 'pageview');
-</script>
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-   <title>北護智慧藥局線上預約平台</title>
-
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <!-- nice select -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
-  <!-- datepicker -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-
-</head>
-
-<!-- 登入主體 -->
-
-
 <html>
-<head>
-<meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-</head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登入 | 北護智慧藥局線上預約平台</title>
 <style>
-@import url("css/style.css");
-     /*@import "css/style.css";*/
+
   
- form {border: 0px solid #f1f1f1
- ;width:auto ;
- height:auto;}    
-
-
+form {border: 0px solid #f1f1f1}    
 
 input[type=text], input[type=password] {
   width: 50%;
@@ -189,13 +112,12 @@ span.psw {
     <% if(request.getParameter("memberpwd")!= null){ %>
 		
 	<%}%>
-	<div class="btn_box">
-    <button  type="submit" name="loginButton">登入</button>
-</div>
-<br>
-	<a href="signup.jsp" class="signbtn">註冊</a>
-	<br><br><a href="">忘記密碼?</a> </center>
 	
+    <button  type="submit" name="loginButton">登入</button>
+<br><br>
+	<a href="signup.jsp" class="signbtn">註冊</a>
+	<br><br><a href="">忘記密碼?</a>
+	</center>
 </form>
 </body>
 </html>

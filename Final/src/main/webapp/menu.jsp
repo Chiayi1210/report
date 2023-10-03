@@ -41,7 +41,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-   <title>北護智慧藥局線上預約平台</title>
+  
 
 
   <!-- bootstrap core css -->
@@ -69,9 +69,8 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
  <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-        <div class="container">
-          <div class="contact_nav">
-          </div>
+        <div class="">
+          
           </div>
           
       <div class="header_bottom">
