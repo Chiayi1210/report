@@ -1,6 +1,5 @@
-<%@page contentType="text/html"%>
-<%@page pageEncoding="UTF-8"%>
-<%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" 
+pageEncoding="utf-8"%><%@page import="java.sql.*"%>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
 <% session.setAttribute("access","n");
 if(request.getParameter("memberid") !=null &&
@@ -28,6 +27,7 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 		//out.println("帳號密碼不符！請重新登入");
 }
 %>
+<%@include file ="menu.jsp" %>
 <script src="js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
@@ -94,7 +94,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
 
 
 <html>
-<head><title>北護智慧藥局預約平台-登入</title>
+<head>
 <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
@@ -174,31 +174,10 @@ span.psw {
   }
 }
 </style>
-<body >
-    <header class="header_section">
-    
-      <div class="header_bottom">
-        <div class="container-fluid">
-         <a class="navbar-brand" href="index2.jsp">
-              <img src="images/logo.png"  alt="">
- </a>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
-                <ul class="navbar-nav  ">
-                  <li class="nav-item active">
-                    <a class="nav-link" >登入 </a>
-                  </li>
-    </ul></div>
- 
-              </div>
-                </div>
-    </header> 
-
-  
-
-
+<body>
 <form action="loginCheck-Select.jsp">
 <center>
+<h1>登入</h1>
 	<label for="memberid"><b>帳號</b></label>
     <input type="text" class="message-box" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
 	

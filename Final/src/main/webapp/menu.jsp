@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" 
-pageEncoding="UTF-8"%><%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" 
+pageEncoding="utf-8"%><%@page import="java.sql.*"%>
 
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
 </script>
 <head>
   <!-- Basic -->
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -92,16 +92,16 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                     <a class="nav-link" href="index2.jsp">首頁 <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#112233"> 關於我們</a>
+                    <a class="nav-link" href="index2.jsp#112233"> 關於我們</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#1234">藥師簡介</a>
+                    <a class="nav-link" href="index2.jsp#1234">藥師簡介</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="treatment.html">慢箋預約</a>
+                    <a class="nav-link" href="#">慢箋預約</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#3456">聯絡我們</a>
+                    <a class="nav-link" href="index2.jsp#3456">聯絡我們</a>
                   </li>
                 </ul>
               </div>
