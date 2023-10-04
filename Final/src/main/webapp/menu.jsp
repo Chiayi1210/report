@@ -98,7 +98,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                     <a class="nav-link" href="index2.jsp#1234">藥師簡介</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">慢箋預約</a>
+                    <a class="nav-link" href="">慢箋預約</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="index2.jsp#3456">聯絡我們</a>
@@ -108,10 +108,11 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
           <form method="post" action="menu.jsp" >
    <%if (session.getAttribute("access") == "y"){%>
               <div class="quote_btn-container">
-                <a href="loginCheck-Select.jsp">
+                <a href="loginCheck-Select.jsp"> 
+                <!-- 這邊想放會員資料 -->
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span>
-                    登入
+                    <%out.print(session.getAttribute("membername"));%>
                   </span>
                 </a>
                

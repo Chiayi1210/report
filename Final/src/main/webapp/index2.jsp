@@ -35,10 +35,10 @@
                   <div class="detail-box">
                     
                     <h1>
-                     <%out.print(session.getAttribute("membername"));%>,歡迎光臨<br>北護智慧藥局<br>
+                     <%out.print(session.getAttribute("membername"));%><br>歡迎光臨<br>北護智慧藥局<br>
                        <span>
                         NTUNHS Pharmacy
-                        </span>
+                       </span>
                     </h1>    
                      <p>
                       when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
@@ -56,7 +56,7 @@
               </div>
             </div>
           </div>
-           </div>
+        </div>
     </section>
     </div>
     </form>
@@ -112,9 +112,10 @@
               </div>
             </div>
           </div>
-           </div>
-
+        </div>
+      </div>
     </section>
+  </div>
     <!-- end 登入頁 -->
 <%}%>
   <!-- book section -->

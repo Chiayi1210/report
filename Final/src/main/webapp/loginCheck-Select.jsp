@@ -100,6 +100,7 @@ span.psw {
 <body>
 <form action="loginCheck-Select.jsp">
 <center>
+<br>
 <h1>登入</h1>
 	<label for="memberid"><b>帳號</b></label>
     <input type="text" class="message-box" placeholder="請輸入帳號(電子信箱)" name="memberid" required><br>
