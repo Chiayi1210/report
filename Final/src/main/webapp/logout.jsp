@@ -9,8 +9,8 @@ if(session.getAttribute("access") !="n"){
 	session.removeAttribute("membername");
 	session.removeAttribute("access");
 	//session.invalidate("memberid");
-	out.println("您已成功登出！<br>");
-	out.println("<a href='index2.jsp'>回首頁</a>");
+	out.println("<script>alert('您已成功登出!!'); window.location='index2.jsp' </script>");
+	
 }else{
 	response.sendRedirect("index2.jsp");
 }

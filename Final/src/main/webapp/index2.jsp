@@ -6,8 +6,67 @@
 <html>
 <title>北護智慧藥局線上預約平台</title>
 <body>
+<form method="post" action="logout.jsp" >
+<%if (session.getAttribute("access") == "y"){%>
 
+<!-- 登出頁 -->
   <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="dot_design">
+        <img src="images/dots.png" alt="">
+      </div>
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    
+                    <h1>
+                     <%out.print(session.getAttribute("membername"));%>,歡迎光臨<br>北護智慧藥局<br>
+                       <span>
+                        NTUNHS Pharmacy
+                        </span>
+                    </h1>    
+                     <p>
+                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                       </p>  <!-- 這裡要打簡介 -->
+                    <a href="index2.jsp#3456">
+                      聯絡我們
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="images/Pharmacy.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           </div>
+    </section>
+    </div>
+    </form>
+    <!-- end slider section -->
+    
+    <%}else{%>
+    
+    
+ <!-- 登入頁 -->
+<div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="header_bottom">
@@ -53,13 +112,11 @@
               </div>
             </div>
           </div>
-          
+           </div>
 
     </section>
-    <!-- end slider section -->
-  </div>
-
-
+    <!-- end 登入頁 -->
+<%}%>
   <!-- book section -->
 
   <section class="book_section layout_padding">

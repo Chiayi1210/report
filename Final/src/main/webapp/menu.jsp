@@ -41,7 +41,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  
+   <title>北護智慧藥局線上預約平台</title>
 
 
   <!-- bootstrap core css -->
@@ -70,7 +70,8 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
     <!-- header section strats -->
     <header class="header_section">
         <div class="">
-          
+          <div class="contact_nav">
+          </div>
           </div>
           
       <div class="header_bottom">
@@ -104,7 +105,8 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                   </li>
                 </ul>
               </div>
-       
+          <form method="post" action="menu.jsp" >
+   <%if (session.getAttribute("access") == "y"){%>
               <div class="quote_btn-container">
                 <a href="loginCheck-Select.jsp">
                   <i class="fa fa-user" aria-hidden="true"></i>
@@ -112,20 +114,30 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                     登入
                   </span>
                 </a>
+               
                 <a href="logout.jsp">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span>
                     登出
                   </span>
                 </a>
-                <form class="form-inline">
-                </form>
+            <%}else{%>
+            <div class="quote_btn-container">
+                <a href="loginCheck-Select.jsp">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                    登入
+                  </span>
+                </a>  
+             <%}%>     
+             
                 </div>
                 </div>
               </div>
             </div>
         </div>
-      </div>         
+      </div> 
+      </form>        
     </header> 
 </body>
 
