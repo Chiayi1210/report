@@ -99,7 +99,7 @@
                      <p>
                       when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
                        </p>  <!-- 這裡要打簡介 -->
-                    <a href="">
+                    <a href="index2.jsp#3456">
                       聯絡我們
                     </a>
                   </div>
@@ -188,7 +188,8 @@
               </h4>
               <p>
                 alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
+              </p><!--各類服務說明!  -->
+              
              
             </div>
           </div>
@@ -204,7 +205,7 @@
               </h4>
               <p>
                 alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
+              </p><!--各類服務說明!  -->
               
             </div>
           </div>
@@ -220,7 +221,7 @@
               </h4>
               <p>
                 alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
+              </p><!--各類服務說明!  -->
               
             </div>
           </div>
@@ -236,7 +237,7 @@
               </h4>
               <p>
                 alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
+              </p><!--各類服務說明!  -->
               
             </div>
           </div>
@@ -318,17 +319,17 @@
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Morijorch
+                    Morijorch<!--最新消息1標題  -->
                   </h5>
                   <h6>
-                    Default model text
+                    Default model text<!-- 作者 -->
                   </h6>
                 </div>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
                 editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
-              </p>
+              </p><!-- 最新消息 -->
             </div>
           </div>
           <div class="carousel-item">
@@ -336,7 +337,7 @@
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Rochak
+                    Rochak<!-- 最新消息2 -->
                   </h5>
                   <h6>
                     Default model text
@@ -473,19 +474,24 @@
                 連結
               </h5>
               <div class="info_links_menu">
-                <a class="active" href="index.html">
+                <a class="active" href="index2.jsp">
                   首頁
                 </a>
-                <a href="about.html">
+                <a href="index2.jsp/#112233">
                   關於我們
                 </a>
-                <a href="treatment.html">
+                <a href="index2.jsp#1234">
                  藥師簡介
                 </a>
-                <a href="doctor.html">
+                <%if (session.getAttribute("access") == "y"){%>
+                <a href="prescription.jsp">
+                  慢箋預約
+                <%}else{%>
+                <a href="#">
                   慢箋預約
                 </a>
-                <a href="contact.html">
+                <%}%>
+                <a href="index2.jsp#3456">
                   聯絡我們
                 </a>
               </div>
