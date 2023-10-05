@@ -58,8 +58,8 @@ span.memberpwd {
 </style>
 
 <body>
-<center><h1>註冊</h1>
-<form action="signup-InsertInto.jsp" method="get" style="border:1px solid #ccc">
+<br><center><h1>註冊</h1>
+<form action="signup-InsertInto.jsp" method="get" style="border:0px solid #ccc">
   <div class="container">
     <h3> 請先建立一個帳號</h3>
   
