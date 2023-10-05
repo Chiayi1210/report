@@ -108,7 +108,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
           <form method="post" action="menu.jsp" >
    <%if (session.getAttribute("access") == "y"){%>
               <div class="quote_btn-container">
-                <a href="loginCheck-Select.jsp"> 
+                <a href="member-profile.jsp"> 
                 <!-- 這邊想放會員資料 -->
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span>
@@ -129,7 +129,14 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                   <span>
                     登入
                   </span>
-                </a>  
+                </a>
+            <div class="quote_btn-container">
+                <a href="signup.jsp">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>
+                   註冊
+                  </span>
+                </a>
              <%}%>     
              
                 </div>
