@@ -41,7 +41,7 @@ form {border: 0px solid #f1f1f1}
 input[type=text], input[type=password] {
   width: 50%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 10px 0;
   display: inline-block;
   box-sizing: border-box;
 }
@@ -50,14 +50,14 @@ button {
   background-color: #00c6a9;
   color: white;
   padding: 14px 15px;
-  margin: 8px 0;
+  margin: 10px 0;
   border: none;
   cursor: pointer;
-  width: 53%;
+  width: 5%;
 }
 
 button:hover {
-  opacity: 0.8;
+  opacity: 10;
 }
 
 .signbtn {
@@ -113,10 +113,9 @@ span.psw {
     <% if(request.getParameter("memberpwd")!= null){ %>
 		
 	<%}%>
-	
+	<br><br>
     <button  type="submit" name="loginButton">登入</button>
-<br><br>
-	<a href="signup.jsp" class="signbtn">註冊</a>
+	<button  type="submit"><a href="signup.jsp">註冊</a></button>
 	<br><br><a href="">忘記密碼?</a>
 	</center>
 </form>
