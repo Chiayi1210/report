@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
     <!--連續處方簽預約網頁 -->
 <%@page import="java.sql.*"%>
 <%@include file ="menu.jsp" %>
