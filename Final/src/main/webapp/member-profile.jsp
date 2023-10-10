@@ -46,14 +46,15 @@ pageEncoding="utf-8"%>
       <div class="row">
         <div class="col-md-6 ">
           <div class="img-box">
-                    <img src="images/PT2.jpg" width="10" height="10">
+                  <img src="images/PT2.jpg" style=width:280px; height:20px">
                   </div>
         </div>
-        <div class="col-md-6" id="112233">
+        <div class="col-md-6" >
           <div class="detail-box">
-            <div class="heading_container"  >
+            <div class="heading_container" >
+                        <h1>會員資料管理</h1>
                           <h2>
-                          會員資料<span><%out.print(session.getAttribute("membername"));%></span>
+                          <span><%out.print(session.getAttribute("membername"));%></span>
                           </h2>
                           </div>
                           <p>
@@ -64,12 +65,6 @@ pageEncoding="utf-8"%>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
   <section class="info_section ">
     <div class="container">
