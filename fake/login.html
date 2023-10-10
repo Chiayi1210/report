@@ -105,19 +105,8 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
               <div class="quote_btn-container">
                 <a href="member-profile.jsp"> 
                 <!-- 這邊想放會員資料 -->
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  <span>
-                    <%out.print(session.getAttribute("membername"));%>
-                  </span>
-                </a>
-               
-                <a href="logout.jsp">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  <span>
-                    登出
-                  </span>
-                </a>
-            <%}else{%>
+                  
+                 
             <div class="quote_btn-container">
                 <a href="loginCheck-Select.jsp">
                   <i class="fa fa-user" aria-hidden="true"></i>
