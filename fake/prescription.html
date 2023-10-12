@@ -189,6 +189,38 @@ span.psw {
   }
 }
 
+#window-container{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+       
+#window-pop{
+    background: white;
+    width:70%;
+    z-index: 1;
+    margin: 12% auto;
+    overflow: visible;
+    border-radius: 10px;
+}
+        
+.window-content {
+    width: auto;
+    height: 480px;
+    line-height: 200px
+    overflow : visible;
+    text-align: center;
+ }
+
+span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
 </style>
 <b><center><h1>慢性病連續處方笺預約</h1></b></center>
  <h2><center>確認您的資料</center></h2><br>
@@ -198,7 +230,32 @@ span.psw {
       身分證字號：A123456789<br>
       電話號碼:0987874087<br>
       E-mail:Anni487@gmail.com
-    </td><th><button-1>修改資料</button-1> </th>
+    </td><th>
+      <div id="window-container">
+        <div id="window-pop">
+            <div class="window-content">
+              
+                <span><h6>修改資料</h6>
+                 <label for="name">姓名：</label> <input type="text"
+				name="cnumber1" required><br>
+			<br> <label for="id">身分證字號：</label> <input type="text"
+				name="cnumber2"><br>
+			<br> <label for="phone">電話號碼：</label> <input type="text"
+				name="cnumber3"><br>
+        <br> <label for="memberid">E-mail：</label> <input type="text"
+				name="cnumber3">
+			<br>
+			<button type="submit">確認修改</button> <!--這邊應該是update-->
+
+      <button onclick="function close()">取消</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <button-1 onclick="customizeWindowEvent()">修改資料</button-1>
+    </th>
+    
       </table>
       
     </center>
@@ -245,6 +302,21 @@ span.psw {
 			<button type="submit">確認</button></center>
 	</form>
 </body>
+<script>
+  function customizeWindowEvent() {
+      var popup_window = document.getElementById("window-container");
 
+      popup_window.style.display = "block";
+
+      
+          
+     botton.onclick = function close(e){
+                    popup_window.style.display = "none";
+                }
+            }
+        
+        
+  
+</script>
 	
 	</html>
