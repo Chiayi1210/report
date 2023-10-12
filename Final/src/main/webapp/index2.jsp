@@ -276,6 +276,12 @@
           </div>
         </div></div><div class="owl-item active" style="width: 247.5px; margin-right: 15px;"><div class="item">
           <div class="box">
+           <div class="img-box"><img src="images/Lee.jpg" alt=""></div>
+            <div class="detail-box">
+              <h5>李聖經</h5>
+              <h6>韓國首爾大學藥學系</h6>
+              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+            </div>
             </div>
         </div></div><div class="owl-item active" style="width: 247.5px; margin-right: 15px;"><div class="item">
           <div class="box">

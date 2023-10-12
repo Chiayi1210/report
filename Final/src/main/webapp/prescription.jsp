@@ -7,7 +7,9 @@
 <body>
 <html>
 <title>慢性病連續處方笺預約| 北護智慧藥局線上預約平台</title>
+<%if (session.getAttribute("access") == "y"){%>
 <br><b><center><h1>慢性病連續處方笺預約</h1></b></center>
+
 <style>
 form {border: 0px solid #f1f1f1}    
 
@@ -114,6 +116,10 @@ span.psw {
 			<br>
 			<button type="submit">確認</button>
 	</form>
+	<%}else{%>
+	<%out.println("<script>alert('請先登入此系統！！'); window.location='loginCheck-Select.jsp' </script>");%>
+	
+	<%}%>
 	</html>
 
 	

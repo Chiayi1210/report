@@ -7,7 +7,7 @@ pageEncoding="utf-8"%>
 <html>
 <head>
   <!-- Basic -->
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -16,7 +16,7 @@ pageEncoding="utf-8"%>
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-   <title>北護智慧藥局線上預約平台</title>
+   <title>會員資料管理 | 北護智慧藥局線上預約平台</title>
   
 
   <!-- bootstrap core css -->
@@ -50,22 +50,21 @@ pageEncoding="utf-8"%>
                   </div>
         </div>
         <div class="col-md-6" >
-          <div class="detail-box">
             <div class="heading_container" >
-                        <h1>會員資料管理</h1>
-                          <h2>
-                          <span><%out.print(session.getAttribute("membername"));%></span>
-                          </h2>
-                          </div>
-                          <p>
-                          has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
-                          </p><!-- 改成關於藥局的資料 -->
+                 <h1>會員料管理</h1>
+                 <h2>
+                 <span><%out.print(session.getAttribute("membername"));%></span>
+                 </h2>
+            </div>
+               <p>
+                   has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
+               </p><!-- 改成關於藥局的資料 -->
                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-  </section>
+               </div>
+             </div>
+            </div>
+          </div>
+ </section>
   <section class="info_section ">
     <div class="container">
       <div class="info_bottom layout_padding2">
