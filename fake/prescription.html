@@ -248,7 +248,7 @@ span {
 			<br>
 			<button type="submit">確認修改</button> <!--這邊應該是update-->
 
-      <button onclick="function close()">取消</button>
+      <button onclick="close()">取消</button>
                 </span>
             </div>
         </div>
@@ -311,11 +311,12 @@ span {
 
       
           
-     botton.onclick = function close(e){
+      botton.onclick = function close(e) {
+                if (e.target == popup_window) {
                     popup_window.style.display = "none";
-                }
+                } 
             }
-        
+          }
         
   
 </script>
