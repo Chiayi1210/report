@@ -121,7 +121,7 @@
 form {border: 0px solid #f1f1f1}    
 
 input[type=text], input[type=password] {
-  width: 50%;
+  width: auto;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -227,28 +227,29 @@ span {
  <h2><center>確認您的資料</center></h2><br>
 	<center>
     <table style="border:2px #212529 solid;">
-     <td> 姓名:鄭家宜<br>
-      身分證字號：A123456789<br>
-      電話號碼:0987874087<br>
-      E-mail:Anni487@gmail.com
+     <center><td> 姓名:<input type="text" name="name" value="鄭家宜" readonly="readonly"><br>
+      身分證字號：<input type="text" name="memberid" value="A123456789" readonly="readonly"><br>
+      電話號碼:<input type="text" name="phone" value="0912345678" readonly="readonly"><br>
+      E-mail:<input type="text" name="Email" value="Anni487@gmail.com" readonly="readonly"></center>
     </td><th>
+      <!--這邊是修改資料的小視窗-->
       <div id="window-container">
         <div id="window-pop">
             <div class="window-content">
               
                 <span><h6>修改資料</h6>
                  <label for="name">姓名：</label> <input type="text"
-				name="cnumber1" required><br>
+				  value=""><br>
 			<br> <label for="id">身分證字號：</label> <input type="text"
-				name="cnumber2"><br>
+				name="memberid"><br>
 			<br> <label for="phone">電話號碼：</label> <input type="text"
-				name="cnumber3"><br>
-        <br> <label for="memberid">E-mail：</label> <input type="text"
-				name="cnumber3">
+				name="phone"><br>
+        <br> <label for="Email">E-mail：</label> <input type="text"
+      	name="Email">
 			<br>
-			<button type="submit">確認修改</button> <!--這邊應該是update-->
+			<button type="button" onclick="myFunction()">確認修改</button> <!--這邊應該是update-->
 
-      <button onclick="close()">取消</button>
+      <button onclick="document.location='prescription.html'">取消</button>
                 </span>
             </div>
         </div>
@@ -258,6 +259,12 @@ span {
     </th>
     
       </table>
+
+      <script>
+        function myFunction() { 
+          document.getElementById("Edit").value=;
+        }
+        </script>
       
     </center>
         <br>
@@ -311,7 +318,7 @@ span {
 
       
           
-      botton.onclick = function close(e) {
+      button.onclick = function close(e) {
                 if (e.target == popup_window) {
                     popup_window.style.display = "none";
                 } 
