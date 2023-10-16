@@ -128,6 +128,16 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
+input[type=submit] {
+  background-color: #00c6a9;
+  color:white;
+  width: 30%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+}
+
 button {
   background-color: #00c6a9;
   color: white;
@@ -222,32 +232,52 @@ span {
     vertical-align: middle;
     line-height: normal;
 }
+
 </style>
 <b><center><h1>慢性病連續處方笺預約</h1></b></center>
  <h2><center>確認您的資料</center></h2><br>
-	<center>
-    <table style="border:2px #212529 solid;">
-     <center><td> 姓名:<input type="text" name="name" value="鄭家宜" readonly="readonly"><br>
-      身分證字號：<input type="text" name="memberid" value="A123456789" readonly="readonly"><br>
-      電話號碼:<input type="text" name="phone" value="0912345678" readonly="readonly"><br>
-      E-mail:<input type="text" name="Email" value="Anni487@gmail.com" readonly="readonly"></center>
-    </td><td><button-1 onclick="customizeWindowEvent()" >修改資料</button-1></td>
-     <th> <!--這邊是修改資料的小視窗-->
+	
+ <center>
+  <table style="border:2px #212529 solid;">
+     <center>
+    <form ><td><label for="name">姓名：</label><br><br> 
+               <label for="id">身分證字號：</label><br><br> 
+              <label for="phone" value="0987487987" readonly="readonly">電話號碼：</label><br><br> 
+              <label for="Email">E-mail：</label>
+          </td>
+  <td>
+     <input type="text"value="鄭家宜" readonly="readonly"><br>  
+     <input type="text"name="memberid" value="A123456789" readonly="readonly"><br>  
+     <input type="text"name="phone" value="0987487987" readonly="readonly"><br> 
+     <input type="text"name="Email" value="Anni487@gmail.com" readonly="readonly">
+  </td>
+    </form></center>
+    <td><button-1 onclick="customizeWindowEvent()" >修改資料</button-1></td>
+      <!--這邊是修改資料的小視窗-->
+  
+    </table>   
+      
       <div id="window-container">
         <div id="window-pop">
             <div class="window-content">
               
-                <span><h6>修改資料</h6>
-                 <label for="name">姓名：</label> <input type="text"
-				  value=""><br>
-			<br> <label for="id">身分證字號：</label> <input type="text"
-				name="memberid"><br>
-			<br> <label for="phone">電話號碼：</label> <input type="text"
-				name="phone"><br>
-        <br> <label for="Email">E-mail：</label> <input type="text"
-      	name="Email">
-			<br>
-			<button type="button" onclick="myFunction()">確認修改</button> <!--這邊應該是update-->
+                <span><h6><b>修改資料</b></h6>
+
+             <table>
+        <td><label for="name">姓名：</label><br><br>
+            <label for="id">身分證字號：</label><br><br>
+            <label for="phone">電話號碼：</label><br><br>
+            <label for="Email">E-mail：</label>
+        </td>
+ 
+        <td>    
+                <input type="text" value=""> <br>
+                <input type="text" name="memberid"><br>
+                <input type="text"name="phone"><br>
+                <input type="text" name="Email">
+			</td> 
+    </table>
+			<input type="submit" name="submitButton"  value="確認修改"/> <!--這邊應該是update-->
 
       <button onclick="document.location='prescription.html'">取消</button>
                 </span>
@@ -255,14 +285,10 @@ span {
         </div>
     </div>
 
-    
-    
-    
-      </table>
 
       <script>
         function myFunction() { 
-          document.getElementById("Edit").value=;
+          document.getElementById("name").value=newvalue;
         }
         </script>
       
