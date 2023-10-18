@@ -8,7 +8,6 @@
 <html>
 <title>慢性病連續處方笺預約| 北護智慧藥局線上預約平台</title>
 <%if (session.getAttribute("access") == "y"){%>
-<br><b><center><h1>慢性病連續處方笺預約</h1></b></center>
 
 <style>
 form {border: 0px solid #f1f1f1}    
@@ -72,12 +71,12 @@ span.psw {
   }
 }
 </style>
- 
- <h2><center>預約資料登記</center></h2>
+ <br><h1><center>預約資料登記</center></h1>
 	<form action="pp-InsertInto.jsp">
 		<div>
 		  <center><h3 value="<%out.print(session.getAttribute("membername"));%>">姓名：<%out.print(session.getAttribute("membername"));%></h3>
 		  <h4 value="<%out.print(session.getAttribute("numberid"));%>">身分證字號：<%out.print(session.getAttribute("numberid"));%></h4><br>
+		  <button type="submit" onclick="document.location='member-profile.jsp'">修改資料</button><br>
 				<label for='massage'>選擇預約日期：</label><input type="date" for="date" name="date" required>
 				<script>
                   var date = document.getElementById('massage'),

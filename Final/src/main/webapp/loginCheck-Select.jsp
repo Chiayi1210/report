@@ -36,67 +36,67 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 <style>
 
   
-form {border: 0px solid #f1f1f1}    
-
-input[type=text], input[type=password] {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 10px 0;
-  display: inline-block;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #00c6a9;
-  color: white;
-  padding: 14px 15px;
-  margin: 10px 0;
-  border: none;
-  cursor: pointer;
-  width: 5%;
-}
-
-button:hover {
-  opacity: 10;
-}
-
-.signbtn {
-  width: auto;
-  color:white;
-  padding: 10px 18px;
-  background-color: #00c6a9;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 70%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: center;
-  padding-top: 50px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .signbtn {
-     width: 50%;
-  }
-}
-</style>
+        form {border: 0px solid #f1f1f1}    
+        
+        input[type=text], input[type=password] {
+          width: 50%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          box-sizing: border-box;
+        }
+        
+        button {
+          background-color: #00c6a9;
+          color: white;
+          padding: 10px 18px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 28%;
+        }
+        
+        button:hover {
+          opacity: 0.8;
+        }
+        
+        .signbtn {
+          width: 28%;
+          color:white;
+          padding: 10px 18px;
+          background-color: #00c6a9;
+        }
+        
+        .imgcontainer {
+          text-align: center;
+          margin: 24px 0 12px 0;
+        }
+        
+        img.avatar {
+          width: 70%;
+          border-radius: 50%;
+        }
+        
+        .container {
+          padding: 16px;
+        }
+        
+        span.psw {
+          float: center;
+          padding-top: 50px;
+        }
+        
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+          span.psw {
+             display: block;
+             float: none;
+          }
+          .signbtn {
+             width: 50%;
+          }
+        }
+        </style>
 <body>
 <form action="loginCheck-Select.jsp">
 <center>
@@ -115,7 +115,7 @@ span.psw {
 	<%}%>
 	<br><br>
     <button  type="submit" name="loginButton">登入</button>
-	<button  type="submit"><a href="signup.jsp">註冊</a></button>
+	<button  type="submit" onclick="document.location='signup.jsp'">註冊</a></button>
 	<br><br><a href="">忘記密碼?</a>
 	</center>
 </form>

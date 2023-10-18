@@ -39,10 +39,7 @@
                        <span>
                         NTUNHS Pharmacy
                        </span>
-                    </h1>    
-                     <p>
-                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                       </p>  <!-- 這裡要打簡介 -->
+                    </h1>
                     <a href="index2.jsp#3456">
                       聯絡我們
                     </a>
@@ -95,10 +92,7 @@
                        <span>
                         NTUNHS Pharmacy
                         </span>
-                    </h1>    
-                     <p>
-                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                       </p>  <!-- 這裡要打簡介 -->
+                    </h1>  
                     <a href="index2.jsp#3456">
                       聯絡我們
                     </a>

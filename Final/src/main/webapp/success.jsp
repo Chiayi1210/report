@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
   <%@include file ="menu.jsp" %> 
     <!--連續處方簽預約成功網頁 -->
 <html lang="en">
@@ -18,7 +18,7 @@ out.println("預約成功<br>");
 			+"！<br>");
 }
 %> </h1></center>
-<center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index.jsp'">回首頁</button></center>
+<center><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index2.jsp'">回首頁</button></center>
 
 
 

@@ -3,7 +3,15 @@ pageEncoding="utf-8"%>
 <%@page import="java.sql.*"%>
 <%@include file ="menu.jsp" %>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
-
+<% 
+	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
+	//out.println("Con= "+con);
+	Statement smt= con.createStatement();
+	String sql = "SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'";
+	ResultSet pp = smt.executeQuery(sql);
+	pp.next();
+	%>
 <html>
 <head>
   <!-- Basic -->
@@ -51,10 +59,27 @@ pageEncoding="utf-8"%>
         </div>
         <div class="col-md-6" >
             <div class="heading_container" >
-                 <h1>會員料管理</h1>
-                 <h2>
-                 <span><%out.print(session.getAttribute("membername"));%></span>
-                 </h2>
+            <h1>會員資料管理</h1>
+              <%while(pp.next()){ %> 
+              <h4><table>
+               <tr>
+                 <td>病人姓名：</td>
+                 <td><%out.print(session.getAttribute("membername"));%></td>
+               </tr>
+               <tr>
+                 <td>身分證字號：</td>
+                 <td><%out.print(session.getAttribute("numberid"));%></td>
+               </tr> 
+               <tr>
+                 <td>領藥時段為：</td>
+                 <td><%=pp.getString("date")%><br>
+                 <%=pp.getString("time")%></td>
+               </tr>
+               <tr>
+                 <td>慢箋卡號為：</td>
+                 <td><%=pp.getString("cnumber1")%></td>
+               </tr>
+              </table></h4><%}%>                
             </div>
                <p>
                    has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
@@ -62,9 +87,8 @@ pageEncoding="utf-8"%>
                        
                </div>
              </div>
-            </div>
-          </div>
- </section>
+             </div>
+             </section> 
   <section class="info_section ">
     <div class="container">
       <div class="info_bottom layout_padding2">
@@ -127,7 +151,7 @@ pageEncoding="utf-8"%>
                 <a href="prescription.jsp">
                   慢箋預約
                 <%}else{%>
-                <a href="#">
+                <%out.println("<script>alert('請先登入此系統！！'); window.location='loginCheck-Select.jsp' </script>");%>
                   慢箋預約
                 </a>
                 <%}%>
