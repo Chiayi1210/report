@@ -1,11 +1,32 @@
 
 <!DOCTYPE html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<html>
+<head>
+  <title>圖片按鈕教學</title>
+  <style>
+    .image-button {
+      width: 150px;
+      height: 50px;
+      background-image: url('/images/Search.jpg');
+      background-size: cover;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
 <body>
-<button id="show">show</button>
-<dialog id="infoModal">
-  <p>這是 html 的 dialog!!</p>
-  <button id="close">close</button>
-</dialog>
-</body>
 
+<button class="image-button"></button>
+
+<script>
+  $(document).ready(function() {
+    $('.image-button').click(function() {
+      // 在這裡添加按鈕被點擊時的動作
+      alert("你點擊了圖片按鈕！");
+    });
+  });
+</script>
+
+</body>
 </html>
