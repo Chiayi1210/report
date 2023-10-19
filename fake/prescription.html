@@ -138,6 +138,7 @@ input[type=submit] {
   border: none;
 }
 
+
 button {
   background-color: #00c6a9;
   color: white;
@@ -264,20 +265,20 @@ span {
                 <span><h6><b>修改資料</b></h6>
 
              <table>
-        <td><label for="name">姓名：</label><br><br>
+          <td><label for="name">姓名：</label><br><br>
             <label for="id">身分證字號：</label><br><br>
             <label for="phone">電話號碼：</label><br><br>
             <label for="Email">E-mail：</label>
-        </td>
+          </td>
  
-        <td>    
+            <td>    
                 <input type="text" value=""> <br>
                 <input type="text" name="memberid"><br>
                 <input type="text"name="phone"><br>
                 <input type="text" name="Email">
-			</td> 
-    </table>
-			<input type="submit" name="submitButton"  value="確認修改"/> <!--這邊應該是update-->
+			     </td> 
+       </table>
+			<button type="submit" name="submitButton"  value="確認修改"/> <!--這邊應該是update-->
 
       <button onclick="document.location='prescription.html'">取消</button>
                 </span>
@@ -314,7 +315,36 @@ span {
 			<br>
 		</div></center>
 	<center>
-			<label  >選擇預約時間：</label> <select required name="time" for="time">
+    <label  >請選擇以下預約時間：</label>
+    <table width="70%">
+    <td width="auto"  align="center"><button type="button" required name="time" for="time" value="">9:30-10:00</button><br>目前已預約3人</td> 
+    <td  width="auto" align="center"><button type="button" required name="time" for="time" value="">10:00-10:30</button><br>目前已預約0人</td>
+    <td width="auto"align="center"><button type="button" required name="time" for="time" value="">10:30-11:00</button><br>目前已預約0人</td>
+    <td width="auto"align="center"><button type="button" required name="time" for="time" value="">11:30-12:00</button><br>目前已預約2人</td>
+  <tr>
+    <td width="200"align="center"><button type="button" required name="time" for="time" value="">12:00-12:30</button><br>目前已預約4人</td>
+    <td width="200"align="center"><button type="button" required name="time" for="time" value="">13:00-13:30</button><br>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" required name="time" for="time" value="">13:30-14:00</button><br>目前已預約1人</td>
+    <td width="200"align="center"><button type="button" required name="time" for="time" value="">14:30-15:00</button><br>目前已預約2人</td>     
+  </tr>
+  <tr>
+    <td width="200"align="center"><button type="button" required name="time" for="time" value="">15:30-16:00</button><br>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" required name="time" for="time" value="">16:30-17:00</button><br>目前已預約1人</td>
+    <td width="200"align="center"><button type="button" required name="time" for="time" value="">17:30-18:00</button><br>目前已預約3人</td>
+      <td width="200"align="center"><button type="button" required name="time" for="time" value="">18:00-18:30</button><br>目前已預約4人</td>     
+</tr>
+<tr><td width="200"align="center"><button type="button" required name="time" for="time" value="">19:00-19:30</button><br>目前已預約1人</td>
+  <td width="200"align="center"><button type="button" required name="time" for="time" value="">19:30-20:00</button><br>目前已預約3人</td>
+  <td width="200"align="center"><button type="button" required name="time" for="time" value="">20:30-21:00</button><br>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" required name="time" for="time" value="">21:00-21:30</button><br>目前已預約1人</td>  
+</tr>
+   </table>
+
+
+
+
+			<!--<label  >請選擇以下預約時間：</label> 
+      <select required name="time" for="time">
 
 				<option value="">請選擇</option>
 				<option >11:00~12:00</option>
@@ -325,7 +355,7 @@ span {
 				<option >17:00~18:00</option>
 				<option >19:00~20:00</option>
 				<option >20:00~21:00</option>
-			</select><br>
+			</select>--><br>
 			<br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
 				name="cnumber1" required><br>
 			<br> <label for="cnumber2">慢性病卡號2：</label> <input type="text"
@@ -335,7 +365,9 @@ span {
 			<br>
 			<button type="submit">確認</button></center>
 	</form>
+  <center><button type="button" herf="index2.html">取消</button></center></center>
 </body>
+
 <script>
   function customizeWindowEvent() {
       var popup_window = document.getElementById("window-container");
