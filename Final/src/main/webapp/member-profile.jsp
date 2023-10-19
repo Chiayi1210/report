@@ -3,15 +3,7 @@ pageEncoding="utf-8"%>
 <%@page import="java.sql.*"%>
 <%@include file ="menu.jsp" %>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
-<% 
-	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
-	//out.println("Con= "+con);
-	Statement smt= con.createStatement();
-	String sql = "SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'";
-	ResultSet pp = smt.executeQuery(sql);
-	pp.next();
-	%>
+
 <html>
 <head>
   <!-- Basic -->
@@ -48,6 +40,15 @@ pageEncoding="utf-8"%>
   <link href="css/responsive.css" rel="stylesheet" />
 
 </head>
+<% 
+	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
+	//out.println("Con= "+con);
+	Statement smt= con.createStatement();
+	String sql = "SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'";
+	ResultSet pp = smt.executeQuery(sql);
+	pp.next();
+	%>
 <body>
 <section class="slider_section">
       <div class="container  ">
