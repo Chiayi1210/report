@@ -130,11 +130,11 @@ span {
 <center> <br><h1>預約資料登記</h1>
 	<form action="pp-InsertInto.jsp">
 		<div>
-		  <table style="border:2px #212529 solid;">
-		  <form ><td><label for="name">姓名：</label><br><br> 
-               <label for="numberid">身分證字號：</label><br><br> 
-              <label for="memberphone" value="0987487987" readonly="readonly">電話號碼：</label><br><br> 
-              <label for="memberid">E-mail：</label>
+		  <table style="border:2px #ccc solid" width="40%">
+		  <form ><td><label for="name">&nbsp;&nbsp;&nbsp;&nbsp;姓名：</label><br><br> 
+               <label for="numberid">&nbsp;&nbsp;&nbsp;&nbsp;身分證字號：</label><br><br> 
+              <label for="memberphone" value="0987487987" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;電話號碼：</label><br><br> 
+              <label for="memberid">&nbsp;&nbsp;&nbsp;&nbsp;E-mail：</label>
           </td>
           <td>
           <input type="text"value="<%out.print(session.getAttribute("membername"));%>" readonly="readonly"><br>  
@@ -153,8 +153,8 @@ span {
               
                 <span><br><br><br><h6><b>修改資料</b></h6>
 
-          <table>
-          <td><label for="name">姓名：</label><br><br><br>
+          <table >
+          <td ><label for="name">姓名：</label><br><br><br>
             <label for="id">身分證字號：</label><br><br><br>
             <label for="phone">電話號碼：</label><br><br><br>
             <label for="Email">E-mail：</label>
