@@ -52,12 +52,11 @@ pageEncoding="utf-8"%>
 <section class="slider_section">
       <div class="container  ">
       <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
+        <div class="col-md-4 "></div>
                   <img src="images/PT2.jpg" style=width:280px; height:20px">
                   </div>
         </div>
-        <div class="col-md-6" >
+        <div class="col-md-8" >
             <div class="heading_container" >
             <h1>會員資料管理</h1>
               <%while(pp.next()){ %> 
@@ -86,8 +85,6 @@ pageEncoding="utf-8"%>
                </p><!-- 改成關於藥局的資料 -->
                        
                </div>
-             </div>
-             </div>
              </section> 
   <section class="info_section ">
     <div class="container">
