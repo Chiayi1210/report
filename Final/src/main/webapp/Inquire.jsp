@@ -21,7 +21,8 @@
 	pp.next();
 	%>
       <div>
-      <center><h3><table>
+      <center><h3>
+      <table>
              <tr>
                  <td>病人姓名：</td>
                  <td><%out.print(session.getAttribute("membername"));%></td>
