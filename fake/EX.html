@@ -1,32 +1,87 @@
-
 <!DOCTYPE html>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-  <title>圖片按鈕教學</title>
-  <style>
-    .image-button {
-      width: 150px;
-      height: 50px;
-      background-image: url('/images/Search.jpg');
-      background-size: cover;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>03dynamicContent.html</title>
+
+    <script>
+
+        window.onload = function () {
+
+            document.getElementById("butinnerText").onclick = InnerText;
+
+            document.getElementById("butinnerHTML").onclick = InnerHTML;
+
+            document.getElementById("butouterText").onclick = OuterText;
+
+            document.getElementById("butouterHTML").onclick = OuterHTML;
+
+        }
+
+ 
+
+        function InnerText() {
+
+            //document.getElementById("h").innerText="<i>italic</i>";
+
+            document.getElementById("h").textContent = "<i>italic</i>";
+
+            //上面兩個效果一樣，把<h1 id="h">this is heading 1</h1>中的「this is heading 1」換成「<i>italic</i>」
+
+            //也就是只換html中的字串
+
+        }
+
+        function InnerHTML() {
+
+            document.getElementById("h").innerHTML = "<i>italic</i>";
+
+            //塞入html裡面<h1 id="h">this is heading 1</h1> 變成 <h1 id="h"><i>italic</i></h1>
+
+            //但是不會動到id
+
+        }
+
+        function OuterText() {
+
+            document.getElementById("h").outerText = "<i>italic</i>";
+
+            //把標籤都弄掉了，只剩下<i>italic</i>，因為i沒有可以更動的標籤(h1)所以只剩整體字串
+
+        }
+
+        function OuterHTML() {
+
+            document.getElementById("h").outerHTML = "<i>italic</i>";
+
+            //取代原有的html，從<h1 id="h">this is heading 1</h1>  變成 <i>italic</i>
+
+        }
+
+ 
+
+       
+
+    </script>
+
 </head>
+
 <body>
 
-<button class="image-button"></button>
+    <h1 id="h">this is heading 1</h1>
 
-<script>
-  $(document).ready(function() {
-    $('.image-button').click(function() {
-      // 在這裡添加按鈕被點擊時的動作
-      alert("你點擊了圖片按鈕！");
-    });
-  });
-</script>
+           <input type="button" id="butinnerText" value="innerText" />
+
+           <input type="button" id="butinnerHTML" value="innerHTML" />
+
+           <input type="button" id="butouterText" value="outerText" />
+
+           <input type="button" id="butouterHTML" value="outerHTML" />
 
 </body>
+
 </html>
