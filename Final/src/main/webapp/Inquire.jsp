@@ -33,8 +33,8 @@
              </tr>
       <tr>
            <td>領藥時段為：</td>
-                 <td><%=pp.getString("date")%><br>
-                 <%=pp.getString("time")%></td>
+           <td><%=pp.getString("date")%><br>
+              <%=pp.getString("time")%></td>
              </tr>
       <tr>
            <td>慢箋卡號為：</td>
