@@ -424,6 +424,7 @@
                 約有90% AMICS病人需給予血管活性劑 (vasoactive medications) 包含升壓劑 (vasopressors) 和強心劑 (inotropes) 處理其低血壓和（或）低灌流狀況。
                 各種研究顯示norepinephrine具較低心律不整發生風險，比dopamine 或epinephrine 更安全。臨床治療指引推薦norepinephrine 是CS 病人維持灌流壓的首選升壓劑 (IIb/B)。機械式循環輔助(mechanical circulatory support, MCS) 被使用於對升壓劑和強心劑難治療的AMICS病人( IIb/C)。經由文獻回顧與分析，基於目前實證和臨床治療指引，本文將討論AMI-CS 病人之流行病學與預後、定義與分類、病理生理學、處理與治療。
               </p>
+              
             </div>
           </div>
           <div class="carousel-item">
@@ -606,23 +607,39 @@
                 <div class="img-box">
                   <img src="images/post3.jpg" alt="">
                 </div>
-                <p>
+                <p id="c1">
                  !!營業時間異動!!<br>10/28週六暫停營業
                 </p>
               </div>
-              <div class="post_box">
+            <div class="post_box">
                 <div class="img-box">
                   <img src="images/post4.png" alt="">
                 </div>
-                <p>
+                <p id="c2">
                   元旦連假營業時間<br>113/1/1暫停營業
                 </p>
+                
               </div>
             </div>
+            <br><input id="text2" placeholder="請輸入要修改的內容">
+                <input type="button" value="修改消息1" onclick="showButtonEvent()">
+                <input type="button" value="修改消息2" onclick="showButtonEvent2()">
+                <script>
+                  function showButtonEvent()
+                  {
+                      var content = document.getElementById("text2");
+                      document.getElementById("c1").textContent=content.value; 
+                  } </script>
+                <script>
+                  function showButtonEvent2(){
+                  var content2 = document.getElementById("text2");
+                      document.getElementById("c2").textContent=content2.value;
+                    } </script>
           </div>
         </div>
       </div>
     </div>
+   
   </section>
   <!-- end info_section -->
 
