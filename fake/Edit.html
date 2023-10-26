@@ -208,7 +208,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
     
             <label for='massage'>請選擇新的預約日期：</label><input type="date" for="date" name="date" required>
             <script>
-              var date = document.getElementById('massage'),
+              var date = document.getElementById('massage');
               function noSundays(e){
               var day = new Date(e.target.value).getUTCDay();
               if ( day == 0 ){
@@ -222,7 +222,9 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
         
         <br>
     </div></center>
-<center>
+<script>
+ 
+    <center>
 <label  >請選擇新的預約時間：</label>
 <table width="70%">
 <td width="auto"  align="center"><button type="button" required name="time" for="time" value="">9:30-10:00</button><br>目前已預約3人</td> 
@@ -248,6 +250,21 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
 </tr>
 </table>
 
+<br>
+        <br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
+            name="cnumber1" required><br>
+        <br> <label for="cnumber2">慢性病卡號2：</label> <input type="text"
+            name="cnumber2"><br>
+        <br> <label for="cnumber3">慢性病卡號3：</label> <input type="text"
+            name="cnumber3"><br>
+        <br>
+        <button type="submit">確認</button></center>
+</form>
+<center><button onclick="window.location='Homepage-e.html'">取消</button></center></center>
+
+</body>
+
+</html>
 
 
 
@@ -263,18 +280,4 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
             <option >17:00~18:00</option>
             <option >19:00~20:00</option>
             <option >20:00~21:00</option>
-        </select>--><br>
-        <br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
-            name="cnumber1" required><br>
-        <br> <label for="cnumber2">慢性病卡號2：</label> <input type="text"
-            name="cnumber2"><br>
-        <br> <label for="cnumber3">慢性病卡號3：</label> <input type="text"
-            name="cnumber3"><br>
-        <br>
-        <button type="submit">確認</button></center>
-</form>
-<center><button onclick="window.location='Homepage-e.html'">取消</button></center></center>
-
-</body>
-
-</html>
+        </select>-->
