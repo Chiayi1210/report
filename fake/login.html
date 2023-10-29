@@ -195,7 +195,14 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
           }
         }
         </style>
-<form action="index2.html"> 
+        <script>
+          function chkinput(){
+if (form.memberid.value == "111"){document.location='index2.html';}
+            else if (form.memberid.value == "1111"){document.location='index3.html';}
+           
+          }
+        </script>
+<form  onsubmit=" chkinput()"> 
     <center><h1>登入</h1>
      
 	<label for="memberid"><b>帳號</b></label>
