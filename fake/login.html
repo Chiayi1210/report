@@ -195,14 +195,8 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
           }
         }
         </style>
-        <script>
-          function chkinput(){
-if (form.memberid.value == "111"){document.location='index2.html';}
-            else if (form.memberid.value == "1111"){document.location='index3.html';}
-           
-          }
-        </script>
-<form  onsubmit=" chkinput()"> 
+        
+<form  name="login"  method="dialog"> 
     <center><h1>登入</h1>
      
 	<label for="memberid"><b>帳號</b></label>
@@ -211,13 +205,38 @@ if (form.memberid.value == "111"){document.location='index2.html';}
     <label for="memberpwd"><b>密碼</b></label>
     <input type="password" class="message-box" placeholder="請輸入密碼" name="memberpwd" required>
      
-<br><button  type="submit" name="loginButton">登入</button>
+<br><button onclick="Login()" type="submit" name="loginButton" >登入</button>
 <button type="submit" onclick="document.location='signup.html'">註冊</button>
 <br><br><a href="">忘記密碼?</a>
 
+<!--<script  type="text/javascript">
+         function login(){  
+
+           if  (reg.memberid.value == "111"){ window.location.href = "index2.html";
+          }
+         else if (reg.memberid.value == "1111"){
+          window.location.href ='index3.html';}
+         
+         else alert('帳號錯誤，請重新入'); window.location='login.html';
+
+          }
+        </script>-->
 </center> 
 </form>
-
+<script language="JavaScript"> 
+  
+function Login(){ 
+  var done=0; 
+  var memberid=document.login.memberid.value; 
+  memberid=memberid.toLowerCase(); 
+  var memberpwd=document.login.memberpwd.value; 
+  memberpwd=memberpwd.toLowerCase(); 
+  if (memberid=="111" ) { window.location="index2.html"; done=1; } 
+  if (memberid=="1111" ) { window.location="index3.html"; done=1; }
+  else{alert('帳號或密碼錯誤或未輸入，請重新輸入!!');window.location="login.html";}
+  } 
+ 
+  </script>
 </body>
 
 </html>
