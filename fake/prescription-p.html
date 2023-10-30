@@ -250,58 +250,24 @@ span {
  <center>
   <table style="border:2px #ccc solid;"  width="40%">
      <center>
-    <form ><td><label for="name">姓名：</label><br><br> 
+    <form >
+      <td><label for="name">姓名：</label><br><br> 
                <label for="id">身分證字號：</label><br><br> 
-               <label for="phone" value="0987487987" readonly="readonly">電話號碼：</label><br><br> 
+               <label for="phone"  >電話號碼：</label><br><br> 
                <label for="Email">E-mail：</label>
           </td>
   <td>
-     <input type="text"value="鄭家宜" readonly="readonly"><br>  
-     <input type="text"name="memberid" value="A123456789" readonly="readonly"><br>  
-     <input type="text"name="phone" value="0987487987" readonly="readonly"><br> 
-     <input type="text"name="Email" value="Anni487@gmail.com" readonly="readonly">
+     <input type="text" required><br>  
+     <input type="text"required><br>  
+     <input type="text"name="phone"required><br> 
+     <input type="text"name="Email"required>
   </td>
     </form></center>
-    <td><button-1 onclick="customizeWindowEvent()" >修改資料</button-1></td>
+    <td>
       <!--這邊是修改資料的小視窗-->
   
     </table>   
-      
-      <div id="window-container">
-        <div id="window-pop">
-            <div class="window-content">
-              
-                <span><br><br><br><h6><b>修改資料</b></h6>
-
-             <table>
-          <td ><label for="name" >姓名：</label><br><br>
-            <label for="id">身分證字號：</label><br><br><br>
-            <label for="phone">電話號碼：</label><br><br>
-            <label for="Email">E-mail：</label>
-          </td>
- 
-            <td>    
-                <input type="text" value=""> <br>
-                <input type="text" name="memberid"><br>
-                <input type="text"name="phone"><br>
-                <input type="text" name="Email">
-			     </td> 
-       </table>
-			<button type="submit" name="submitButton">確認修改</button><!--這邊應該是update-->
-
-      <button onclick="document.location='prescription.html'">取消</button>
-                </span>
-            </div>
-        </div>
-    </div>
-
-
-      <script>
-        function myFunction() { 
-          document.getElementById("name").value=newvalue;
-        }
-        </script>
-      
+   
     </center>
         <br>
         <center>
