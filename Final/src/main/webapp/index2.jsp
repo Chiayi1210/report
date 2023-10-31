@@ -92,7 +92,7 @@
         </div>
       </div>
     </section>
-  </div>
+ 
     <!-- end 登入頁 -->
 <%}%>
   <!-- book section -->
@@ -232,7 +232,7 @@
       <h2>藥師 <span>簡介</span></h2>
     </div>
     <div class="carousel-wrap"> 
-      <div class="owl-carousel team_carousel owl-loaded owl-drag">
+      <div class="owl-carousel team_carouselowl-loaded owl-drag">
       <div class="item">
           <div class="box">
             <div class="img-box">
@@ -251,7 +251,8 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-            <img src="images/PT1.jpg" alt=""></div>
+            <img src="images/PT1.jpg" alt="">
+            </div>
             <div class="detail-box">
               <h5>林新義</h5>
               <h6>台灣大學藥學系學士</h6>
@@ -263,7 +264,9 @@
        
         <div class="item">
           <div class="box">
-           <div class="img-box"><img src="images/Lee.jpg" alt=""></div>
+           <div class="img-box">
+           <img src="images/Lee.jpg" alt="">
+           </div>
             <div class="detail-box">
               <h5>李聖經</h5>
               <h6>韓國首爾大學藥學系</h6>
@@ -273,8 +276,9 @@
             </div>
         </div>
         </div>
-</div>
-</div>
+     </div>
+   </div>
+   
 </section>
   
 
