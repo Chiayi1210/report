@@ -4,22 +4,14 @@
 
 <!DOCTYPE html>
 <html>
-<title>北護智慧藥局線上預約平台</title>
+
 <body>
 <form method="post" action="logout.jsp" >
 <%if (session.getAttribute("access") == "y"){%>
 
 <!-- 登出頁 -->
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-          </nav>
-        </div>
-      </div>
-    </header>
+  
+      
     <!-- end header section -->
     <!-- slider section -->
     <section class="slider_section ">
@@ -63,16 +55,7 @@
     
     
  <!-- 登入頁 -->
-<div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-          </nav>
-        </div>
-      </div>
-    </header>
+
     <!-- end header section -->
     <!-- slider section -->
     <section class="slider_section ">
@@ -248,52 +231,48 @@
     <div class="heading_container heading_center">
       <h2>藥師 <span>簡介</span></h2>
     </div>
-    <div class="carousel-wrap">
+    <div class="carousel-wrap"> 
       <div class="owl-carousel team_carousel owl-loaded owl-drag">
-      <div class="owl-stage-outer"><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
+      <div class="item">
           <div class="box">
-            <div class="img-box"><img src="images/PT2.jpg" alt=" "></div>
+            <div class="img-box">
+            <img src="images/PT2.jpg" alt=" ">
+            </div>
             <div class="detail-box">
               <h5>陳湘婷</h5>
               <h6>北醫大藥學系學士</h6>
-              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+              <div class="social_box">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </div>
             </div>
           </div>
-        </div></div><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
+        </div>
+      
+        <div class="item">
           <div class="box">
-            <div class="img-box"><img src="images/PT1.jpg" alt=""></div>
+            <div class="img-box">
+            <img src="images/PT1.jpg" alt=""></div>
             <div class="detail-box">
               <h5>林新義</h5>
               <h6>台灣大學藥學系學士</h6>
-              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </div>
             </div>
           </div>
-        </div></div><div class="owl-item active" style="width: 247.5px; margin-right: 15px;"><div class="item">
+        </div>
+       
+        <div class="item">
           <div class="box">
            <div class="img-box"><img src="images/Lee.jpg" alt=""></div>
             <div class="detail-box">
               <h5>李聖經</h5>
               <h6>韓國首爾大學藥學系</h6>
-              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </div>
             </div>
             </div>
-        </div></div><div class="owl-item active" style="width: 247.5px; margin-right: 15px;"><div class="item">
-          <div class="box">
-            </div>
-        </div></div><div class="owl-item" style="width: 247.5px; margin-right: 15px;"><div class="item">
-          <div class="box">
-            
-        </div></div><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
-          <div class="box">
-            
-        </div></div><div class="owl-item cloned" style="width: 247.5px; margin-right: 15px;"><div class="item">
-          <div class="box">
-            </div></div></div>
-        <div class="owl-nav disabled"></div><div class="owl-dots"></div></div>
-    </div>
-</div>
-</div>
-
+        </div>
+        </div>
 </div>
 </div>
 </section>
