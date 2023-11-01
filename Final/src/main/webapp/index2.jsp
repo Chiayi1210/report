@@ -6,8 +6,9 @@
 <html>
 
 <body>
-<form method="post" action="logout.jsp" >
-<%if (session.getAttribute("access") == "y"){%>
+<div class="hero_area">
+  <form method="post" action="logout.jsp" >
+  <%if (session.getAttribute("access") == "y"){%>
 
 <!-- 登出頁 -->
   
@@ -44,10 +45,9 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div>   
     </section>
-    </div>
+    
     </form>
     <!-- end slider section -->
     
@@ -91,6 +91,7 @@
           </div>
         </div>
       </div>
+     
     </section>
  
     <!-- end 登入頁 -->
@@ -136,7 +137,9 @@
         </div>
       </div>
     </div>
-  </section>
+    </div> 
+    
+ </section>
 
   <!-- end about section -->
 
@@ -522,9 +525,21 @@
         <a>國立台北護理健康大學 Designed by 鄭嘉儀 陳祖均 林天愛</a>
       </p>
     </div>
+    
   </footer>
   <!-- footer section -->
-
+<!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- datepicker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
 
 
 
