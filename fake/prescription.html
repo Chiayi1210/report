@@ -145,14 +145,14 @@ input[type=submit] {
 }
 
 
-button {
+button2 {
   background-color: #00c6a9;
   color: white;
   padding: 14px 15px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 30%;
+  width: 40%;
 }
 
 button-1 {
@@ -165,10 +165,30 @@ button-1 {
   width: 10%;
 }
 
+button {
+  background-color: #00c6a9;
+  color: white;
+  padding: 10px 10px;
+  margin: 15px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  border-radius:10px;
+}
+
+
+
 button:hover {
   opacity: 0.8;
 }
 
+button2:hover {
+  opacity: 0.8;
+}
+
+button-1:hover {
+  opacity: 0.8;
+}
 .signbtn {
   width: auto;
   color:white;
@@ -323,10 +343,10 @@ span {
 	<center>
     <label  >請選擇以下預約時間：</label>
     <table width="70%">
-    <td width="auto"  align="center"><button type="button" required name="time" for="time" value="">9:30-10:00</button><br>目前已預約3人</td> 
-    <td  width="auto" align="center"><button type="button" required name="time" for="time" value="">10:00-10:30</button><br>目前已預約0人</td>
-    <td width="auto"align="center"><button type="button" required name="time" for="time" value="">10:30-11:00</button><br>目前已預約0人</td>
-    <td width="auto"align="center"><button type="button" required name="time" for="time" value="">11:30-12:00</button><br>目前已預約2人</td>
+    <td width="auto"  align="center"><button type="button" required name="time" for="time" >9:30-10:00</button><br>目前已預約3人</td> 
+    <td  width="auto" align="center"><button type="button" required name="time" for="time" >10:00-10:30</button><br>目前已預約0人</td>
+    <td width="auto"align="center"><button type="button" required name="time" for="time" >10:30-11:00</button><br>目前已預約0人</td>
+    <td width="auto"align="center"><button type="button" required name="time" for="time" >11:30-12:00</button><br>目前已預約2人</td>
   <tr>
     <td width="200"align="center"><button type="button" required name="time" for="time" value="">12:00-12:30</button><br>目前已預約4人</td>
     <td width="200"align="center"><button type="button" required name="time" for="time" value="">13:00-13:30</button><br>目前已預約0人</td>
@@ -369,9 +389,9 @@ span {
 			<br> <label for="cnumber3">慢性病卡號3：</label> <input type="text"
 				name="cnumber3"><br>
 			<br>
-			<button type="submit">確認</button></center>
+			<button2 type="submit">確認</button2></center>
 	</form>
-  <center><button type="button" herf="index2.html">取消</button></center></center>
+  <center><br><button2 onclick="document.location='index2.html'">取消</button2></center></center>
 </body>
 
 <script>
