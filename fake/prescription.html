@@ -148,11 +148,13 @@ input[type=submit] {
 button2 {
   background-color: #00c6a9;
   color: white;
-  padding: 14px 15px;
+  padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 40%;
+  display: inline-block;
+ 
 }
 
 button-1 {
@@ -162,7 +164,8 @@ button-1 {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 10%;
+  width: auto;
+  
 }
 
 button {
@@ -172,7 +175,7 @@ button {
   margin: 15px 0;
   border: none;
   cursor: pointer;
-  width: auto;
+  width: 45%%;
   border-radius:10px;
 }
 
@@ -240,14 +243,14 @@ span.psw {
     background: white;
     width:70%;
     z-index: 1;
-    margin: 12% auto;
+    margin:  8%;
     overflow: visible;
     border-radius: 10px;
 }
         
 .window-content {
     width: auto;
-    height: 480px;
+    height: 500px;
     line-height: 200px
     overflow : visible;
     text-align: center;
@@ -303,11 +306,11 @@ span {
                 <input type="text"name="phone"><br>
                 <input type="text" name="Email">
 			     </td> 
-       </table>
-			<button type="submit" name="submitButton">確認修改</button><!--這邊應該是update-->
-
-      <button onclick="document.location='prescription.html'">取消</button>
-                </span>
+       
+			
+                </span></table>
+          <button2  type="submit" name="submitButton"onclick="document.location='prescription.html'">確認修改</button2><!--這邊應該是update-->
+         <button2 onclick="document.location='prescription.html'">取消</button2>
             </div>
         </div>
     </div>
