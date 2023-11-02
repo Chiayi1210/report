@@ -111,7 +111,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                   </li>
                 </ul>
               </div>
-          <form method="post" action="menu.jsp" >
+          
    <%if (session.getAttribute("access") == "y"){%>
               <div class="quote_btn-container">
                 <a href="member-profile.jsp"> 

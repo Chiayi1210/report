@@ -6,7 +6,7 @@
 <html>
 
 <body>
-<div class="hero_area">
+ <div class="hero_area">
   <form method="post" action="logout.jsp" >
   <%if (session.getAttribute("access") == "y"){%>
 
@@ -45,7 +45,8 @@
                 </div>
               </div>
             </div>
-          </div>   
+          </div>  
+          </div> 
     </section>
     
     </form>
@@ -58,7 +59,8 @@
 
     <!-- end header section -->
     <!-- slider section -->
-    <section class="slider_section ">
+  <div class="hero_area">
+   <section class="slider_section ">
       <div class="dot_design">
         <img src="images/dots.png" alt="">
       </div>
@@ -91,13 +93,13 @@
           </div>
         </div>
       </div>
-     
-    </section>
+      </div>
+   </section>
  
     <!-- end 登入頁 -->
 <%}%>
   <!-- book section -->
-
+ <div class="hero_area">
   <section class="book_section layout_padding">
     <div class="container">
       <div class="row">
@@ -114,7 +116,7 @@
 
   <!-- about section -->
 
-  <section class="about_section">
+<section class="about_section">
     <div class="container  ">
       <div class="row">
         <div class="col-md-6 ">
@@ -132,14 +134,13 @@
             <p>
               has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
             </p><!-- 改成關於藥局的資料 -->
-            
           </div>
         </div>
       </div>
     </div>
     </div> 
-    
- </section>
+  </section>
+ 
 
   <!-- end about section -->
 
@@ -329,7 +330,7 @@
       </div>
     </div>
   </section>
-</section>
+
   
 
   <!-- end team section -->
@@ -573,8 +574,10 @@
       </p>
     </div>
     
-  </footer>
+     </footer>
   <!-- footer section -->
+  </div>
+  
 <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
