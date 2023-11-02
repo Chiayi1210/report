@@ -5,6 +5,16 @@
 <%@include file ="menu.jsp" %>
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
 <body>
+<%
+	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
+	Statement smt= con.createStatement();
+	String sql = "SELECT * FROM leelab left join position on leelab.positionId=position.positionId WHERE memberId ='" +request.getParameter("memberId")+"'";
+	String option="SELECT * FROM position";
+	ResultSet rs = smt.executeQuery(sql);
+	ResultSet rs2 = smt.executeQuery(option);
+	rs.next();
+	%>
 <html>
 <title>慢性病連續處方笺預約| 北護智慧藥局線上預約平台</title>
 <%if (session.getAttribute("access") == "y"){%>
@@ -144,6 +154,12 @@ span {
           </td>
     </form>
     </center>
+    function pic(){  
+				document.form.action="MBupdate-pp.jsp";
+				document.form.enctype="multipart/form-data";
+				document.form.submit();
+			}  
+			</script> 
      <!--  <h3 value="<%out.print(session.getAttribute("membername"));%>">姓名：<%out.print(session.getAttribute("membername"));%></h3>
 		  <h4 value="<%out.print(session.getAttribute("numberid"));%>">身分證字號：<%out.print(session.getAttribute("numberid"));%></h4><br>-->
     <td><button-1 onclick="customizeWindowEvent()" >修改資料</button-1></td></table>
@@ -172,24 +188,6 @@ span {
 			</table>
 			<button type="submit" name="submitButton">確認修改</button>
 			<button onclick="document.location='prescription.jsp'">取消</button>
-			
-<%Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
-	Statement smt= con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-	String name =request.getParameter("name");
-	String id =request.getParameter("id");
-	String phone =request.getParameter("phone");
-	String memberid =request.getParameter("memberid");
-	//String sql;
-	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
-	try{
-	smt.execute("UPDATE member (name, id, phone, memberid) VALUES('"+name+"','"+id+"','"+phone+"','"+memberid+"')");
-	con.close();
-	response.sendRedirect("prescription.jsp");
-}catch (Exception e){
-    //response.sendRedirect("prescription.jsp?status=IDexist");
-	}
-	%>
 			</span>
 			</div>
 			</div> 
