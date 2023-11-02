@@ -96,15 +96,12 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="index2.jsp#1234">藥師簡介</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="prescription.jsp">慢箋預約</a>
-                  </li>
+                  </li>              
                   <li class="nav-item">
                     <a class="nav-link" href="index2.jsp#3456">聯絡我們</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="Homepage-e.jsp">慢箋預約</a>
+                    <a class="nav-link" href="prescription.jsp">慢箋預約</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="Homepage-e.jsp">我的預約</a>
@@ -113,6 +110,9 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
               </div>
           
    <%if (session.getAttribute("access") == "y"){%>
+              
+              
+              
               <div class="quote_btn-container">
                 <a href="member-profile.jsp"> 
                 <!-- 這邊想放會員資料 -->
@@ -129,6 +129,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                   </span>
                 </a>
             <%}else{%>
+            
             <div class="quote_btn-container">
                 <a href="loginCheck-Select.jsp">
                   <i class="fa fa-user" aria-hidden="true"></i>

@@ -104,15 +104,15 @@ span.psw {
        
 #window-pop{
     background: white;
-    width:70%;
+    width:75%;
     z-index: 1;
-    margin: 12% auto;
+    margin: 3em;;
     overflow: visible;
     border-radius: 10px;
 }
         
 .window-content {
-    width: auto;
+    width: 70%;
     height: 480px;
     line-height: 200px
     overflow : visible;
@@ -142,16 +142,18 @@ span {
           <input type="text"name="phone" value="<%out.print(session.getAttribute("memberphone"));%>" readonly="readonly"><br> 
           <input type="text"name="memberid" value="<%out.print(session.getAttribute("email"));%>" readonly="readonly">
           </td>
-    </form></center>
+    </form>
+    </center>
      <!--  <h3 value="<%out.print(session.getAttribute("membername"));%>">姓名：<%out.print(session.getAttribute("membername"));%></h3>
 		  <h4 value="<%out.print(session.getAttribute("numberid"));%>">身分證字號：<%out.print(session.getAttribute("numberid"));%></h4><br>-->
     <td><button-1 onclick="customizeWindowEvent()" >修改資料</button-1></td></table>
+     
      <!-- 修改視窗 -->
      <div id="window-container">
         <div id="window-pop">
             <div class="window-content">
-              
-                <span><br><br><br><h6><b>修改資料</b></h6>
+           <form>   
+                <span><br><br><h6><b>修改資料</b></h6>
 
           <table >
           <td ><label for="name">姓名：</label><br><br><br>
@@ -162,23 +164,38 @@ span {
  
               <td>    
                 <input type="text" value=""> <br>
-                <input type="text" name="memberid"><br>
-                <input type="text"name="phone"><br>
+                <input type="text" name="memberid"><br><br> 
+                <input type="text"name="phone"><br><br> 
                 <input type="text" name="Email">
 			 </td> 
 			 
 			</table>
 			<button type="submit" name="submitButton">確認修改</button>
 			<button onclick="document.location='prescription.jsp'">取消</button>
+			
+<%Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
+	Statement smt= con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+	String name =request.getParameter("name");
+	String id =request.getParameter("id");
+	String phone =request.getParameter("phone");
+	String memberid =request.getParameter("memberid");
+	//String sql;
+	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
+	try{
+	smt.execute("UPDATE member (name, id, phone, memberid) VALUES('"+name+"','"+id+"','"+phone+"','"+memberid+"')");
+	con.close();
+	response.sendRedirect("prescription.jsp");
+}catch (Exception e){
+		response.sendRedirect("prescription.jsp?status=IDexist");
+	}
+	%>
 			</span>
 			</div>
 			</div> 
 			</div>
-			<script>
-        function myFunction() { 
-          document.getElementById("name").value=newvalue;
-        }
-        </script>
+			</form>
+			
 				<br><label for='massage'>選擇預約日期：</label><input type="date" for="date" name="date" required>
 				<script>
                   var date = document.getElementById('massage'),
