@@ -230,58 +230,105 @@
 
   <!-- team section -->
  <section class="team_section layout_padding">
-  <div class="container" id="1234">
-    <div class="heading_container heading_center">
-      <h2>藥師 <span>簡介</span></h2>
+    <div class="container" id="1234">
+      <div class="heading_container heading_center">
+        <h2>
+          關於 <span>藥師</span>
+        </h2>
+      </div>
+      <div class="carousel-wrap ">
+        <div class="owl-carousel team_carousel">
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/PT2.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                 陳湘婷
+                </h5>
+                <h6>
+                  美國加州大學藥學系
+                </h6>
+                <div class="social_box">
+                  <a href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/Lee.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                   李聖京
+                </h5>
+                <h6>
+                  韓國首爾大學藥學系
+                </h6>
+                <div class="social_box">
+                  <a href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/PT1.jpg" alt="" />
+              </div>
+              <div class="detail-box">
+                <h5>
+                林新義
+                </h5>
+                <h6>
+                台灣大學藥學系學士
+                </h6>
+                <div class="social_box">
+                  <a href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="carousel-wrap"> 
-      <div class="owl-carousel team_carouselowl-loaded owl-drag">
-      <div class="item">
-          <div class="box">
-            <div class="img-box">
-            <img src="images/PT2.jpg" alt=" ">
-            </div>
-            <div class="detail-box">
-              <h5>陳湘婷</h5>
-              <h6>北醫大藥學系學士</h6>
-              <div class="social_box">
-              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <div class="item">
-          <div class="box">
-            <div class="img-box">
-            <img src="images/PT1.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>林新義</h5>
-              <h6>台灣大學藥學系學士</h6>
-              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-        <div class="item">
-          <div class="box">
-           <div class="img-box">
-           <img src="images/Lee.jpg" alt="">
-           </div>
-            <div class="detail-box">
-              <h5>李聖經</h5>
-              <h6>韓國首爾大學藥學系</h6>
-              <div class="social_box"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a href="https://www.instagram.com/ntunhs_dhcm/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </div>
-            </div>
-            </div>
-        </div>
-        </div>
-     </div>
-   </div>
-   
+  </section>
 </section>
   
 
