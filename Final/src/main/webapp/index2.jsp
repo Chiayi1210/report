@@ -16,9 +16,6 @@
     <!-- end header section -->
     <!-- slider section -->
     <section class="slider_section ">
-      <div class="dot_design">
-        <img src="images/dots.png" alt="">
-      </div>
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">

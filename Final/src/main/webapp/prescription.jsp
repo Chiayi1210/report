@@ -187,7 +187,7 @@ span {
 	con.close();
 	response.sendRedirect("prescription.jsp");
 }catch (Exception e){
-		response.sendRedirect("prescription.jsp?status=IDexist");
+    //response.sendRedirect("prescription.jsp?status=IDexist");
 	}
 	%>
 			</span>
