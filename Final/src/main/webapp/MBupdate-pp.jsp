@@ -19,9 +19,8 @@
 	String phone = new String(request.getParameter("phone").getBytes("ISO-8859-1"));
 	String memberid = new String(request.getParameter("memberid").getBytes("ISO-8859-1"));
 	string memberpwd = new String(request.getParameter("memberpwd").getBytes("ISO-8859-1"));
-	String position = new String(request.getParameter("position"));
-	smt.execute("INSERT INTO prescription (name, id, date, time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("membername")+"','"+session.getAttribute("numberid")+"',smt.execute("INSERT INTO prescription (name, id, date, time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("membername")+"','"+session.getAttribute("numberid")+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");)");
-	response.sendRedirect("prescriprion.jsp?memberId="+request.getParameter("memberId")+"");
+	//String position = new String(request.getParameter("position"));
+    , memberid ='" + memberid +"'smt.executeUpdate("UPDATE prescription SET name ='" + name+"', id ='" + id+"', phone ='" + phone +"', memberid ='" + memberid +"', memberpwd ='" + memberpwd +"' WHERE memberId ='" + request.getParameter("memberId")+"' ");	response.sendRedirect("prescriprion.jsp?memberId="+request.getParameter("")+"");
 %>
 </body>
 </html>
