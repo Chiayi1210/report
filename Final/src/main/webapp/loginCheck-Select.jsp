@@ -16,13 +16,14 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 			request.getParameter("memberid")+"' AND memberpwd='" +
 			request.getParameter("memberpwd")+"'";
 	ResultSet members = smt.executeQuery(getmemberdata);
-//memberid 帳號 memberpwd 密碼 email 電子信箱	membername 姓名 numberid 身分證字號 memberphone電話
+//memberid 帳號 memberpwd 密碼 email 電子信箱	membername 姓名 numberid 身分證字號 memberphone電話 CK權限檢核碼
 	if(members.next()){
 		session.setAttribute("access","y");
 		session.setAttribute("email",request.getParameter("memberid"));
 		session.setAttribute("membername",members.getString("name"));
 		session.setAttribute("numberid",members.getString("id"));
 		session.setAttribute("memberphone",members.getString("phone"));
+		session.setAttribute("CKey",members.getString("CK"));
 		
 		session.setMaxInactiveInterval(3600);
 		response.sendRedirect("index2.jsp");

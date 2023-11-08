@@ -18,7 +18,7 @@
 	//String sql;
 	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
 	try{
-	smt.execute("INSERT INTO member (name, id, phone, memberid, memberpwd) VALUES('"+name+"','"+id+"','"+phone+"','"+memberid+"','"+memberpwd+"')");
+	smt.execute("INSERT INTO member (name, id, phone, memberid, memberpwd,CK) VALUES('"+name+"','"+id+"','"+phone+"','"+memberid+"','"+memberpwd+"','0')");
 	con.close();
 	response.sendRedirect("loginCheck-Select.jsp");
 }catch (Exception e){

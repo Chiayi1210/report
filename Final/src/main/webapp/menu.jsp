@@ -66,6 +66,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
 
 </head>
 <body>
+ 
  <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -105,14 +106,22 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="Homepage-e.jsp">我的預約</a>
-                  </li>
-                </ul>
-              </div>
+                  </li> 
+                   
+             <!-- 登入判定還沒成功(員工及管理員及一般民眾) -->    <%if (session.getAttribute("CK") == "1"){%>
+                 <li class="nav-item">
+                    <a class="nav-link" href=".jsp">預約資料</a>
+                  </li> 
+                 <%}else{%>
+                 
           
-   <%if (session.getAttribute("access") == "y"){%>
-              
-              
-              
+   
+  </ul>
+                  </div>
+               <%} %>
+         
+         <%if (session.getAttribute("access") == "y" ){%>       
+         
               <div class="quote_btn-container">
                 <a href="member-profile.jsp"> 
                 <!-- 這邊想放會員資料 -->
@@ -145,7 +154,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                   </span>
                 </a>
              <%}%>     
-             
+           
                 </div>
                 </div>
               </div>
