@@ -24,7 +24,7 @@
 	smt.execute("INSERT INTO prescription (name, id, date, time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("membername")+"','"+session.getAttribute("numberid")+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	//,'"+cnumber2+"','"+cnumber3+"'
 	con.close();
-	response.sendRedirect("confirm-pp.jsp");
+	response.sendRedirect("success.jsp");
 	
 	}else{
 		out.println("已有預約，請至查詢確認!!");

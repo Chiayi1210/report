@@ -11,6 +11,7 @@
 <header class="w3-container w3-red w3-center" style="padding:80px 16px">
   <h1 class="w3-margin w3-jumbo">查詢/更改/取消預約</h1>
   </header>
+  
 <% 
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
@@ -19,7 +20,9 @@
 	String sql = "SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'";
 	ResultSet pp = smt.executeQuery(sql);
 	pp.next();
+	
 	%>
+	
       <div>
       <center><h3>
       <table>
@@ -44,7 +47,7 @@
       </table>
    </h3>
         
-        <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">上一步</button>
+       
         <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index2.jsp'">確認</button>
       </center>
       </div>
