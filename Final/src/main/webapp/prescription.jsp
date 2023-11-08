@@ -51,6 +51,8 @@ button {
   width: 30%;
 }
 
+   
+
 button-1 {
   background-color: #00c6a9;
   color: white;
@@ -136,6 +138,8 @@ span {
     line-height: normal;
 }
 
+
+
 </style>
 <center> <br><h1>預約資料登記</h1>
 	<form action="pp-InsertInto.jsp">
@@ -208,34 +212,34 @@ span {
                   }
                   }
                 </script>
-                <br><br><label >選擇預約時間：<p id="demo" name="time" value=""></p></label>
+                <br><br><label >選擇預約時間：<input type="text" id="demo" name="time" value="" readonly="readonly"></label>
 			</center>
 			<br>
     <center><table width="70%">
-    <td width="auto"  align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "9:30-10:00"' required  for="time" value="9:30-10:00">9:30-10:00</button>
+    <td width="auto"  align="center"><button type="button" type="button" onclick='document.getElementById("demo").innerHTML = "9:30-10:00"' required  for="time" value="9:30-10:00">9:30-10:00</button>
     <br>目前已預約3人</td> 
-    <td  width="auto" align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "10:00-10:30" ' required name="time" for="time" value="10:00-10:30">10:00-10:30</button>
+    <td  width="auto" align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "10:00-10:30" ' required for="time" value="10:00-10:30">10:00-10:30</button>
     <br>目前已預約0人</td>
-    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "10:30-11:00"'required name="time" for="time" value="">10:30-11:00</button>
+    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "10:30-11:00"'required  for="time" value="">10:30-11:00</button>
     <br>目前已預約0人</td>
-    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "11:30-12:00"' required name="time" for="time" value="">11:30-12:00</button>
+    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "11:30-12:00"' required  for="time" value="">11:30-12:00</button>
     <br>目前已預約2人</td>
   <tr>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "12:00-12:30"' required name="time" for="time" value="">12:00-12:30</button><br>目前已預約4人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "13:00-13:30"' required name="time" for="time" value="">13:00-13:30</button><br>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "13:30-14:00"' required name="time" for="time" value="">13:30-14:00</button><br>目前已預約1人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "14:30-15:00"' required name="time" for="time" value="">14:30-15:00</button><br>目前已預約2人</td>     
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "12:00-12:30"' required  for="time" value="">12:00-12:30</button><br>目前已預約4人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "13:00-13:30"' required for="time" value="">13:00-13:30</button><br>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "13:30-14:00"' required  for="time" value="">13:30-14:00</button><br>目前已預約1人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "14:30-15:00"' required  for="time" value="">14:30-15:00</button><br>目前已預約2人</td>     
   </tr>
   <tr>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "15:30-16:00"' required name="time" for="time" value="">15:30-16:00</button><br>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "16:30-17:00"' required name="time" for="time" value="">16:30-17:00</button><br>目前已預約1人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "17:30-18:00"' required name="time" for="time" value="">17:30-18:00</button><br>目前已預約3人</td>
-      <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "18:00-18:30"' required name="time" for="time" value="">18:00-18:30</button><br>目前已預約4人</td>     
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "15:30-16:00"' required  for="time" value="">15:30-16:00</button><br>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "16:30-17:00"' required  for="time" value="">16:30-17:00</button><br>目前已預約1人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "17:30-18:00"' required  for="time" value="">17:30-18:00</button><br>目前已預約3人</td>
+      <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "18:00-18:30"' required  for="time" value="">18:00-18:30</button><br>目前已預約4人</td>     
    </tr>
-    <tr><td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "19:00-19:30"' required name="time" for="time" value="">19:00-19:30</button><br>目前已預約1人</td>
-   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "19:30-20:00"' required name="time" for="time" value="">19:30-20:00</button><br>目前已預約3人</td>
-   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "20:30-21:00"' required name="time" for="time" value="">20:30-21:00</button><br>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "21:00-21:30"' required name="time" for="time" value="">21:00-21:30</button><br>目前已預約1人</td>  
+    <tr><td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "19:00-19:30"' required  for="time" value="">19:00-19:30</button><br>目前已預約1人</td>
+   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "19:30-20:00"' required  for="time" value="">19:30-20:00</button><br>目前已預約3人</td>
+   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "20:30-21:00"' required  for="time" value="">20:30-21:00</button><br>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "21:00-21:30"' required  for="time" value="">21:00-21:30</button><br>目前已預約1人</td>  
     </tr></table>
 			
 			<br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
