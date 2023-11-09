@@ -172,7 +172,7 @@ span {
       </table>
    </h3>
         
-        <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">確認取消</button>
+        <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'" >確認取消</button>
         
       </center>
       </form>

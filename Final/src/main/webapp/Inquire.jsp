@@ -56,19 +56,21 @@ button {
 	ResultSet pp = smt.executeQuery(sql);
 	pp.next();
 	
+	
 	%>
     <center><h1>我的預約</h1>
-       <table style="border:2px #111 solid;"  width="20%" >
+       <table style="border:2px #111 solid;" width="20%" >
         <td align="center" ><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
         您預約的時間如下：<br>
-    <%=pp.getString("date")%><br><%=pp.getString("time")%><br>
-<%=pp.getString("cnumber1")%><%=pp.getString("cnumber2")%><%=pp.getString("cnumber3")%></p></td></table> 
+    <%=pp.getString("date")%><br><%=pp.getString("time")%><br>慢箋號碼：<br>
+<%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%>
+</p></td></table> 
    
 
   
-  <br><button type="button" onclick="window.location='Edit.html'">更改預約</button>
-  <button type="button" onclick="window.location='Cancel.html'">取消預約</button>
-  <br><button type="button" onclick="window.location='index2.html'">確認回首頁</button>
+  <br><button type="button" onclick="window.location='Edit.jsp'">更改預約</button>
+  <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
+  <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>
 <!--  <center><header>
   <h1 >查詢預約</h1>
   </header></center><

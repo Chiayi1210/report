@@ -25,7 +25,7 @@
 	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
 	smt.execute("INSERT INTO prescription (name, id, time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("membername")+"','"+session.getAttribute("numberid")+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	//,'"+cnumber2+"','"+cnumber3+"'
-	smt.executeUpdate("UPDATE member SET name ='"+ membername+"' WHERE id='"+session.getAttribute("numberid")+"'");
+	smt.executeUpdate("UPDATE member SET name ='"+ membername+"' ,phone='"+ memberphone"' ,memberid ='"+ memberid+"' WHERE id='"+session.getAttribute("numberid")+"'");
 	con.close();
 	response.sendRedirect("success.jsp");
 	
