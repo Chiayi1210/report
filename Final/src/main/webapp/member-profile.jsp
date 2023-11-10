@@ -59,7 +59,166 @@ pageEncoding="utf-8"%>
         </div>
         <div class="col-md-8" >
             <div class="heading_container" >
-            <h1>會員資料管理</h1>
+    <!--使用 Bootstrap 設計登入表單-->
+<div class="panel panel-primary">
+    <div class="panel-heading"> 會員資料管理</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label>姓名</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>身分證字號</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="panel-footer">
+        <button type="button" class="btn btn-primary">修改個人資料</button>
+    </div>
+</div>
+ 
+    <!--使用 Bootstrap 設計登入表單-->
+    <div class="panel panel-primary">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>修改密碼</label>
+                        <input type="password" class="form-control" v-model="form.NewUserPwd">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>確認新密碼</label>
+                        <input type="password" class="form-control" v-model="form.CheckUserPwd">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button type="button" class="btn btn-primary" v-on:click="DoEditPwd()">修改密碼</button>
+        </div>
+    </div>
+ 
+    <!--使用 Bootstrap Modal 樣式，當執行有錯誤時，顯示錯誤訊息-->
+    </div>
+    <!--  <script>
+        var VuePage = new Vue({
+            el: '#VuePage'
+            , data: function () {
+                var data = {
+                    form: {}
+                };
+ 
+                // 設定表單初始值
+                data.form = {
+                    UserID: ""
+                    , UserName: ""
+                    , UserEmail:""
+                }
+                return data;
+            }
+            // Vue 實體與掛載完成
+            , mounted: function () {
+                var self = this;
+ 
+                // 當 Vue 掛載完成，取得個人資料
+                self.GetUserProfile();
+            }
+            , methods: {
+                // 前端驗證權杖
+                GetToken: function () {
+                    var token = '@Html.AntiForgeryToken()';
+                    token = $(token).val();
+                    return token;
+                }
+                // 取得個人資料
+                , GetUserProfile: function () {
+                    var self = this;
+                    var postData = {};
+ 
+                    // 使用 jQuery Ajax 傳送至後端
+                    $.ajax({
+                        url:'@Url.Content("~/Member/GetUserProfile")',
+                        method:'POST',
+                        dataType:'json',
+                        data: { inModel: postData },
+                        success: function (datas) {
+                            if (datas.ErrMsg) {
+                                alert(datas.ErrMsg);
+                                return;
+                            }
+                            self.form.UserID = datas.UserID;
+                            self.form.UserName = datas.UserName;
+                            self.form.UserEmail = datas.UserEmail;
+                        },
+                        error: function (err) {
+                            $('#ErrorMsg').html(err.responseText);
+                            $('#ErrorAlert').modal('toggle');
+                        },
+                    });
+                }
+                // 修改個人資料
+                , DoEditProfile: function () {
+                    var self = this;
+ 
+                    // 組合表單資料
+                    var postData = {};
+                    postData['UserName'] = self.form.UserName;
+                    postData['UserEmail'] = self.form.UserEmail;
+ 
+                    // 使用 jQuery Ajax 傳送至後端
+                    $.ajax({
+                        url:'@Url.Content("~/Member/DoEditProfile")',
+                        method:'POST',
+                        dataType:'json',
+                        data: { inModel: postData, __RequestVerificationToken: self.GetToken() },
+                        success: function (datas) {
+                            if (datas.ErrMsg) {
+                                alert(datas.ErrMsg);
+                                return;
+                            }
+                            alert(datas.ResultMsg);
+                        },
+                        error: function (err) {
+                            $('#ErrorMsg').html(err.responseText);
+                            $('#ErrorAlert').modal('toggle');
+                        },
+                    });
+                }
+                 // 修改密碼
+                , DoEditPwd: function () {
+                    var self = this;
+ 
+                    // 組合表單資料
+                    var postData = {};
+                    postData['NewUserPwd'] = self.form.NewUserPwd;
+                    postData['CheckUserPwd'] = self.form.CheckUserPwd;
+ 
+                    // 使用 jQuery Ajax 傳送至後端
+                    $.ajax({
+                        url:'@Url.Content("~/Member/DoEditPwd")',
+                        method:'POST',
+                        dataType:'json',
+                        data: { inModel: postData, __RequestVerificationToken: self.GetToken() },
+                        success: function (datas) {
+                            if (datas.ErrMsg) {
+                                alert(datas.ErrMsg);
+                                return;
+                            }
+                            alert(datas.ResultMsg);
+                        },
+                        error: function (err) {
+                            $('#ErrorMsg').html(err.responseText);
+                            $('#ErrorAlert').modal('toggle');
+    </script>-->
+}
+            <!--  <h1>會員資料管理</h1>
               <%while(pp.next()){ %> 
               <h4><table>
                <tr>
@@ -86,7 +245,7 @@ pageEncoding="utf-8"%>
                </p><!-- 改成關於藥局的資料 -->
                        
                </div>
-             </section> 
+             </section> -->
   <section class="info_section ">
     <div class="container">
       <div class="info_bottom layout_padding2">
