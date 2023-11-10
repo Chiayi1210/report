@@ -44,14 +44,37 @@ input[type=submit] {
 button {
   background-color: #00c6a9;
   color: white;
-  padding: 14px 15px;
-  margin: 8px 0;
-  border: none;
+  padding: 6px 0px;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+    border-radius: 3px;
+  margin: 0px 0px 10px;
+  border: 1px solid #00c6a9;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
+  font-size: 16px;
+  font-weight: 300;
+   -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+  text-align: center;
+  display: flex;    
+  align-items: center;
+  box-sizing: border-box;
+     height: 45px;
+    
 }
-
-   
+ 
+ .button:active {
+    background-color: #fff;
+  transition: all 0.2s ease-in-out 0s;
+    transition-behavior: normal;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;}
 
 button-1 {
   background-color: #00c6a9;
@@ -61,6 +84,7 @@ button-1 {
   border: none;
   cursor: pointer;
   width: 10%;
+  
 }
 
 button:hover {
@@ -139,25 +163,60 @@ span {
 }
 
 
+.buttonSS {
+    padding: 6px 0px;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-bottom: 6px;
+    padding-left: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    transition-behavior: normal;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px 0px 10px;
+    height: 45px;
+    border: 1px solid #00c6a9;
+    background: #00c6a9;
+    color: rgb(255, 255, 255);}
+    
+.button:active{
+background-color:#fff;
+ color: #fff;
+}
 
 </style>
 <center> <br><h1>預約資料登記</h1>
-	<form action="pp-InsertInto.jsp">
+<form action="pp-InsertInto.jsp" method="post">
 		<div>
 		  <table style="border:2px #ccc solid" width="40%">
-		  <form ><td><label for="name" value="<%out.print(session.getAttribute("accessname"));%>">&nbsp;&nbsp;&nbsp;&nbsp;姓名：</label><br><br> 
+		  <td><label for="membername" >&nbsp;&nbsp;&nbsp;&nbsp;姓名：</label><br><br> 
                <label for="numberid">&nbsp;&nbsp;&nbsp;&nbsp;身分證字號：</label><br><br> 
               <label for="memberphone"  readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;電話號碼：</label><br><br> 
               <label for="memberid">&nbsp;&nbsp;&nbsp;&nbsp;E-mail：</label>
           </td>
+          <!--  value="<%out.print(session.getAttribute("accessname"));%>"-->
           <td>
-          <input type="text" name="name"value="<%out.print(session.getAttribute("membername"));%>" readonly="readonly"><br>  
-          <input type="text" name="id" value="<%out.print(session.getAttribute("numberid"));%>" readonly="readonly"><br>  
-          <input type="text" name="phone" value="<%out.print(session.getAttribute("memberphone"));%>" readonly="readonly"><br> 
-          <input type="text" name="memberid" value="<%out.print(session.getAttribute("email"));%>" readonly="readonly">
+          <input type="text" name="membername" value="<%out.print(session.getAttribute("membername"));%>" ><br>  
+          <input type="text" name="numberid" value="<%out.print(session.getAttribute("numberid"));%>"  readonly="true"><br>  
+          <input type="text" name="memberphone" value=" <%out.print(session.getAttribute("memberphone"));%>" ><br> 
+          <input type="text" name="memberid" value=" <%out.print(session.getAttribute("email"));%>" >
           </td>
-         </form>
-    </center>
+         </table>
+   
     <!-- function pic(){  
 				document.form.action="MBupdate-pp.jsp";
 				document.form.enctype="multipart/form-data";
@@ -166,39 +225,43 @@ span {
 			
      <!--  <h3 value="<%out.print(session.getAttribute("membername"));%>">姓名：<%out.print(session.getAttribute("membername"));%></h3>
 		  <h4 value="<%out.print(session.getAttribute("numberid"));%>">身分證字號：<%out.print(session.getAttribute("numberid"));%></h4><br>-->
-    <td><button-1 onclick="customizeWindowEvent()" >修改資料</button-1></td></table>
+    <td>
+   <!--  <button-1 onclick="customizeWindowEvent()" >修改資料</button-1></td></table>
      
-     <!-- 修改視窗 ，修改為寫入資料庫-->
+      修改視窗 ，修改為寫入資料庫
+  
      <div id="window-container">
         <div id="window-pop">
             <div class="window-content">
-           <form>   
+              
                 <span><br><br><h6><b>修改資料</b></h6>
 
 
           <table >
-          <td ><label for="name">姓名：</label><br><br><br>
-            <label for="id">身分證字號：</label><br><br><br>
-            <label for="phone">電話號碼：</label><br><br><br>
-            <label for="Email">E-mail：</label>
+          <td width="200"align="center"><br><label for="membername">姓名：</label><br><br>
+            <label for="numberid">身分證字號：</label><br><br><br>
+            <label for="memberphone">電話號碼：</label><br><br>
+            <label for="memberid">E-mail：</label><br><br>
+            <button type="submit" name="submitButton">確認修改</button>
           </td>
  
-              <td>    
-                <input type="text" value=""> <br>
-                <input type="text" name="memberid"><br><br> 
-                <input type="text"name="phone"><br><br> 
-                <input type="text" name="Email">
+              <td width="200"align="center">    
+                <input type="text" name="membername" > <br>
+                <input type="text" name="numberid"><br>
+                <input type="text"name="memberphone"><br>
+                <input type="text" name="memberid"><br><br>
+                <button onclick="document.location='prescription.jsp'">取消</button>
 			 </td> 
 			 
 			</table>
-			<button type="submit" name="submitButton">確認修改</button>
-			<button onclick="document.location='prescription.jsp'">取消</button>
+			
+			
 			</span>
 			</div>
 			</div> 
-			</div>
-			
-			
+			</div> -->
+		
+	
 				<br><label for='massage'>選擇預約日期：</label><input type="date"  name="date" required>
 				<script>
                   var date = document.getElementById('massage'),
@@ -212,34 +275,35 @@ span {
                   }
                   }
                 </script>
-                <br><br><label >選擇預約時間：<input type="text" id="demo" name="time" value="" readonly="readonly"></label>
+                <br><br><label >選擇預約時間：<text type="text" id="demo" name="time1" value="" readonly="readonly"></text>
 			</center>
-			<br>
-    <center><table width="70%">
-    <td width="auto"  align="center"><button type="button" type="button" onclick='document.getElementById("demo").innerHTML = "9:30-10:00"' required  for="time" value="9:30-10:00">9:30-10:00</button>
-    <br>目前已預約3人</td> 
+			
+    <center>
+    <table width="70%"><tr>
+    <td width="auto"  align="center"><button   type="button" class="button" onclick='document.getElementById("demo").innerHTML = "9:30-10:00"' required  for="time" value="9:30-10:00">9:30-10:00</button>
+    目前已預約<% %>人</td> 
     <td  width="auto" align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "10:00-10:30" ' required for="time" value="10:00-10:30">10:00-10:30</button>
-    <br>目前已預約0人</td>
-    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "10:30-11:00"'required  for="time" value="">10:30-11:00</button>
-    <br>目前已預約0人</td>
-    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "11:30-12:00"' required  for="time" value="">11:30-12:00</button>
-    <br>目前已預約2人</td>
+    目前已預約0人</td>
+    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "10:30-11:00"'required  for="time" value="10:30-11:00">10:30-11:00</button>
+    目前已預約0人</td>
+    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "11:30-12:00"' required  for="time" value="11:30-12:00">11:30-12:00</button>
+    目前已預約0人</td></tr>
   <tr>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "12:00-12:30"' required  for="time" value="">12:00-12:30</button><br>目前已預約4人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "13:00-13:30"' required for="time" value="">13:00-13:30</button><br>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "13:30-14:00"' required  for="time" value="">13:30-14:00</button><br>目前已預約1人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "14:30-15:00"' required  for="time" value="">14:30-15:00</button><br>目前已預約2人</td>     
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "12:00-12:30"' required  for="time" value="12:00-12:30">12:00-12:30</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "13:00-13:30"' required for="time" value="13:00-13:30">13:00-13:30</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "13:30-14:00"' required  for="time" value="13:30-14:00">13:30-14:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "14:30-15:00"' required  for="time" value="14:30-15:00">14:30-15:00</button>目前已預約0人</td>     
   </tr>
   <tr>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "15:30-16:00"' required  for="time" value="">15:30-16:00</button><br>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "16:30-17:00"' required  for="time" value="">16:30-17:00</button><br>目前已預約1人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "17:30-18:00"' required  for="time" value="">17:30-18:00</button><br>目前已預約3人</td>
-      <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "18:00-18:30"' required  for="time" value="">18:00-18:30</button><br>目前已預約4人</td>     
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "15:30-16:00"' required  for="time" value="15:30-16:00">15:30-16:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "16:30-17:00"' required  for="time" value="16:30-17:00">16:30-17:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "17:30-18:00"' required  for="time" value="17:30-18:00">17:30-18:00</button>目前已預約0人</td>
+      <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "18:00-18:30"' required  for="time" value="18:00-18:30">18:00-18:30</button>目前已預約0人</td>     
    </tr>
-    <tr><td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "19:00-19:30"' required  for="time" value="">19:00-19:30</button><br>目前已預約1人</td>
-   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "19:30-20:00"' required  for="time" value="">19:30-20:00</button><br>目前已預約3人</td>
-   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "20:30-21:00"' required  for="time" value="">20:30-21:00</button><br>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "21:00-21:30"' required  for="time" value="">21:00-21:30</button><br>目前已預約1人</td>  
+    <tr><td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "19:00-19:30"' required  for="time" value="19:00-19:30">19:00-19:30</button>目前已預約0人</td>
+   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "19:30-20:00"' required  for="time" value="19:30-20:00">19:30-20:00</button>目前已預約0人</td>
+   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "20:30-21:00"' required  for="time" value="20:30-21:00">20:30-21:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "21:00-21:30"' required  for="time" value="21:00-21:30">21:00-21:30</button>目前已預約0人</td>  
     </tr></table>
 			
 			<br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
@@ -249,8 +313,9 @@ span {
 			<br> <label for="cnumber3">慢性病卡號3：</label> <input type="text"
 				name="cnumber3"><br>
 			<br>
-			<button type="submit">確認</button></form>
+			<button type="submit">確認</button>
 	</center>
+	</form>
 	<%}else{%>
 	<%out.println("<script>alert('請先登入此系統！！'); window.location='loginCheck-Select.jsp' </script>");%>
 	
@@ -272,9 +337,10 @@ span {
         
   
 </script>
+
 	</html>
 
 	
-	</html>
+	
 
  

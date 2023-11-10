@@ -8,10 +8,45 @@
 
 
 <body>
-<header class="w3-container w3-red w3-center" style="padding:80px 16px">
-  <h1 class="w3-margin w3-jumbo">查詢/更改/取消預約</h1>
-  </header>
-  
+<style>
+button {
+  background-color: #00c6a9;
+  color: white;
+  padding: 6px 0px;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+    border-radius: 3px;
+  margin: 0px 0px 10px;
+  border: 1px solid #00c6a9;
+  cursor: pointer;
+  width: 15%;
+  font-size: 18px;
+  font-weight: 300;
+   -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+  text-align: center;
+  display: flex;    
+  align-items: center;
+  box-sizing: border-box;
+     height: 50px;
+    
+}
+ 
+ .button:active {
+    background-color: #fff;
+  transition: all 0.2s ease-in-out 0s;
+    transition-behavior: normal;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;}
+
+</style>
+
+<form action="Homepage-e.jsp" method="post"> 
 <% 
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
@@ -21,36 +56,57 @@
 	ResultSet pp = smt.executeQuery(sql);
 	pp.next();
 	
+	
 	%>
+    <center><h1>我的預約</h1>
+       <table style="border:2px #111 solid;" width="20%" >
+        <td align="center" ><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
+        您預約的時間如下：<br>
+    <%=pp.getString("date")%><br><%=pp.getString("time")%><br>慢箋號碼：<br>
+<%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%>
+</p></td></table> 
+   
+
+  
+  <br><button type="button" onclick="window.location='Edit.jsp'">更改預約</button>
+  <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
+  <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>
+<!--  <center><header>
+  <h1 >查詢預約</h1>
+  </header></center><
+  
+
 	
       <div>
       <center><h3>
       <table>
              <tr>
-                 <td>病人姓名：</td>
-                 <td><%out.print(session.getAttribute("membername"));%></td>
+                 <td align="center">病人姓名：<%out.print(session.getAttribute("membername"));%></td>
+                 
              </tr>
       <tr>
-           <td>身分證字號：</td>
-                 <td><%out.print(session.getAttribute("numberid"));%></td>
+           <td align="center">身分證字號：<%out.print(session.getAttribute("numberid"));%></td>
+                
              </tr>
       <tr>
-           <td>領藥時段為：</td>
-           <td><%=pp.getString("date")%><br>
-              <%=pp.getString("time")%></td>
+           <tdalign="center">領藥日期為：<%=pp.getString("date")%></td>
+          
              </tr>
+             <tr>
+              <td align="center">領藥時間為：<%=pp.getString("time")%></td>
+              </tr>
       <tr>
-           <td>慢箋卡號為：</td>
-                 <td><%=pp.getString("cnumber1")%></td>
+           <td align="center">慢箋卡號為：<%=pp.getString("cnumber1")%></td>
+                 
              </tr>
       
       </table>
    </h3>
         
        
-        <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index2.jsp'">確認</button>
+        <button type="submit"  onclick="document.location='index2.jsp'">確認</button>
       </center>
-      </div>
+      </div>-->
     
  <!--    //Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
       //Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
