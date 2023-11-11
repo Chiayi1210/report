@@ -217,49 +217,6 @@ background-color:#fff;
           </td>
          </table>
    
-    <!-- function pic(){  
-				document.form.action="MBupdate-pp.jsp";
-				document.form.enctype="multipart/form-data";
-				document.form.submit();
-			}  -->
-			
-     <!--  <h3 value="<%out.print(session.getAttribute("membername"));%>">姓名：<%out.print(session.getAttribute("membername"));%></h3>
-		  <h4 value="<%out.print(session.getAttribute("numberid"));%>">身分證字號：<%out.print(session.getAttribute("numberid"));%></h4><br>-->
-    <td>
-   <!--  <button-1 onclick="customizeWindowEvent()" >修改資料</button-1></td></table>
-     
-      修改視窗 ，修改為寫入資料庫
-  
-     <div id="window-container">
-        <div id="window-pop">
-            <div class="window-content">
-              
-                <span><br><br><h6><b>修改資料</b></h6>
-
-
-          <table >
-          <td width="200"align="center"><br><label for="membername">姓名：</label><br><br>
-            <label for="numberid">身分證字號：</label><br><br><br>
-            <label for="memberphone">電話號碼：</label><br><br>
-            <label for="memberid">E-mail：</label><br><br>
-            <button type="submit" name="submitButton">確認修改</button>
-          </td>
- 
-              <td width="200"align="center">    
-                <input type="text" name="membername" > <br>
-                <input type="text" name="numberid"><br>
-                <input type="text"name="memberphone"><br>
-                <input type="text" name="memberid"><br><br>
-                <button onclick="document.location='prescription.jsp'">取消</button>
-			 </td> 
-			 
-			</table>
-			
-			
-			</span>
-			</div>
-			</div> 
-			</div> -->
 		
 	
 				<br><label for='massage'>選擇預約日期：</label><input type="date"  name="date" required>

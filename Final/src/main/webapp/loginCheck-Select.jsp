@@ -16,7 +16,7 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 			request.getParameter("memberid")+"' AND memberpwd='" +
 			request.getParameter("memberpwd")+"'";
 	ResultSet members = smt.executeQuery(getmemberdata);
-//memberid 帳號 memberpwd 密碼 email 電子信箱	membername 姓名 numberid 身分證字號 memberphone電話 CK權限檢核碼
+//memberid 帳號 memberpwd 密碼 email 電子信箱(帳號) 	membername 姓名 numberid 身分證字號 memberphone電話 CK權限檢核碼
 	if(members.next()){
 		session.setAttribute("access","y");
 		session.setAttribute("email",request.getParameter("memberid"));
