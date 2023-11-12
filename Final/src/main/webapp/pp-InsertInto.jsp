@@ -18,7 +18,7 @@
 	String memberid =new String(request.getParameter("memberid"));
 
 	
-	smt.executeUpdate("UPDATE member SET name ='"+ session.getAttribute("membername")+"' ,phone='" + session.getAttribute("memberphone")+"' , memberid ='"+ memberid+"' WHERE id='"+session.getAttribute("numberid")+"'");
+	smt.executeUpdate("UPDATE member SET name ='"+membername+"' ,phone='" + memberphone+"' , memberid ='"+ memberid+"' WHERE id='"+session.getAttribute("numberid")+"'");
 	con.close();
 	
 	String date =request.getParameter("date");
