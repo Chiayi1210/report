@@ -203,20 +203,20 @@ background-color:#fff;
 <form action="pp-InsertInto.jsp" method="post">
 		<div>
 		  <table style="border:2px #ccc solid" width="40%">
-		  <td><label for="membername" >&nbsp;&nbsp;&nbsp;&nbsp;姓名：</label><br><br> 
+		  <td><label for="nmembername" >&nbsp;&nbsp;&nbsp;&nbsp;姓名：</label><br><br> 
                <label for="numberid">&nbsp;&nbsp;&nbsp;&nbsp;身分證字號：</label><br><br> 
-              <label for="memberphone"  readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;電話號碼：</label><br><br> 
+              <label for="memberphone"  >&nbsp;&nbsp;&nbsp;&nbsp;電話號碼：</label><br><br> 
               <label for="memberid">&nbsp;&nbsp;&nbsp;&nbsp;E-mail：</label>
           </td>
           <!--  value="<%out.print(session.getAttribute("accessname"));%>"-->
           <td>
-          <input type="text" name="membername" value="<%out.print(session.getAttribute("membername"));%>" ><br>  
+          <input type="text" name="name" value="<%out.print(session.getAttribute("membername"));%>" ><br>  
           <input type="text" name="numberid" value="<%out.print(session.getAttribute("numberid"));%>"  readonly="true"><br>  
-          <input type="text" name="memberphone" value=" <%out.print(session.getAttribute("memberphone"));%>" ><br> 
+          <input type="text" name="phone" value=" <%out.print(session.getAttribute("memberphone"));%>" ><br> 
           <input type="text" name="memberid" value=" <%out.print(session.getAttribute("email"));%>" >
           </td>
          </table>
-   
+   </div>
 		
 	
 				<br><label for='massage'>選擇預約日期：</label><input type="date"  name="date" required>
@@ -232,12 +232,12 @@ background-color:#fff;
                   }
                   }
                 </script>
-                <br><br><label >選擇預約時間：<text type="text" id="demo" name="time1" value="" readonly="readonly"></text>
+                <br><br><label >選擇預約時間：<text type="text" id="demo" name="time" value="" readonly="readonly"></text>
 			</center>
 			
     <center>
     <table width="70%"><tr>
-    <td width="auto"  align="center"><button   type="button" class="button" onclick='document.getElementById("demo").innerHTML = "9:30-10:00"' required  for="time" value="9:30-10:00">9:30-10:00</button>
+    <td width="auto"  align="center"><button   type="button" class="button" onclick='document.getElementById("demo").innerHTML= "9:30-10:00"' required  for="time" >9:30-10:00</button>
     目前已預約<% %>人</td> 
     <td  width="auto" align="center"><button type="button" onclick='document.getElementById("demo").innerHTML = "10:00-10:30" ' required for="time" value="10:00-10:30">10:00-10:30</button>
     目前已預約0人</td>

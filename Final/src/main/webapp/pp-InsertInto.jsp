@@ -12,14 +12,14 @@
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement
 			(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-	String name = new String(request.getParameter("membername"));
+	String name = new String(request.getParameter("name"));
 	String id = request.getParameter("numberid");
-	String phone =new String(request.getParameter("memberphone"));
+	String phone =new String(request.getParameter("phone"));
 	String memberid =new String(request.getParameter("memberid"));
 
 	
-	smt.executeUpdate("UPDATE member SET name ='"+membername+"' ,phone='" + memberphone+"' , memberid ='"+ memberid+"' WHERE id='"+session.getAttribute("numberid")+"'");
-	con.close();
+	smt.executeUpdate("UPDATE member SET name='" + name+"' , phone='" + phone+"' , memberid ='"+ memberid+"' WHERE id='"+session.getAttribute("numberid")+"'");
+	
 	
 	String date =request.getParameter("date");
 	String time =request.getParameter("time");
@@ -28,7 +28,7 @@
 	String cnumber3 =request.getParameter("cnumber3");
 	//String sql;
 	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
-	smt.execute("INSERT INTO prescription (name, id, phone, email,time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("membername")+"','"+session.getAttribute("numberid")+"','"+session.getAttribute("memberphone")+"','"+session.getAttribute("memberid")+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
+	smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("name")+"','"+session.getAttribute("numberid")+"','"+session.getAttribute("phone")+"','"+session.getAttribute("memberid")+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	//,'"+cnumber2+"','"+cnumber3+"'
 	con.close();
 	response.sendRedirect("success.jsp");
