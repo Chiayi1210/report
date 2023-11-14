@@ -161,7 +161,37 @@ span {
                   }
                   }
                 </script><br><br>
-        <label for="time" >選擇時間：</label> <select required name="time" value="<%=rs.getString("ptime") %>" >
+                
+                <label >選擇預約時間：<input type="text" id="demo" name="time" value="<%=rs.getString("time")%>" readonly="readonly" required>
+			
+    <table width="70%"><tr>
+    <td width="auto"  align="center"><button   type="button" class="button" onclick='document.getElementById("demo").value= "9:30-10:00"' required  for="time" >9:30-10:00</button>
+    目前已預約<% %>人</td> 
+    <td  width="auto" align="center"><button type="button" onclick='document.getElementById("demo").value = "10:00-10:30" ' required for="time" >10:00-10:30</button>
+    目前已預約0人</td>
+    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").value = "10:30-11:00"'required  for="time" >10:30-11:00</button>
+    目前已預約0人</td>
+    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").value = "11:30-12:00"' required  for="time" >11:30-12:00</button>
+    目前已預約0人</td></tr>
+  <tr>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "12:00-12:30"' required  for="time" >12:00-12:30</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "13:00-13:30"' required for="time" >13:00-13:30</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "13:30-14:00"' required  for="time" >13:30-14:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value= "14:30-15:00"' required  for="time" >14:30-15:00</button>目前已預約0人</td>     
+  </tr>
+  <tr>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "15:30-16:00"' required  for="time" >15:30-16:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "16:30-17:00"' required  for="time" >16:30-17:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "17:30-18:00"' required  for="time" >17:30-18:00</button>目前已預約0人</td>
+      <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "18:00-18:30"' required  for="time" >18:00-18:30</button>目前已預約0人</td>     
+   </tr>
+    <tr><td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "19:00-19:30"' required  for="time" >19:00-19:30</button>目前已預約0人</td>
+   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "19:30-20:00"' required  for="time" >19:30-20:00</button>目前已預約0人</td>
+   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "20:30-21:00"' required  for="time" >20:30-21:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "21:00-21:30"' required  for="time" >21:00-21:30</button>目前已預約0人</td>  
+    </tr></table>
+                
+        <!--  <label for="time" >選擇時間：</label> <select required name="time" value="<%=rs.getString("ptime") %>" >
 
 				<option value="">請選擇</option>
 				<option >11:00~12:00</option>
@@ -174,7 +204,8 @@ span {
 				<option >20:00~21:00</option>
 				<option >21:00~22:00</option>
 				<option >22:00~23:00</option>
-			</select><br>
+			</select>-->
+			<br>
 	 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">上一步</button>
 	 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index2.jsp'">確認修改</button>
 </center>

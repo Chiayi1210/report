@@ -60,7 +60,7 @@ button {
 	%>
     <center><h1>我的預約</h1>
        <table style="border:2px #111 solid;" width="20%" >
-        <td align="center" ><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
+        <td align="center"><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
         您預約的時間如下：<br>
     <%=pp.getString("date")%><br><%=pp.getString("time")%><br>慢箋號碼：<br>
 <%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%>
@@ -129,6 +129,6 @@ button {
       //session.setAttribute("pcnumber2",pp.getString("cnumber2"));
       //session.setAttribute("pcnumber3",pp.getString("cnumber3")); --> 
      
-      
+      </center></form>
 </body>
 </html>

@@ -16,19 +16,20 @@
 	String id = request.getParameter("numberid");
 	String phone =new String(request.getParameter("phone"));
 	String memberid =new String(request.getParameter("memberid"));
-
-	
-	smt.executeUpdate("UPDATE member SET name='" + name+"' , phone='" + phone+"' , memberid ='"+ memberid+"' WHERE id='"+session.getAttribute("numberid")+"'");
-	
-	
 	String date =request.getParameter("date");
 	String time =request.getParameter("time");
 	String cnumber1 =request.getParameter("cnumber1");
 	String cnumber2 =request.getParameter("cnumber2");
 	String cnumber3 =request.getParameter("cnumber3");
+
+	
+	smt.executeUpdate("UPDATE member SET name='" + name+"' , phone='" + phone+"' , memberid ='"+ memberid+"' WHERE id='"+session.getAttribute("numberid")+"'");
+	
+	
+	
 	//String sql;
 	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
-	smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("membername")+"','"+session.getAttribute("numberid")+"','"+session.getAttribute("memberphone")+"','"+session.getAttribute("email")+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
+	smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1, cnumber2, cnumber3) VALUES('"+session.getAttribute("membername")+"','"+session.getAttribute("numberid")+"','"+session.getAttribute("memberphone")+"','"+session.getAttribute("memberid")+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	//,'"+cnumber2+"','"+cnumber3+"'
 	con.close();
 	response.sendRedirect("success.jsp");
