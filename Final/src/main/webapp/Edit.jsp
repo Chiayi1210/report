@@ -32,12 +32,37 @@ input[type=submit] {
 button {
   background-color: #00c6a9;
   color: white;
-  padding: 14px 15px;
-  margin: 8px 0;
-  border: none;
+  padding: 6px 0px;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+    border-radius: 3px;
+  margin: 0px 0px 10px;
+  border: 1px solid #00c6a9;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
+  font-size: 16px;
+  font-weight: 300;
+   -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+  text-align: center;
+  display: flex;    
+  align-items: center;
+  box-sizing: border-box;
+     height: 45px;
+    
 }
+ 
+ .button:active {
+    background-color: #fff;
+  transition: all 0.2s ease-in-out 0s;
+    transition-behavior: normal;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;}
 
 button-1 {
   background-color: #00c6a9;
@@ -47,6 +72,7 @@ button-1 {
   border: none;
   cursor: pointer;
   width: 10%;
+  
 }
 
 button:hover {
@@ -102,15 +128,15 @@ span.psw {
        
 #window-pop{
     background: white;
-    width:70%;
+    width:75%;
     z-index: 1;
-    margin: 12% auto;
+    margin: 3em;;
     overflow: visible;
     border-radius: 10px;
 }
         
 .window-content {
-    width: auto;
+    width: 70%;
     height: 480px;
     line-height: 200px
     overflow : visible;
@@ -124,9 +150,46 @@ span {
     line-height: normal;
 }
 
+
+.buttonSS {
+    padding: 6px 0px;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-bottom: 6px;
+    padding-left: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    transition-behavior: normal;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px 0px 10px;
+    height: 45px;
+    border: 1px solid #00c6a9;
+    background: #00c6a9;
+    color: rgb(255, 255, 255);}
+    
+.button:active{
+background-color:#fff;
+ color: #fff;
+}
+
 </style>
-<header class="w3-container w3-red w3-center" style="padding:40px 16px">
-  <h1 class="w3-margin w3-jumbo">查詢/更改/取消預約</h1>
+<center>
+<header >
+  <h1><br>更改預約</h1>
   </header>
    <%
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
@@ -146,8 +209,17 @@ span {
 	%>
 <form action="Edit-Update.jsp?id=<%=session.getAttribute("numberid")%>" method="post" name="form" >
 
-<center><h3 value="">姓名：<%out.print(session.getAttribute("membername"));%></h3>
-        <h3>身分證字號：<%out.print(session.getAttribute("numberid"));%></h3>
+
+<table style="border:2px #111 solid;" width="20%" >
+        <td align="center"><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
+        您預約的時間如下：<br>
+   <%=rs.getString("date")%><br><%=rs.getString("time")%><br>慢箋號碼：<br>
+<%=rs.getString("cnumber1")%><br><%=rs.getString("cnumber2")%><br><%=rs.getString("cnumber3")%>
+</p></td></table>
+
+
+<br>
+        
         <label for='massage'>選擇預約日期：</label><input type="date" name="date" value="<%=rs.getString("date")%>" required>
 				<script>
                   var date = document.getElementById('massage'),
@@ -164,31 +236,31 @@ span {
                 
                 <label >選擇預約時間：<input type="text" id="demo" name="time" value="<%=rs.getString("time")%>" readonly="readonly" required>
 			
-    <table width="70%"><tr>
-    <td width="auto"  align="center"><button   type="button" class="button" onclick='document.getElementById("demo").value= "9:30-10:00"' required  for="time" >9:30-10:00</button>
+    <table width="100%"><tr>
+    <td width="auto"  align="center"><button type="button" class="button" onclick='document.getElementById("demo").value= "9:30-10:00"'  for="time" >9:30-10:00</button>
     目前已預約<% %>人</td> 
-    <td  width="auto" align="center"><button type="button" onclick='document.getElementById("demo").value = "10:00-10:30" ' required for="time" >10:00-10:30</button>
+    <td  width="auto" align="center"><button type="button" onclick='document.getElementById("demo").value = "10:00-10:30" ' for="time" >10:00-10:30</button>
     目前已預約0人</td>
-    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").value = "10:30-11:00"'required  for="time" >10:30-11:00</button>
+    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").value = "10:30-11:00"'  for="time" >10:30-11:00</button>
     目前已預約0人</td>
-    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").value = "11:30-12:00"' required  for="time" >11:30-12:00</button>
+    <td width="auto"align="center"><button type="button" onclick='document.getElementById("demo").value = "11:30-12:00"'   for="time" >11:30-12:00</button>
     目前已預約0人</td></tr>
   <tr>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "12:00-12:30"' required  for="time" >12:00-12:30</button>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "13:00-13:30"' required for="time" >13:00-13:30</button>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "13:30-14:00"' required  for="time" >13:30-14:00</button>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value= "14:30-15:00"' required  for="time" >14:30-15:00</button>目前已預約0人</td>     
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "12:00-12:30"'   for="time" >12:00-12:30</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "13:00-13:30"'  for="time" >13:00-13:30</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "13:30-14:00"'  for="time" >13:30-14:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value= "14:30-15:00"'   for="time" >14:30-15:00</button>目前已預約0人</td>     
   </tr>
   <tr>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "15:30-16:00"' required  for="time" >15:30-16:00</button>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "16:30-17:00"' required  for="time" >16:30-17:00</button>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "17:30-18:00"' required  for="time" >17:30-18:00</button>目前已預約0人</td>
-      <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "18:00-18:30"' required  for="time" >18:00-18:30</button>目前已預約0人</td>     
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "15:30-16:00"'   for="time" >15:30-16:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "16:30-17:00"'   for="time" >16:30-17:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "17:30-18:00"'   for="time" >17:30-18:00</button>目前已預約0人</td>
+      <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "18:00-18:30"'   for="time" >18:00-18:30</button>目前已預約0人</td>     
    </tr>
-    <tr><td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "19:00-19:30"' required  for="time" >19:00-19:30</button>目前已預約0人</td>
-   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "19:30-20:00"' required  for="time" >19:30-20:00</button>目前已預約0人</td>
-   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "20:30-21:00"' required  for="time" >20:30-21:00</button>目前已預約0人</td>
-    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "21:00-21:30"' required  for="time" >21:00-21:30</button>目前已預約0人</td>  
+    <tr><td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "19:00-19:30"'   for="time" >19:00-19:30</button>目前已預約0人</td>
+   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "19:30-20:00"'   for="time" >19:30-20:00</button>目前已預約0人</td>
+   <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "20:30-21:00"'   for="time" >20:30-21:00</button>目前已預約0人</td>
+    <td width="200"align="center"><button type="button" onclick='document.getElementById("demo").value = "21:00-21:30"'   for="time" >21:00-21:30</button>目前已預約0人</td>  
     </tr></table>
                 
         <!--  <label for="time" >選擇時間：</label> <select required name="time" value="<%=rs.getString("ptime") %>" >
@@ -206,8 +278,8 @@ span {
 				<option >22:00~23:00</option>
 			</select>-->
 			<br>
-	 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'">上一步</button>
-	 <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='index2.jsp'">確認修改</button>
+	 <button type="submit"  onclick="document.location='Homepage-e.jsp'">上一步</button>
+	 <button type="submit"  onclick="document.location='index2.jsp'">確認修改</button>
 </center>
 </form>
 </div>

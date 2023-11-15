@@ -58,7 +58,7 @@ button {
 	
 	
 	%>
-    <center><h1>我的預約</h1>
+    <center><br><h1>我的預約</h1>
        <table style="border:2px #111 solid;" width="20%" >
         <td align="center"><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
         您預約的時間如下：<br>

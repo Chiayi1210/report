@@ -45,10 +45,53 @@ pageEncoding="utf-8"%>
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	//out.println("Con= "+con);
 	Statement smt= con.createStatement();
-	String sql = "SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'";
-	ResultSet pp = smt.executeQuery(sql);
-	pp.next();
+	String sql = "SELECT * FROM member WHERE id='"+session.getAttribute("numberid")+"'";
+	ResultSet IM = smt.executeQuery(sql);
+	IM.next();
 	%>
+	<style>
+	.btn-primary {
+    color: #fff;
+    background-color: #00c6a9;
+    border-color: #00c6a9;
+}
+	
+	buttonSS {
+    padding: 6px 0px;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-bottom: 6px;
+    padding-left: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    transition-behavior: normal;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px 0px 10px;
+    height: 45px;
+    border: 1px solid #00c6a9;
+    background: #00c6a9;
+    color: rgb(255, 255, 255);}
+    
+.button:active{
+background-color:#fff;
+ color: #fff;
+}
+	
+	</style>
 <body>
 <section class="slider_section">
       <div class="container  ">
@@ -61,19 +104,19 @@ pageEncoding="utf-8"%>
             <div class="heading_container" >
     <!--使用 Bootstrap 設計登入表單-->
 <div class="panel panel-primary">
-    <div class="panel-heading"> 會員資料管理</div>
+    <div class="panel-heading"><h1 >會員基本資料</h1></div>
     <div class="panel-body">
         <div class="form-group">
             <label>姓名</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" value="<%out.print(session.getAttribute("membername"));%>">
         </div>
         <div class="form-group">
             <label>身分證字號</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" value="<%out.print(session.getAttribute("numberid"));%>" readonly="true">
         </div>
         <div class="form-group">
             <label>Email</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" value="<%=IM.getString("memberid")%>">
         </div>
     </div>
     <div class="panel-footer">
@@ -89,13 +132,13 @@ pageEncoding="utf-8"%>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>修改密碼</label>
-                        <input type="password" class="form-control" v-model="form.NewUserPwd">
+                        <input type="password" class="form-control" v-model="form.NewUserPwd" value="">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>確認新密碼</label>
-                        <input type="password" class="form-control" v-model="form.CheckUserPwd">
+                        <input type="password" class="form-control" v-model="form.CheckUserPwd" value="">
                     </div>
                 </div>
             </div>
@@ -217,35 +260,11 @@ pageEncoding="utf-8"%>
                             $('#ErrorMsg').html(err.responseText);
                             $('#ErrorAlert').modal('toggle');
     </script>-->
-}
-            <!--  <h1>會員資料管理</h1>
-              <%while(pp.next()){ %> 
-              <h4><table>
-               <tr>
-                 <td>病人姓名：</td>
-                 <td><%out.print(session.getAttribute("membername"));%></td>
-               </tr>
-               <tr>
-                 <td>身分證字號：</td>
-                 <td><%out.print(session.getAttribute("numberid"));%></td>
-               </tr> 
-               <tr>
-                 <td>領藥時段為：</td>
-                 <td><%=pp.getString("date")%><br>
-                 <%=pp.getString("time")%></td>
-               </tr>
-               <tr>
-                 <td>慢箋卡號為：</td>
-                 <td><%=pp.getString("cnumber1")%></td>
-               </tr>
-              </table></h4><%}%>                
-            </div>
-               <p>
-                   has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
-               </p><!-- 改成關於藥局的資料 -->
+
+    <!-- 改成關於藥局的資料 -->
                        
                </div>
-             </section> -->
+             </section>
   <section class="info_section ">
     <div class="container">
       <div class="info_bottom layout_padding2">

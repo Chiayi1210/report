@@ -16,5 +16,6 @@
 	con.close();
 	response.sendRedirect("Inquire.jsp?id='"+session.getAttribute("numberid")+"");
 %>
+<%out.println("<script>alert('預約已更改成功！！'); window.location='Inquire.jsp' </script>");%>
 </body>
 </html>
