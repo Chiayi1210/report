@@ -108,7 +108,8 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
                     <a class="nav-link" href="Homepage-e.jsp">我的預約</a>
                   </li> 
                    
-             <!-- 登入判定還沒成功(員工及管理員及一般民眾) -->    <%if (session.getAttribute("CK") == "1"){%>
+             <!-- 登入判定還沒成功(員工及管理員及一般民眾) -->   
+              <%if (session.getAttribute("CK") == "1"){%>
                  <li class="nav-item">
                     <a class="nav-link" href=".jsp">預約資料</a>
                   </li> 
