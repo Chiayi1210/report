@@ -103,6 +103,7 @@ background-color:#fff;
         <div class="col-md-8" >
             <div class="heading_container" >
     <!--使用 Bootstrap 設計登入表單-->
+<form action="member_update.jsp" method="post">
 <div class="panel panel-primary">
     <div class="panel-heading"><h1 >會員基本資料</h1></div>
     <div class="panel-body">
@@ -125,6 +126,7 @@ background-color:#fff;
 </div>
  
     <!--使用 Bootstrap 設計登入表單-->
+    
     <div class="panel panel-primary">
         <div class="panel-heading"></div>
         <div class="panel-body">
@@ -144,12 +146,13 @@ background-color:#fff;
             </div>
         </div>
         <div class="panel-footer">
-            <button type="button" class="btn btn-primary" v-on:click="DoEditPwd()">修改密碼</button>
+            <button type="submit" class="btn btn-primary" >修改資料</button>
         </div>
     </div>
  
     <!--使用 Bootstrap Modal 樣式，當執行有錯誤時，顯示錯誤訊息-->
     </div>
+    </form>
     <!--  <script>
         var VuePage = new Vue({
             el: '#VuePage'
