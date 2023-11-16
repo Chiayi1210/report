@@ -833,5 +833,118 @@
 
 
 </body>
+    <!-- 內建密碼更改 <script>
+        var VuePage = new Vue({
+            el: '#VuePage'
+            , data: function () {
+                var data = {
+                    form: {}
+                };
+ 
+                // 設定表單初始值
+                data.form = {
+                    UserID: ""
+                    , UserName: ""
+                    , UserEmail:""
+                }
+                return data;
+            }
+            // Vue 實體與掛載完成
+            , mounted: function () {
+                var self = this;
+ 
+                // 當 Vue 掛載完成，取得個人資料
+                self.GetUserProfile();
+            }
+            , methods: {
+                // 前端驗證權杖
+                GetToken: function () {
+                    var token = '@Html.AntiForgeryToken()';
+                    token = $(token).val();
+                    return token;
+                }
+                // 取得個人資料
+                , GetUserProfile: function () {
+                    var self = this;
+                    var postData = {};
+ 
+                    // 使用 jQuery Ajax 傳送至後端
+                    $.ajax({
+                        url:'@Url.Content("~/Member/GetUserProfile")',
+                        method:'POST',
+                        dataType:'json',
+                        data: { inModel: postData },
+                        success: function (datas) {
+                            if (datas.ErrMsg) {
+                                alert(datas.ErrMsg);
+                                return;
+                            }
+                            self.form.UserID = datas.UserID;
+                            self.form.UserName = datas.UserName;
+                            self.form.UserEmail = datas.UserEmail;
+                        },
+                        error: function (err) {
+                            $('#ErrorMsg').html(err.responseText);
+                            $('#ErrorAlert').modal('toggle');
+                        },
+                    });
+                }
+                // 修改個人資料
+                , DoEditProfile: function () {
+                    var self = this;
+ 
+                    // 組合表單資料
+                    var postData = {};
+                    postData['UserName'] = self.form.UserName;
+                    postData['UserEmail'] = self.form.UserEmail;
+ 
+                    // 使用 jQuery Ajax 傳送至後端
+                    $.ajax({
+                        url:'@Url.Content("~/Member/DoEditProfile")',
+                        method:'POST',
+                        dataType:'json',
+                        data: { inModel: postData, __RequestVerificationToken: self.GetToken() },
+                        success: function (datas) {
+                            if (datas.ErrMsg) {
+                                alert(datas.ErrMsg);
+                                return;
+                            }
+                            alert(datas.ResultMsg);
+                        },
+                        error: function (err) {
+                            $('#ErrorMsg').html(err.responseText);
+                            $('#ErrorAlert').modal('toggle');
+                        },
+                    });
+                }
+                 // 修改密碼
+                , DoEditPwd: function () {
+                    var self = this;
+ 
+                    // 組合表單資料
+                    var postData = {};
+                    postData['NewUserPwd'] = self.form.NewUserPwd;
+                    postData['CheckUserPwd'] = self.form.CheckUserPwd;
+ 
+                    // 使用 jQuery Ajax 傳送至後端
+                    $.ajax({
+                        url:'@Url.Content("~/Member/DoEditPwd")',
+                        method:'POST',
+                        dataType:'json',
+                        data: { inModel: postData, __RequestVerificationToken: self.GetToken() },
+                        success: function (datas) {
+                            if (datas.ErrMsg) {
+                                alert(datas.ErrMsg);
+                                return;
+                            }
+                            alert(datas.ResultMsg);
+                        },
+                        error: function (err) {
+                            $('#ErrorMsg').html(err.responseText);
+                            $('#ErrorAlert').modal('toggle');
+    </script>-->
+
+
+
 
 </html>

@@ -6,8 +6,7 @@
 
 <html>
 <body>
-	<%
-	session.setAttribute("IM","n");	
+	<%	
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement
@@ -22,6 +21,7 @@
 	String cnumber2 =request.getParameter("cnumber2");
 	String cnumber3 =request.getParameter("cnumber3");
 	
+	
 	smt.executeUpdate("UPDATE member SET name='" + name+"' , phone='" + phone+"' , memberid ='"+ memberid+"' WHERE id='"+session.getAttribute("numberid")+"'");
 	
 	
@@ -35,11 +35,6 @@
 	response.sendRedirect("success.jsp");
 	
 
-	
-		 	
-	//}else{
-		//out.println("已有預約，請至查詢確認!!");
-		//out.println("<a href='Inquire.jsp'>查詢</a>");
 		 %>
  
 </body>
