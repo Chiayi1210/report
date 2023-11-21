@@ -6,12 +6,12 @@
 
 <html>
 <body>
-	<%	
+	<%	session.setAttribute("run","n");
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement
 			(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-	String name = new String(request.getParameter("name"));
+	String name = new String(request.getParameter("name").getBytes("ISO-8859-1"));
 	String id = request.getParameter("numberid");
 	String phone =new String(request.getParameter("phone"));
 	String memberid =new String(request.getParameter("memberid"));
