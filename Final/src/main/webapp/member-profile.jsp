@@ -98,12 +98,23 @@ border-bottom: 1px solid rgba(0,0,0,.1);
 	ResultSet IM = smt.executeQuery(sql);
 	IM.next();
 	%>
-<form action="member_update.jsp" method="post">
-<section class="slider_section">
+<form action="member_update.jsp?memberid=<%=request.getParameter("memberid")%>" method="post" name="form">
+<section class="slider_section" id="about">
       <div class="container  ">
       <div class="row">
         <div class="col-md-4 "></div>
                   <img src="<%=IM.getString("pic") %>" style=width:280px; height:20px">
+                  <h3>選擇要上傳的文件:</h3>
+                  <input type="file" name="theFirstFile" size="50" />
+            <input type="button" onClick="del()" name=submitButton value="上傳" />
+			<script >  
+			//點選提交按鈕觸發下面的函式
+			function del(){  
+				document.form.action="memberpic_update.jsp";//這邊要連結到更新圖片的程式
+				document.form.enctype="multipart/form-data";
+				document.form.submit();
+			}  
+			</script>         
                   </div>
         </div>
         <div class="col-md-8" >
@@ -115,15 +126,15 @@ border-bottom: 1px solid rgba(0,0,0,.1);
     <div class="panel-body">
         <div class="form-group">
             <label>姓名</label>
-            <input type="text" class="form-control" value="<%out.print(session.getAttribute("membername"));%>">
+            <input type="text" name="membername" class="form-control" value="<%out.print(session.getAttribute("membername"));%>">
         </div>
         <div class="form-group">
             <label>身分證字號</label>
-            <input type="text" class="form-control" value="<%out.print(session.getAttribute("numberid"));%>" readonly="true">
+            <input type="text"  class="form-control" value="<%out.print(session.getAttribute("numberid"));%>" readonly="true">
         </div>
         <div class="form-group">
             <label>Email</label>
-            <input type="text" class="form-control" value="<%=IM.getString("memberid")%>">
+            <input type="text" name="memberid" class="form-control" value="<%=IM.getString("memberid")%>">
         </div>
     </div>
    
@@ -138,7 +149,7 @@ border-bottom: 1px solid rgba(0,0,0,.1);
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>修改密碼</label>
-                        <input type="password" class="form-control"  value="">                                      
+                        <input type="password" name="memberpwd" class="form-control"  value="">                                      
                     </div>
                 </div>                  
             </div>
