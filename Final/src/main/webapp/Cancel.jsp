@@ -34,12 +34,37 @@ input[type=submit] {
 button {
   background-color: #00c6a9;
   color: white;
-  padding: 14px 15px;
-  margin: 8px 0;
-  border: none;
+  padding: 6px 0px;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+    border-radius: 3px;
+  margin: 0px 0px 10px;
+  border: 1px solid #00c6a9;
   cursor: pointer;
-  width: 30%;
+  width: 20%;
+  font-size: 16px;
+  font-weight: 300;
+   -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+  text-align: center;
+  display: flex;    
+  align-items: center;
+  box-sizing: border-box;
+     height: 45px;
+    
 }
+ 
+ .button:active {
+    background-color: #fff;
+  transition: all 0.2s ease-in-out 0s;
+    transition-behavior: normal;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;}
 
 button-1 {
   background-color: #00c6a9;
@@ -49,6 +74,7 @@ button-1 {
   border: none;
   cursor: pointer;
   width: 10%;
+  
 }
 
 button:hover {
@@ -104,15 +130,15 @@ span.psw {
        
 #window-pop{
     background: white;
-    width:70%;
+    width:75%;
     z-index: 1;
-    margin: 12% auto;
+    margin: 3em;;
     overflow: visible;
     border-radius: 10px;
 }
         
 .window-content {
-    width: auto;
+    width: 70%;
     height: 480px;
     line-height: 200px
     overflow : visible;
@@ -126,6 +152,41 @@ span {
     line-height: normal;
 }
 
+
+.buttonSS {
+    padding: 6px 0px;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-bottom: 6px;
+    padding-left: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    transition-behavior: normal;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px 0px 10px;
+    height: 45px;
+    border: 1px solid #00c6a9;
+    background: #00c6a9;
+    color: rgb(255, 255, 255);}
+    
+.button:active{
+background-color:#fff;
+ color: #fff;
+}
 </style>
 <body>
 <header style="padding:40px 16px">
@@ -148,34 +209,35 @@ span {
 	pp.next();
 	%>
 <br>
- 
-<div>
+
+<center>      
+
 <form action="remove.jsp?id=<%=session.getAttribute("numberid")%>" method="post" name="form" >
-      <center><h3><table>
+      <table style="border:2px #111 solid;" width="20%"><br>
              <tr>
-                 <td>病人姓名：</td>
-                 <td><%out.print(session.getAttribute("membername"));%></td>
+                 <td align="center">病人姓名：<%out.print(session.getAttribute("membername"));%></td>             
              </tr>
       <tr>
-           <td>身分證字號：</td>
-                 <td><%out.print(session.getAttribute("numberid"));%></td>
+           <td align="center">身分證字號：<%out.print(session.getAttribute("numberid"));%></td>    
              </tr>
       <tr>
-           <td>領藥時段為：</td>
-                 <td><%=pp.getString("date")%><br><%=pp.getString("time")%></td>
+           <td align="center">領藥日期為：<%=pp.getString("date")%></td>
+             </tr>
+             <tr>
+           <td align="center">領藥時段為：<%=pp.getString("time")%></td>
              </tr>
       <tr>
-           <td>慢箋卡號為：</td>
-                 <td><%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%></td>
+           <td align="center">慢箋卡號為：
+                 <%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%></td>
              </tr>
       
       </table>
-   </h3>
+  
+        <br>
+        <button type="submit"  onclick="document.location='Homepage-e.jsp'" >確認取消</button>
         
-        <button type="submit" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick="document.location='Homepage-e.jsp'" >確認取消</button>
-        
-      </center>
-      </form>
-      </div>
+      
+      </form></center>
+     
 </body>
 </html>

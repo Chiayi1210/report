@@ -47,7 +47,7 @@ button {
     transition-property: all;}
 
 </style>
-<%if (session.getAttribute("access") == "y" ){ %>
+
 <%
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
@@ -67,8 +67,8 @@ button {
 <form action="Homepage-e.jsp" method="post"> 
 
     <center><br><h1>我的預約</h1>
-       <table style="border:2px #111 solid;" width="20%" >
-        <td align="center"><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
+       <table style="border:2px #111 solid;" width="20%"  >
+        <td align="center"><br><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
         您預約的時間如下：<br>
     <%=pp.getString("date")%><br><%=pp.getString("time")%><br>慢箋號碼：<br>
  <%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%>
@@ -78,9 +78,7 @@ button {
   <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
   <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>     
       </center></form>
- <%}else {%>
-   out.println("<script>alert('無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");-->
-<%} %>
+ 
 
 </body>
 </html>
