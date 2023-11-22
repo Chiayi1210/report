@@ -1,3 +1,4 @@
+<%@page import="javax.xml.catalog.CatalogFeatures.Feature"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
     <%@include file ="menu.jsp" %>
@@ -46,8 +47,8 @@ button {
     transition-property: all;}
 
 </style>
-
-<%session.setAttribute("run","n");
+<%if (session.getAttribute("access") == "y" ){ %>
+<%
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	//out.println("Con= "+con);
@@ -55,18 +56,14 @@ button {
 	String sql = "SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'";
 	ResultSet pp = smt.executeQuery(sql);
 	pp.next();
+	
 	//if (pp.next()){
 		//session.setAttribute("run","1");
 		//}else{   
 	      //out.println("<script>alert('查無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");
-	if (pp.next()){session.setAttribute("run","y");}
-    
-	
 	%>
 	
-<%if (session.getAttribute("run")=="y"){
-%>
-
+	
 <form action="Homepage-e.jsp" method="post"> 
 
     <center><br><h1>我的預約</h1>
@@ -81,9 +78,9 @@ button {
   <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
   <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>     
       </center></form>
-  <%}else{ %> 
-   out.println("<script>alert('無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");
+ <%}else {%>
+   out.println("<script>alert('無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");-->
+<%} %>
 
-   <%}%>
 </body>
 </html>
