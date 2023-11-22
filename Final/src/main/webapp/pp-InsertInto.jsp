@@ -6,7 +6,7 @@
 
 <html>
 <body>
-	<%	session.setAttribute("run","n");
+	<%	
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	Statement smt= con.createStatement
@@ -33,8 +33,6 @@
 	con.close();
 	//session.setAttribute("IM","y");
 	response.sendRedirect("success.jsp");
-	
-
 		 %>
  
 </body>

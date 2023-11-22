@@ -47,9 +47,7 @@ button {
 
 </style>
 
-<%
-	
-    
+<%session.setAttribute("run","n");
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	//out.println("Con= "+con);
@@ -61,11 +59,13 @@ button {
 		//session.setAttribute("run","1");
 		//}else{   
 	      //out.println("<script>alert('查無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");
-	
+	if (pp.next()){session.setAttribute("run","y");}
     
 	
 	%>
-<%if (pp.getString("date")!=null) {%>
+	
+<%if (session.getAttribute("run")=="y"){
+%>
 
 <form action="Homepage-e.jsp" method="post"> 
 
@@ -82,7 +82,7 @@ button {
   <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>     
       </center></form>
   <%}else{ %> 
-   out.println("<script>alert('查無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");
+   out.println("<script>alert('無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");
 
    <%}%>
 </body>
