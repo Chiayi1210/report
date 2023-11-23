@@ -40,16 +40,8 @@ pageEncoding="utf-8"%>
   <link href="css/responsive.css" rel="stylesheet" />
 
 </head>
-<% 
-	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
-	//out.println("Con= "+con);
-	Statement smt= con.createStatement();
-	String sql = "SELECT * FROM member WHERE id='"+session.getAttribute("numberid")+"'";
-	ResultSet IM = smt.executeQuery(sql);
-	IM.next();
-	%>
-	<style>
+
+<style>
 	.btn-primary {
     color: #fff;
     background-color: #00c6a9;
@@ -90,39 +82,66 @@ pageEncoding="utf-8"%>
 background-color:#fff;
  color: #fff;
 }
-	
-	</style>
+.input_block {
+border-bottom: 1px solid rgba(0,0,0,.1);
+}
+</style>
+
 <body>
-<section class="slider_section">
+
+<% 
+	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
+	//out.println("Con= "+con);
+	Statement smt= con.createStatement();
+	String sql = "SELECT * FROM member WHERE id='"+session.getAttribute("numberid")+"'";
+	ResultSet IM = smt.executeQuery(sql);
+	IM.next();
+	%>
+<form action="MBupdate-pp.jsp?memberid=<%=request.getParameter("memberid")%>" method="post" name="form">
+<section class="slider_section" id="about">
       <div class="container  ">
       <div class="row">
         <div class="col-md-4 "></div>
-                  <img src="images/PT2.jpg" style=width:280px; height:20px">
+                  <img src="<%=IM.getString("pic") %>" style=width:280px; height:20px">
+                  <h3>選擇要上傳的文件:</h3>
+                  <input type="file" name="theFirstFile" size="50" />
+            <input type="button" onClick="del()" name=submitButton value="上傳" />
+			<script >  
+			//點選提交按鈕觸發下面的函式
+			function del(){  
+				document.form.action="MBpic_update.jsp";//這邊要連結到更新圖片的程式
+				document.form.enctype="multipart/form-data";
+				document.form.submit();
+			}  
+			</script>         
                   </div>
         </div>
         <div class="col-md-8" >
             <div class="heading_container" >
     <!--使用 Bootstrap 設計登入表單-->
-<form action="member_update.jsp" method="post">
+
 <div class="panel panel-primary">
     <div class="panel-heading"><h1 >會員基本資料</h1></div>
     <div class="panel-body">
         <div class="form-group">
             <label>姓名</label>
-            <input type="text" class="form-control" value="<%out.print(session.getAttribute("membername"));%>">
+            <input type="text" name="membername" class="form-control" value="<%out.print(session.getAttribute("membername"));%>">
         </div>
         <div class="form-group">
             <label>身分證字號</label>
-            <input type="text" class="form-control" value="<%out.print(session.getAttribute("numberid"));%>" readonly="true">
+            <input type="text"  class="form-control" value="<%out.print(session.getAttribute("numberid"));%>" readonly="true">
+        </div>
+        <div class="form-group">
+            <label>電話:</label>
+            <input type="text" name="phone" class="form-control" value="<%=IM.getString("phone")%>">
         </div>
         <div class="form-group">
             <label>Email</label>
-            <input type="text" class="form-control" value="<%=IM.getString("memberid")%>">
+            <input type="text" name="email" class="form-control" value="<%=IM.getString("memberid")%>">
         </div>
     </div>
-    <div class="panel-footer">
-        <button type="button" class="btn btn-primary">修改個人資料</button>
-    </div>
+   
 </div>
  
     <!--使用 Bootstrap 設計登入表單-->
@@ -134,139 +153,39 @@ background-color:#fff;
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>修改密碼</label>
-                        <input type="password" class="form-control" v-model="form.NewUserPwd" value="">
+                        <input type="password" name="memberpwd" class="form-control"  value="<%=IM.getString("memberpwd")%>">                                      
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>確認新密碼</label>
-                        <input type="password" class="form-control" v-model="form.CheckUserPwd" value="">
-                    </div>
-                </div>
+                </div>                  
             </div>
         </div>
         <div class="panel-footer">
             <button type="submit" class="btn btn-primary" >修改資料</button>
         </div>
     </div>
- 
-    <!--使用 Bootstrap Modal 樣式，當執行有錯誤時，顯示錯誤訊息-->
     </div>
     </form>
-    <!--  <script>
-        var VuePage = new Vue({
-            el: '#VuePage'
-            , data: function () {
-                var data = {
-                    form: {}
-                };
- 
-                // 設定表單初始值
-                data.form = {
-                    UserID: ""
-                    , UserName: ""
-                    , UserEmail:""
-                }
-                return data;
-            }
-            // Vue 實體與掛載完成
-            , mounted: function () {
-                var self = this;
- 
-                // 當 Vue 掛載完成，取得個人資料
-                self.GetUserProfile();
-            }
-            , methods: {
-                // 前端驗證權杖
-                GetToken: function () {
-                    var token = '@Html.AntiForgeryToken()';
-                    token = $(token).val();
-                    return token;
-                }
-                // 取得個人資料
-                , GetUserProfile: function () {
-                    var self = this;
-                    var postData = {};
- 
-                    // 使用 jQuery Ajax 傳送至後端
-                    $.ajax({
-                        url:'@Url.Content("~/Member/GetUserProfile")',
-                        method:'POST',
-                        dataType:'json',
-                        data: { inModel: postData },
-                        success: function (datas) {
-                            if (datas.ErrMsg) {
-                                alert(datas.ErrMsg);
-                                return;
-                            }
-                            self.form.UserID = datas.UserID;
-                            self.form.UserName = datas.UserName;
-                            self.form.UserEmail = datas.UserEmail;
-                        },
-                        error: function (err) {
-                            $('#ErrorMsg').html(err.responseText);
-                            $('#ErrorAlert').modal('toggle');
-                        },
-                    });
-                }
-                // 修改個人資料
-                , DoEditProfile: function () {
-                    var self = this;
- 
-                    // 組合表單資料
-                    var postData = {};
-                    postData['UserName'] = self.form.UserName;
-                    postData['UserEmail'] = self.form.UserEmail;
- 
-                    // 使用 jQuery Ajax 傳送至後端
-                    $.ajax({
-                        url:'@Url.Content("~/Member/DoEditProfile")',
-                        method:'POST',
-                        dataType:'json',
-                        data: { inModel: postData, __RequestVerificationToken: self.GetToken() },
-                        success: function (datas) {
-                            if (datas.ErrMsg) {
-                                alert(datas.ErrMsg);
-                                return;
-                            }
-                            alert(datas.ResultMsg);
-                        },
-                        error: function (err) {
-                            $('#ErrorMsg').html(err.responseText);
-                            $('#ErrorAlert').modal('toggle');
-                        },
-                    });
-                }
-                 // 修改密碼
-                , DoEditPwd: function () {
-                    var self = this;
- 
-                    // 組合表單資料
-                    var postData = {};
-                    postData['NewUserPwd'] = self.form.NewUserPwd;
-                    postData['CheckUserPwd'] = self.form.CheckUserPwd;
- 
-                    // 使用 jQuery Ajax 傳送至後端
-                    $.ajax({
-                        url:'@Url.Content("~/Member/DoEditPwd")',
-                        method:'POST',
-                        dataType:'json',
-                        data: { inModel: postData, __RequestVerificationToken: self.GetToken() },
-                        success: function (datas) {
-                            if (datas.ErrMsg) {
-                                alert(datas.ErrMsg);
-                                return;
-                            }
-                            alert(datas.ResultMsg);
-                        },
-                        error: function (err) {
-                            $('#ErrorMsg').html(err.responseText);
-                            $('#ErrorAlert').modal('toggle');
-    </script>-->
-
-    <!-- 改成關於藥局的資料 -->
-                       
-               </div>
+ <script type="text/javascript"> 
+ // 這裡使用最原始的js語法實現，可對應換成jquery語法進行邏輯控制
+ var visible=document.getElementById('psw_visible');//text block
+ var invisible=document.getElementById('psw_invisible');//password block
+ var inputVisible = document.getElementById('input_visible');
+ var inputInVisible = document.getElementById('input_invisible');
+    //隱藏text block，顯示password block
+ function showPsw(){
+ var val = inputInVisible.value;//將password的值傳給text
+ inputVisible.value = val;
+ invisible.style.display = "none";  
+ visible.style.display = "";  
+ }
+    //隱藏password，顯示text  
+    function hidePsw(){
+   var val=inputVisible.value;//將text的值傳給password  
+inputInVisible.value = val; 
+invisible.style.display = "";  
+    visible.style.display = "none";  
+}
+</script>
+    </div>
              </section>
   <section class="info_section ">
     <div class="container">
@@ -326,14 +245,10 @@ background-color:#fff;
                 <a href="index2.jsp#1234">
                  藥師簡介
                 </a>
-                <%if (session.getAttribute("access") == "y"){%>
+              
                 <a href="prescription.jsp">
                   慢箋預約
-                <%}else{%>
-                <%out.println("<script>alert('請先登入此系統！！'); window.location='loginCheck-Select.jsp' </script>");%>
-                  慢箋預約
-                </a>
-                <%}%>
+              
                 <a href="index2.jsp#3456">
                   聯絡我們
                 </a>
@@ -379,4 +294,7 @@ background-color:#fff;
       </p>
     </div>
   </footer>
+  
   </body>
+  
+  </html>

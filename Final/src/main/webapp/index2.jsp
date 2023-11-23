@@ -129,7 +129,7 @@
               </h2>
             </div>
             <p>
-              has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
+              本藥局受復康活力藥局及其他贊助廠商捐贈「智能身體成分分析儀」、「智慧感測墊」、「輪椅、助行推車及四腳枴」、「智慧健康手錶」、「保健品」、「藥局申報系統」、「智慧膝力環及足速適客製化鞋墊」等，提供學生良好的學習環境和資源， 讓學生更了解實務操作及有助於推動藥局服務教育和研究發展。此外，還可以使學生們了解門市的營運方式及管理，為未來就業提早做準備，增加學生們的信心，提高競爭力。
             </p><!-- 改成關於藥局的資料 -->
           </div>
         </div>
@@ -146,7 +146,7 @@
 
   <section class="treatment_section layout_padding">
     <div class="side_img">
-      <img src="images/treatment-side-img.jpg" alt="">
+      
     </div>
     <div class="container">
       <div class="heading_container heading_center">
@@ -165,7 +165,7 @@
                 各類處方箋調劑
               </h4>
               <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
+                我們有一般健保處方箋調劑以及慢性練續處方箋調劑服務，慢性連續處方箋可以在線上預約您方便的時間領藥，藥師可以先備好藥，讓您到店就可以減少排隊時間取藥!
               </p><!--各類服務說明!  -->
               
              
@@ -182,7 +182,7 @@
                 日常保健
               </h4>
               <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
+                提供各大品牌之日常保健食品，歡迎至店內選購。
               </p><!--各類服務說明!  -->
               
             </div>
@@ -198,7 +198,7 @@
                 醫療器材
               </h4>
               <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
+                我們還有提供國內外品質優良之醫療器材，可依照您的選購需求來挑選，不清楚我們也有專人為您解說。
               </p><!--各類服務說明!  -->
               
             </div>
@@ -214,7 +214,7 @@
                 用藥諮詢
               </h4>
               <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
+               用藥方面有任何問題歡迎至本藥局做諮詢，我們有優秀的藥師來為您解答。
               </p><!--各類服務說明!  -->
               
             </div>
@@ -350,16 +350,21 @@
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Morijorch<!--最新消息1標題  -->
+                    急性心肌梗塞併發心因性休克之處理與治療<!--最新消息1標題  -->
                   </h5>
                   <h6>
-                    Default model text<!-- 作者 -->
+                    邱春吉Chun-Chi Chiou1,* 、劉淑貞Shu-Chen Liu1 / 臺灣臨床藥學期刊<!-- 作者 -->
                   </h6>
                 </div>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+                心因性休克 (cardiogenic shock, CS) 是一種低心輸出狀態，主要是由於心臟功能障礙導致系統性低灌流合併組織缺氧。
+                急性心肌梗塞 (acute myocardial infarction, AMI) 是CS 最常見之病因，然而CS 是AMI 住院病人死亡的最主要原因，三十天的死亡率接近40%，
+                一年的死亡率將近50%。臨床試驗對於CS 的定義是以臨床和血液動力學準則為依據，包含持續低血壓、終端器官灌注不良之證據和低心臟指數。
+                執行立即性血管重建，處理與梗塞相關的冠狀動脈仍然是主要的治療型態，也是唯一具明顯減少急性心肌梗塞併發心因性休克 (AMI-CS) 死亡率的治療方式。
+                約有90% AMICS病人需給予血管活性劑 (vasoactive medications) 包含升壓劑 (vasopressors) 和強心劑 (inotropes) 處理其低血壓和（或）低灌流狀況。
+                各種研究顯示norepinephrine具較低心律不整發生風險，比dopamine 或epinephrine 更安全。臨床治療指引推薦norepinephrine 是CS 病人維持灌流壓的首選升壓劑 (IIb/B)。機械式循環輔助(mechanical circulatory support, MCS) 被使用於對升壓劑和強心劑難治療的AMICS病人( IIb/C)。經由文獻回顧與分析，基於目前實證和臨床治療指引，本文將討論AMI-CS 病人之流行病學與預後、定義與分類、病理生理學、處理與治療。
               </p><!-- 最新消息 -->
             </div>
           </div>
@@ -368,20 +373,19 @@
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Rochak<!-- 最新消息2 -->
+                    慢性疾病及其用藥對水肺潛水之影響<!-- 最新消息2 -->
                   </h5>
                   <h6>
-                    Default model text
+                    張中維(Chung-Wei Chang) 、 陳冠霖(Kuan-Lin Chen ) / 臺灣臨床藥學雜誌
                   </h6>
                 </div>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                潛水過程造成的生理變化與潛水員自身的健康狀態可能影響水肺潛水（以下簡稱潛水）的安全。本文透過文獻回顧，先彙整潛水所帶來的生理變化與可能的健康風險，再討論高血壓、糖尿病與氣喘等三種慢性疾病及其用藥對潛水員安全的影響，以及相對安全的用藥選擇。欲從事潛水的高血壓患者，除了留意血壓控制外，可優先選擇較不影響潛水安全的降血壓藥物。Angiotensin converting enzyme inhibitors（ACEIs）與angiotensin receptor blockers（ARBs）為較理想的選擇，不過服用ACEIs應留意乾咳可能影響潛水員在水下的呼吸。使用calcium channel blockers需留意姿態性低血壓的發生，而服用diuretics及β-blockers則較不建議從事潛水。患有糖尿病的潛水員，血糖控制應符合從事潛水的標準，並留意降血糖藥物可能造成低血糖事件發生。氣喘是肺氣壓傷、動脈氣體栓塞等潛水疾病的危險因子，因此控制不穩定的氣喘應視為潛水的禁忌症。氣喘患者從事潛水前應進行肺量計檢查，符合條件的潛水員也建議使用尖峰呼氣流速計追蹤峰值呼氣流量（peak expiratory flow），以確保當天身體狀況適合潛水。使用吸入型類固醇、吸入型長效乙二型交感神經刺激劑或白三烯受體拮抗劑治療並控制良好的氣喘患者，並非潛水的禁忌症。
               </p>
             </div>
-          </div>
-          
+          </div>         
         </div>
         <div class="carousel_btn-box">
           <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
@@ -469,6 +473,8 @@
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
                   位置
+                   <br>
+                   <a>台北市北投區明德路365號</a>
                 </span>
               </a>
               <a href="">
@@ -539,8 +545,7 @@
                   <img src="images/post3.jpg" alt="">
                 </div>
                 <p>
-                  Normal
-                  distribution
+                  !!營業時間異動!!<br>10/28週六暫停營業
                 </p>
               </div>
               <div class="post_box">
@@ -548,8 +553,7 @@
                   <img src="images/post4.png" alt="">
                 </div>
                 <p>
-                  Normal
-                  distribution
+                  元旦連假營業時間<br>113/1/1暫停營業
                 </p>
               </div>
             </div>

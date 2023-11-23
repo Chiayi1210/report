@@ -1,3 +1,4 @@
+<%@page import="javax.xml.catalog.CatalogFeatures.Feature"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
     <%@include file ="menu.jsp" %>
@@ -8,6 +9,7 @@
 
 
 <body>
+
 <style>
 button {
   background-color: #00c6a9;
@@ -46,8 +48,7 @@ button {
 
 </style>
 
-<form action="Homepage-e.jsp" method="post"> 
-<% 
+<%
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
 	//out.println("Con= "+con);
@@ -56,80 +57,36 @@ button {
 	ResultSet pp = smt.executeQuery(sql);
 	pp.next();
 	
-	
+	//if (pp.next()){
+		//session.getAttribute("run","1");
+		//}else{   
+	      //out.println("<script>alert('查無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");
 	%>
+	
+	
+<form action="Homepage-e.jsp" method="post"> 
+
     <center><br><h1>我的預約</h1>
-       <table style="border:2px #111 solid;" width="20%" >
-        <td align="center"><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
+       <table style="border:2px #111 solid;" width="20%"  >
+        <td align="center"><br><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
         您預約的時間如下：<br>
+<<<<<<< HEAD
         <%=pp.getString("date")%><br><%=pp.getString("time")%><br>
         慢箋號碼：<br>
         <%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%>
         </p></td></table> 
    
+=======
+    <%=pp.getString("date")%><br><%=pp.getString("time")%><br>慢箋號碼：<br>
+ <%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%>
+ </p></td></table> 
+>>>>>>> e10f6f3cf6cc3ef025e136493a4a2c9e1b44c1f3
 
-  
   <br><button type="button" onclick="window.location='Edit.jsp'">更改預約</button>
   <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
-  <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>
-<!--  <center><header>
-  <h1 >查詢預約</h1>
-  </header></center><
-  
-
-	
-      <div>
-      <center><h3>
-      <table>
-             <tr>
-                 <td align="center">病人姓名：<%out.print(session.getAttribute("membername"));%></td>
-                 
-             </tr>
-      <tr>
-           <td align="center">身分證字號：<%out.print(session.getAttribute("numberid"));%></td>
-                
-             </tr>
-      <tr>
-           <tdalign="center">領藥日期為：<%=pp.getString("date")%></td>
-          
-             </tr>
-             <tr>
-              <td align="center">領藥時間為：<%=pp.getString("time")%></td>
-              </tr>
-      <tr>
-           <td align="center">慢箋卡號為：<%=pp.getString("cnumber1")%></td>
-                 
-             </tr>
-      
-      </table>
-   </h3>
-        
-       
-        <button type="submit"  onclick="document.location='index2.jsp'">確認</button>
-      </center>
-      </div>-->
-    
- <!--    //Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-      //Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
-      //Statement stmt= con.createStatement
-      //(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-      //String getprescriptiondata = "SELECT * FROM prescription WHERE accessid='"+request.getParameter("accessid")
-      //+"' AND date='" +request.getParameter("date")
-      //+"' AND time='" +request.getParameter("time")
-      //+"' AND cnumber1='" +request.getParameter("cnumber1")
-      //+"' AND cnumber2='" +request.getParameter("cnumber2")
-      //+"' AND cnumber3='" +request.getParameter("cnumber3")+"'";
-      //WHERE memberid='"+request.getParameter("memberid")+"' AND date='" +request.getParameter("date")+"'  AND time='" +request.getParameter("time")+"'";
-     //ResultSet pp = stmt.executeQuery("SELECT * FROM prescription");
-      //SELECT * FROM prescription
-     // if (pp.next())
-      //session.setAttribute("access","y");
-      //session.setAttribute("pdate",pp.getString("date"));
-      //session.setAttribute("ptime",pp.getString("time"));
-      //session.setAttribute("pcnumber1",pp.getString("cnumber1"));
-      //session.setAttribute("pcnumber2",pp.getString("cnumber2"));
-      //session.setAttribute("pcnumber3",pp.getString("cnumber3")); --> 
-     
+  <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>     
       </center></form>
+ 
+
 </body>
 </html>

@@ -211,7 +211,7 @@ background-color:#fff;
 
 
 <table style="border:2px #111 solid;" width="20%" >
-        <td align="center"><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
+        <td align="center"><br><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
         您預約的時間如下：<br>
    <%=rs.getString("date")%><br><%=rs.getString("time")%><br>慢箋號碼：<br>
 <%=rs.getString("cnumber1")%><br><%=rs.getString("cnumber2")%><br><%=rs.getString("cnumber3")%>

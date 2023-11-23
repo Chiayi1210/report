@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" 
-pageEncoding="utf-8"%><%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%><%@page import="java.sql.*"%>
 
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ function gaOptout() {document.cookie = disableStr + '=true; expires=Thu, 31 Dec 
 </script>
 <head>
   <!-- Basic -->
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />

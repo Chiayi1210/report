@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=BIG5" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@page import="java.sql.*"%>
-<%@include file = "menu.jsp" %>
+
 <jsp:useBean id='objDBConfig' scope='session' class='hitstd.group.tool.database.DBConfig' />
 <html>
 <head>
@@ -13,14 +13,16 @@
 <%
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
-	Statement smt= con.createStatement();
-	String name = new String(request.getParameter("name").getBytes("ISO-8859-1"));
-	String id = new String(request.getParameter("id").getBytes("ISO-8859-1"));
-	String phone = new String(request.getParameter("phone").getBytes("ISO-8859-1"));
-	String memberid = new String(request.getParameter("memberid").getBytes("ISO-8859-1"));
-	string memberpwd = new String(request.getParameter("memberpwd").getBytes("ISO-8859-1"));
+	Statement smt= con.createStatement
+	(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+	String name = new String(request.getParameter("membername").getBytes("ISO-8859-1"));
+	String id = request.getParameter("numberid");
+	String phone = new String(request.getParameter("phone"));
+	String memberid = new String(request.getParameter("email"));
+	String memberpwd = new String(request.getParameter("memberpwd"));
 	//String position = new String(request.getParameter("position"));
-    , memberid ='" + memberid +"'smt.executeUpdate("UPDATE prescription SET name ='" + name+"', id ='" + id+"', phone ='" + phone +"', memberid ='" + memberid +"', memberpwd ='" + memberpwd +"' WHERE memberId ='" + request.getParameter("memberId")+"' ");	response.sendRedirect("prescriprion.jsp?memberId="+request.getParameter("")+"");
+   smt.executeUpdate("UPDATE member SET name='" + name+"' , phone='" + phone+"' , memberid ='"+ memberid+"', memberpwd ='"+ memberpwd+"' WHERE id='"+session.getAttribute("numberid")+"'");
+   out.println("<script>alert('資料修改成功!!'); window.location='member-profile.jsp' </script>");
 %>
 </body>
 </html>
