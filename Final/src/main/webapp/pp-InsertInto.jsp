@@ -31,8 +31,9 @@
 	smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1, cnumber2, cnumber3) VALUES('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
 	//,'"+cnumber2+"','"+cnumber3+"'	
 	con.close();
-	//session.setAttribute("IM","y");
+	
 	response.sendRedirect("success.jsp");
+	//session.setAttribute("run","1");
 		 %>
  
 </body>

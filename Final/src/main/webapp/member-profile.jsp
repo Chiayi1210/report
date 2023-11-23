@@ -88,7 +88,7 @@ border-bottom: 1px solid rgba(0,0,0,.1);
 </style>
 
 <body>
-<%if (session.getAttribute("access") == "y"){%>
+
 <% 
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
@@ -98,7 +98,7 @@ border-bottom: 1px solid rgba(0,0,0,.1);
 	ResultSet IM = smt.executeQuery(sql);
 	IM.next();
 	%>
-<form action="member_update.jsp?memberid=<%=request.getParameter("memberid")%>" method="post" name="form">
+<form action="MBupdate-pp.jsp?memberid=<%=request.getParameter("memberid")%>" method="post" name="form">
 <section class="slider_section" id="about">
       <div class="container  ">
       <div class="row">
@@ -110,7 +110,7 @@ border-bottom: 1px solid rgba(0,0,0,.1);
 			<script >  
 			//點選提交按鈕觸發下面的函式
 			function del(){  
-				document.form.action="memberpic_update.jsp";//這邊要連結到更新圖片的程式
+				document.form.action="MBpic_update.jsp";//這邊要連結到更新圖片的程式
 				document.form.enctype="multipart/form-data";
 				document.form.submit();
 			}  
@@ -133,8 +133,12 @@ border-bottom: 1px solid rgba(0,0,0,.1);
             <input type="text"  class="form-control" value="<%out.print(session.getAttribute("numberid"));%>" readonly="true">
         </div>
         <div class="form-group">
+            <label>電話:</label>
+            <input type="text" name="phone" class="form-control" value="<%=IM.getString("phone")%>">
+        </div>
+        <div class="form-group">
             <label>Email</label>
-            <input type="text" name="memberid" class="form-control" value="<%=IM.getString("memberid")%>">
+            <input type="text" name="email" class="form-control" value="<%=IM.getString("memberid")%>">
         </div>
     </div>
    
@@ -149,7 +153,7 @@ border-bottom: 1px solid rgba(0,0,0,.1);
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>修改密碼</label>
-                        <input type="password" name="memberpwd" class="form-control"  value="">                                      
+                        <input type="password" name="memberpwd" class="form-control"  value="<%=IM.getString("memberpwd")%>">                                      
                     </div>
                 </div>                  
             </div>
@@ -241,14 +245,10 @@ invisible.style.display = "";
                 <a href="index2.jsp#1234">
                  藥師簡介
                 </a>
-                <%if (session.getAttribute("access") == "y"){%>
+              
                 <a href="prescription.jsp">
                   慢箋預約
-                <%}else{%>
-                <%out.println("<script>alert('請先登入此系統！！'); window.location='loginCheck-Select.jsp' </script>");%>
-                  慢箋預約
-                </a>
-                <%}%>
+              
                 <a href="index2.jsp#3456">
                   聯絡我們
                 </a>
@@ -294,9 +294,7 @@ invisible.style.display = "";
       </p>
     </div>
   </footer>
-  <%}else{%>
-	<%out.println("<script>alert('請先登入此系統！！'); window.location='loginCheck-Select.jsp' </script>");%>	
-	<%}%>
+  
   </body>
   
   </html>

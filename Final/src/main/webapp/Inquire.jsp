@@ -9,7 +9,7 @@
 
 
 <body>
-<% %>
+
 <style>
 button {
   background-color: #00c6a9;
@@ -58,7 +58,7 @@ button {
 	pp.next();
 	
 	//if (pp.next()){
-		//session.setAttribute("run","1");
+		//session.getAttribute("run","1");
 		//}else{   
 	      //out.println("<script>alert('查無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");
 	%>
