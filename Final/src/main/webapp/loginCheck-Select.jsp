@@ -27,6 +27,7 @@ Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 		
 		session.setMaxInactiveInterval(3600);
 		response.sendRedirect("index2.jsp");
+		
 	}else
 		out.println("<script>alert('帳號密碼不符！請重新登入'); window.location='loginCheck-Select.jsp' </script>");
 		//out.println("帳號密碼不符！請重新登入");
