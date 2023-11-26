@@ -21,8 +21,10 @@
 	smt.execute("INSERT INTO member (name, id, phone, memberid, memberpwd,CK) VALUES('"+name+"','"+id+"','"+phone+"','"+memberid+"','"+memberpwd+"','0')");
 	con.close();
 	response.sendRedirect("loginCheck-Select.jsp");
+	out.println("<script>alert('註冊成功，請登入！！'); </script>");
 }catch (Exception e){
 		response.sendRedirect("signup.jsp?status=IDexist");
+		out.println("<script>alert('此帳號已註冊，請重新輸入！！'); </script>");
 	}
 	%>
 
