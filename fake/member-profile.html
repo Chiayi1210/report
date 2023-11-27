@@ -162,12 +162,23 @@ background-color:#fff;
 
 
 <section class="slider_section">
-      <div class="container  ">
-      <div class="row">
-        <div class="col-md-4 "></div>
-                  <img src="images/PT2.jpg" style=width:280px; height:20px">
-                  </div>
-        </div>
+  <div class="container  ">
+    <div class="row">
+      <div class="col-md-4 "></div>
+                <img src="">
+                <h3>選擇要上傳的文件:</h3>
+                <input type="file" name="theFirstFile" size="50" />
+          <input type="button" onClick="del()" name=submitButton value="上傳" />
+    <script >  
+    //點選提交按鈕觸發下面的函式
+    function del(){  
+      document.form.action="MBpic_update.jsp";//這邊要連結到更新圖片的程式
+      document.form.enctype="multipart/form-data";
+      document.form.submit();
+    }  
+    </script>         
+                </div>
+      </div>
         <div class="col-md-8" >
             <div class="heading_container" >
     <!--使用 Bootstrap 設計登入表單-->
@@ -183,9 +194,14 @@ background-color:#fff;
             <input type="text" class="form-control" value="A123456789" readonly="true">
         </div>
         <div class="form-group">
+          <label>電話</label>
+          <input type="text" class="form-control" value="0912345678" >
+      </div>
+        <div class="form-group">
             <label>Email</label>
             <input type="text" id="email" class="form-control" value="111">
         </div>
+        
     </div>
     
 </div>
@@ -214,12 +230,7 @@ background-color:#fff;
                         <input type="password" class="form-control"  value="">
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>確認新密碼</label>
-                        <input type="password" class="form-control"  value="">
-                    </div>
-                </div>
+               
             </div>
         </div>
         <div class="panel-footer">
