@@ -1,4 +1,5 @@
-<%@page import="javax.xml.catalog.CatalogFeatures.Feature"%>
+
+<%@page import="java.security.DrbgParameters.NextBytes"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
     <%@include file ="menu.jsp" %>
@@ -8,7 +9,7 @@
 <html>
 
 
-<body>
+
 
 <style>
 button {
@@ -47,7 +48,7 @@ button {
     transition-property: all;}
 
 </style>
-
+<body>
 <%
 	Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 	Connection con=DriverManager.getConnection("jdbc:ucanaccess://"+objDBConfig.FilePath()+";");
@@ -55,38 +56,36 @@ button {
 	Statement smt= con.createStatement();
 	String sql = "SELECT * FROM prescription WHERE id='"+session.getAttribute("numberid")+"'";
 	ResultSet pp = smt.executeQuery(sql);
-	pp.next();
 	
-	//if (pp.next()){
-		//session.getAttribute("run","1");
-		//}else{   
+	pp.next();
+	if (pp.wasNull()) 
+	{out.println("<script>alert('查無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");}
 	      //out.println("<script>alert('查無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");
 	%>
 	
 	
+	 
+	 
 <form action="Homepage-e.jsp" method="post"> 
 
     <center><br><h1>我的預約</h1>
        <table style="border:2px #111 solid;" width="20%"  >
         <td align="center"><br><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
         您預約的時間如下：<br>
-<<<<<<< HEAD
+
         <%=pp.getString("date")%><br><%=pp.getString("time")%><br>
         慢箋號碼：<br>
         <%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%>
         </p></td></table> 
    
-=======
-    <%=pp.getString("date")%><br><%=pp.getString("time")%><br>慢箋號碼：<br>
- <%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%>
- </p></td></table> 
->>>>>>> e10f6f3cf6cc3ef025e136493a4a2c9e1b44c1f3
+
+    
 
   <br><button type="button" onclick="window.location='Edit.jsp'">更改預約</button>
   <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
   <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>     
       </center></form>
- 
 
+ 
 </body>
 </html>

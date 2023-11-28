@@ -33,7 +33,7 @@
 	con.close();
 	
 	response.sendRedirect("success.jsp");
-	//session.setAttribute("run","1");
+	session.setAttribute("run","1");
 		 %>
  
 </body>
