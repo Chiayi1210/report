@@ -1,3 +1,5 @@
+<%@page import="java.awt.Window"%>
+<%@page import="java.io.PrintWriter"%>
 <%@page contentType="text/html"%>
 <%@page pageEncoding="utf-8"%>
 <%@page import="java.sql.*"%>
@@ -21,10 +23,12 @@
 	smt.execute("INSERT INTO member (name, id, phone, memberid, memberpwd,CK) VALUES('"+name+"','"+id+"','"+phone+"','"+memberid+"','"+memberpwd+"','0')");
 	con.close();
 	response.sendRedirect("loginCheck-Select.jsp");
-	out.println("<script>alert('註冊成功，請登入！！'); </script>");
+	//response.sendRedirect("<script>alert('註冊成功，請登入！！'); window.open('loginCheck-Select.jsp')</script>");
+	out.println("註冊成功，請登入！！");
 }catch (Exception e){
 		response.sendRedirect("signup.jsp?status=IDexist");
-		out.println("<script>alert('此帳號已註冊，請重新輸入！！'); </script>");
+		//response.sendRedirect("<script>alert('註冊成功，請登入！！'); window.open('loginCheck-Select.jsp')</script>");
+		out.println("此帳號已註冊，請重新輸入！！");
 	}
 	%>
 
