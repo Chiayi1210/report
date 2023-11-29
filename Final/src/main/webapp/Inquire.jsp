@@ -63,9 +63,7 @@ button {
 	%>
 	
 	
-	 <%if (pp.wasNull() ){
-		 out.println("<script>alert('查無預約資料，請先預約!!'); window.location='prescription.jsp' </script>");
-	 }else{ %>
+	
 <form action="Homepage-e.jsp" method="post"> 
 
     <center><br><h1>我的預約</h1>
@@ -85,7 +83,7 @@ button {
   <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
   <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>     
       </center></form>
-<%} %>
+
  
 </body>
 </html>
