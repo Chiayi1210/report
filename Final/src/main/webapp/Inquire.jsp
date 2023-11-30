@@ -63,26 +63,37 @@ button {
 	%>
 	
 	
-	
+<center>	
 <form action="Homepage-e.jsp" method="post"> 
 
-    <center><br><h1>我的預約</h1>
-       <table style="border:2px #111 solid;" width="20%"  >
-        <td align="center"><br><p><%out.print(session.getAttribute("membername"));%>，您好!<br>
-        您預約的時間如下：<br>
-
-        <%=pp.getString("date")%><br><%=pp.getString("time")%><br>
-        慢箋號碼：<br>
-        <%=pp.getString("cnumber1")%><br><%=pp.getString("cnumber2")%><br><%=pp.getString("cnumber3")%>
-        </p></td></table> 
+       
+  <%if (pp.next()){ 
+      int count=0 ;
+      while (pp.next()){ 
+    	count =count+1;  
+     
+        if (count == 1 ){%>
+           <table><tr align="center"><th>慢箋號碼</th><th>日期</th><th>時間</th></tr>
+           <tr>        
+      <%}else{ %>
+          </tr><tr>
+      <%}%>
+     
+       <td><%=pp.getString("cnumber1")%></td><td><%=pp.getString("date")%></td><td><%=pp.getString("time")%></td>
+       
+     <%}%>
+        </tr></table>
+  <%}else{out.println("查無預約資料");} %>
    
+
+
 
     
 
   <br><button type="button" onclick="window.location='Edit.jsp'">更改預約</button>
   <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
   <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>     
-      </center></form>
+     </form></center>
 
  
 </body>

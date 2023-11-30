@@ -28,7 +28,9 @@
 	
 	//String sql;
 	//sql="INSERT INTO member VALUES('"+memberid+"','"+memberpwd+"')";
-	smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1, cnumber2, cnumber3) VALUES('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber1+"','"+cnumber2+"','"+cnumber3+"')");
+	smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1) VALUES('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber1+"'),('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber2+"'),('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber3+"')");
+	
+	
 	//,'"+cnumber2+"','"+cnumber3+"'	
 	con.close();
 	
