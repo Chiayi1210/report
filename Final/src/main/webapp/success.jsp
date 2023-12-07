@@ -82,17 +82,10 @@ pp.next();
 
 
 
-if(session.getAttribute("access") !="y"){
- out.println("預約失敗！");
-}else{
+
 out.println("預約成功<br>");
- out.println("已預約成功，記得攜帶健保卡來店取藥，我們將以電子信箱提醒您"+"！<br>");%> </h1>
-			 <table style="border:2px #111 solid;"  width="25%" >
-    <td align="center"><p>
-    您預約的時間如下：<%=pp.getString("date")%><br><%=pp.getString("time")%>
-&nbsp;&nbsp;&nbsp;<br>
-慢性病卡號:<%=pp.getString("cnumber1")%></p></td></table>
-<%}%> 
+ out.println("記得攜帶健保卡來店取藥，我們將以電子信箱提醒您"+"！<br>");%> </h1>
+	
 <button onclick="document.location='index2.jsp'">回首頁</button>
 </center>
 

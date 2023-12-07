@@ -73,7 +73,7 @@ button {
     	count =count+1;  
      
         if (count == 1 ){%>
-           <table><tr align="center"><th>慢箋號碼</th><th>日期</th><th>時間</th></tr>
+           <table style="padding:30px;"><tr align="center"><th>慢箋號碼</th><th>日期</th><th>時間</th></tr>
            <tr>        
       <%}else{ %>
           </tr><tr>
@@ -82,17 +82,17 @@ button {
        <td><%=pp.getString("cnumber1")%></td><td><%=pp.getString("date")%></td><td><%=pp.getString("time")%></td>
        
      <%}%>
-        </tr></table>
-  <%}else{out.println("查無預約資料");} %>
-   
+        </tr></table>    
+  <br><button type="button" onclick="window.location='Edit.jsp'">更改預約</button>
+  <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
+  <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>
+  <%}else{out.println("查無預約資料，請先預約!!");} %>
+   <button type="button" onclick="window.location='prescription.jsp'">預約</button>
 
 
 
     
-
-  <br><button type="button" onclick="window.location='Edit.jsp'">更改預約</button>
-  <button type="button" onclick="window.location='Cancel.jsp'">取消預約</button>
-  <button type="button" onclick="window.location='index2.jsp'">確認回首頁</button>     
+     
      </form></center>
 
  
