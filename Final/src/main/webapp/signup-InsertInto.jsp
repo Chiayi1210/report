@@ -22,13 +22,13 @@
 	try{
 	smt.execute("INSERT INTO member (name, id, phone, memberid, memberpwd,CK) VALUES('"+name+"','"+id+"','"+phone+"','"+memberid+"','"+memberpwd+"','0')");
 	con.close();
-	response.sendRedirect("loginCheck-Select.jsp");
+	//response.sendRedirect("loginCheck-Select.jsp");
 	//response.sendRedirect("<script>alert('註冊成功，請登入！！'); window.open('loginCheck-Select.jsp')</script>");
-	out.println("註冊成功，請登入！！");
+	out.println("<script>alert('註冊成功，請登入！！'); window.location.href='loginCheck-Select.jsp'</script>");
 }catch (Exception e){
-		response.sendRedirect("signup.jsp?status=IDexist");
-		//response.sendRedirect("<script>alert('註冊成功，請登入！！'); window.open('loginCheck-Select.jsp')</script>");
-		out.println("此帳號已註冊，請重新輸入！！");
+		//response.sendRedirect("out.println('註冊成功，請登入！！');signup.jsp?status=IDexist");
+		//response.sendRedirect("<script>alert('註冊成功，請登入！！'); window.location.href('loginCheck-Select.jsp')</script>");
+		out.println("<script>alert('此帳號已註冊過，請重新註冊'); window.location.href='signup.jsp?status=IDexist'</script>");
 	}
 	%>
 
