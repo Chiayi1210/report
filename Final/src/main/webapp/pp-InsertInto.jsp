@@ -33,11 +33,13 @@
 	smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1) VALUES('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber2+"')");
 	smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1) VALUES('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber1+"')");
 	smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1) VALUES('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber3+"')");
+	//smt.execute("INSERT INTO prescription (name, id, phone, email,date,time, cnumber1) VALUES('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber1+"'),('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber2+"'),('"+name+"','"+session.getAttribute("numberid")+"','"+phone+"','"+memberid+"','"+date+"','"+time+"','"+cnumber3+"')");
 	//,'"+cnumber2+"','"+cnumber3+"'	
 	
 	con.close();
 	response.sendRedirect("success.jsp");
-
+	}
+	else {out.println("<script>alert('已有預約，請至我的預約查看'); window.location.href='Homepage-e.jsp'</script>");}
 	
 		//con.close();
 	//out.println("<script>alert('已有預約，請至我的預約查看'); window.location.href='prescription.jsp'</script>");}

@@ -264,11 +264,11 @@ background-color:#fff;
     </tr></table>
 			
 			<br> <label for="cnumber1">慢性病卡號1：</label> <input type="text"
-				name="cnumber1" required><br>
+				name="cnumber1" value="" required><br>
 			<br> <label for="cnumber2">慢性病卡號2：</label> <input type="text"
-				name="cnumber2"><br>
+				name="cnumber2" value="" ><br>
 			<br> <label for="cnumber3">慢性病卡號3：</label> <input type="text"
-				name="cnumber3"><br>
+				name="cnumber3"  value="" ><br>
 			<br>
 			<button type="submit">確認</button>
 	</center>
